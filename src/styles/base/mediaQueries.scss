@@ -1,0 +1,10 @@
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+@mixin media-query-min($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
