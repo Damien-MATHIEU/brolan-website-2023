@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './internal/header.module.scss'
-import { Hexagon } from 'react-feather'
+import { Hexagon, Menu } from 'react-feather'
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false)
@@ -27,6 +27,7 @@ function Header() {
         <a href="#" className={styles.linkContainer}>
           <p>S inscrire</p>
         </a>
+        {showMenu && <Menu />}
       </div>
     </nav>
   )

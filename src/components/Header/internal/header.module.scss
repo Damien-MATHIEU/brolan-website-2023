@@ -1,5 +1,7 @@
 @use 'sass:map';
 @use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss' as breakpoints;
+@import './../../../styles/base/mediaQueries.scss';
 
 .container {
   display: flex;
@@ -7,6 +9,20 @@
   padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '8');
   justify-content: space-between;
   background-color: red;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    background-color: yellow;
+    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '7');
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    background-color: blue;
+    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '6');
+  }
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    background-color: green;
+    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '5');
+  }
 }
 
 .logoContainer {
@@ -20,6 +36,9 @@
   flex-direction: row;
   justify-content: space-between;
   gap: map.get(spaces.$spaces, '4');
+  @include media-query-max(breakpoints.$screenMedium) {
+    flex-direction: column;
+  }
 }
 
 .linkContainer {
