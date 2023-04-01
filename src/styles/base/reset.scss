@@ -103,3 +103,9 @@ input[type='number'] {
   appearance: textfield;
   -moz-appearance: textfield;
 }
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
