@@ -38,6 +38,7 @@
   gap: map.get(spaces.$spaces, '4');
   @include media-query-max(breakpoints.$screenMedium) {
     flex-direction: column;
+    // display: none;
   }
 }
 
