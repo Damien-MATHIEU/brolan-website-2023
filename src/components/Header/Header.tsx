@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './internal/header.module.scss'
-import { Hexagon, Menu } from 'react-feather'
+import { Hexagon, Menu, X } from 'react-feather'
 
 function Header() {
   const [showMenuIcon, setShowMenuIcon] = useState(false)
@@ -30,30 +30,34 @@ function Header() {
       <div className={styles.logoContainer}>
         <Hexagon />
       </div>
-      {(showMenu || !showMenuIcon) && (
-        <div className={styles.linksContainer}>
-          <a href="#" className={styles.linkContainer}>
-            <p>Présentation</p>
-          </a>
-          <a href="#" className={styles.linkContainer}>
-            <p>Les jeux</p>
-          </a>
-          <a href="#" className={styles.linkContainer}>
-            <p>Equipes</p>
-          </a>
-          <a href="#" className={styles.linkContainer}>
-            <p>S inscrire</p>
-          </a>
-        </div>
-      )}
       {showMenuIcon && (
         <div
+          className={styles.burgerMenuContainer}
           onClick={() => {
             toggleMenu()
           }}>
-          <Menu />
+          {showMenu ? <X /> : <Menu />}
         </div>
       )}
+
+      <div
+        className={`${styles.linksContainer}
+        ${showMenu || !showMenuIcon ? styles.showMobile : undefined}
+         ${showMenuIcon ? styles.linksContainerActive : undefined}
+        `}>
+        <a href="#" className={styles.linkContainer}>
+          <p className={styles.link}>Présentation</p>
+        </a>
+        <a href="#" className={styles.linkContainer}>
+          <p className={styles.link}>Les jeux</p>
+        </a>
+        <a href="#" className={styles.linkContainer}>
+          <p className={styles.link}>Equipes</p>
+        </a>
+        <a href="#" className={styles.linkContainer}>
+          <p className={styles.link}>S inscrire</p>
+        </a>
+      </div>
     </nav>
   )
 }

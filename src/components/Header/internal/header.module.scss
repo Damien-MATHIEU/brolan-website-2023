@@ -25,7 +25,8 @@
   }
 }
 
-.logoContainer {
+.logoContainer,
+.burgerMenuContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +39,27 @@
   gap: map.get(spaces.$spaces, '4');
   @include media-query-max(breakpoints.$screenMedium) {
     flex-direction: column;
-    // display: none;
+    margin-top: map.get(spaces.$spaces, '7');
+    position: absolute;
+    background-color: aqua;
+    height: calc(100svh - 14.5px);
+    width: 100svw;
+    left: -120%;
+    top: 7.5px;
+    justify-content: flex-start;
+    transition: left 250ms ease;
+  }
+}
+
+.showMobile {
+  @include media-query-max(breakpoints.$screenMedium) {
+    left: 0%;
+  }
+}
+
+.link {
+  @include media-query-max(breakpoints.$screenMedium) {
+    text-align: center;
   }
 }
 
