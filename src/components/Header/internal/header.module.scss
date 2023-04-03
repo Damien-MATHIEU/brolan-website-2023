@@ -1,0 +1,68 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss' as breakpoints;
+@import './../../../styles/base/mediaQueries.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '8');
+  justify-content: space-between;
+  background-color: red;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    background-color: yellow;
+    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '7');
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    background-color: blue;
+    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '6');
+  }
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    background-color: green;
+    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '5');
+  }
+}
+
+.logoContainer,
+.burgerMenuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: map.get(spaces.$spaces, '4');
+  @include media-query-max(breakpoints.$screenMedium) {
+    flex-direction: column;
+    margin-top: map.get(spaces.$spaces, '7');
+    position: absolute;
+    background-color: aqua;
+    height: calc(100svh - 14.5px);
+    width: 100svw;
+    left: -120%;
+    top: 7.5px;
+    justify-content: flex-start;
+    transition: left 250ms ease;
+  }
+}
+
+.showMobile {
+  @include media-query-max(breakpoints.$screenMedium) {
+    left: 0%;
+  }
+}
+
+.link {
+  @include media-query-max(breakpoints.$screenMedium) {
+    text-align: center;
+  }
+}
+
+.linkContainer {
+  padding: map.get(spaces.$spaces, '2');
+}
