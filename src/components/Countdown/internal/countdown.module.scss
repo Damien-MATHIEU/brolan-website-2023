@@ -1,14 +1,25 @@
 @use 'sass:map';
 @use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@import './../../../styles/base/mediaQueries.scss';
 
 .container {
-  width: 50%;
-  margin-left: 25%;
+  width: 65%;
+  margin-left: 17.5%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 80%;
+    margin-left: 10%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 100%;
+    margin-left: 0%;
+  }
 }
 .unitContainer {
   display: flex;
@@ -17,8 +28,28 @@
 }
 .countdownNumber {
   font-size: 4rem;
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    font-size: 3.5rem;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    font-size: 3rem;
+  }
 }
 .countdownText {
   font-weight: 600;
   font-size: 2rem;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    // width: 80%;
+    // margin-left: 10%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    font-size: 1.5rem;
+    // font-size: 6rem;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    font-size: 1.25rem;
+    // margin-left: 0%;
+  }
 }

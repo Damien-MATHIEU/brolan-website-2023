@@ -1,5 +1,7 @@
 @use 'sass:map';
 @use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@import './../../../styles/base/mediaQueries.scss';
 
 .centerButton {
   display: flex;
@@ -11,4 +13,19 @@
   margin-top: map.get(spaces.$spaces, '8');
   margin-bottom: map.get(spaces.$spaces, '8');
   font-size: 8rem;
+  text-indent: map.get(spaces.$spaces, '3');
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    font-size: 7rem;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    font-size: 6rem;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    font-size: 19svw;
+    // font-size: 4.5rem;
+  }
+}
+.countdown {
+  margin-bottom: map.get(spaces.$spaces, '7');
 }

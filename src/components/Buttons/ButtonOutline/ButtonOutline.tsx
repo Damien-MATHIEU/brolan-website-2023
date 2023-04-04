@@ -4,12 +4,14 @@ import styles from './internal/buttonOutline.module.scss'
 
 function ButtonOutline({ children, outlineColor = 'pink', propsClassName }: IButtonOutline) {
   return (
-    <button
-      className={`${styles.buttonOutline} ${
-        outlineColor === 'aquamarine' ? styles.outlineAquamarine : styles.outlinePink
-      } ${propsClassName}`}>
-      {children}
-    </button>
+    <div className={propsClassName}>
+      <button
+        className={`${styles.buttonOutline} ${
+          outlineColor === 'aquamarine' ? styles.outlineAquamarine : styles.outlinePink
+        }`}>
+        {children}
+      </button>
+    </div>
   )
 }
 

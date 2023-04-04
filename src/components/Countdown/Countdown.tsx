@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import ICountdown from './internal/countdown.interface'
+import { ICountdown, ICountdownContainer } from './internal/countdown.interface'
 import styles from './internal/countdown.module.scss'
 import TextNeon from '../TextNeon/TextNeon'
 
-function Countdown() {
+function Countdown({ propsClassName }: ICountdownContainer) {
   const targetDate = '2023-04-28T18:00:00.000Z'
 
   const calculateTimeLeft = (): ICountdown => {
@@ -68,7 +68,7 @@ function Countdown() {
   })
 
   return (
-    <div>
+    <div className={propsClassName}>
       {timerComponents.length ? (
         <div className={styles.container}>{timerComponents}</div>
       ) : (

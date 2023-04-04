@@ -14,7 +14,7 @@ function HeroSection() {
         propsClassName={styles.title}>
         BROLAN
       </TextNeon>
-      <Countdown />
+      <Countdown propsClassName={styles.countdown} />
       <ButtonOutline propsClassName={styles.centerButton}>{`S'inscrire`}</ButtonOutline>
     </div>
   )

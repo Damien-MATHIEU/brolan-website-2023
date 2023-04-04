@@ -7,7 +7,6 @@ function Header() {
   const [showMenu, setShowMenu] = useState(false)
 
   function toggleMenu() {
-    console.log('click')
     setShowMenu(!showMenu)
   }
 
