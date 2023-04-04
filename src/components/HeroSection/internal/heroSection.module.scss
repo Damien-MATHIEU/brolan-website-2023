@@ -8,4 +8,7 @@
 }
 .title {
   letter-spacing: map.get(spaces.$spaces, '3');
+  margin-top: map.get(spaces.$spaces, '8');
+  margin-bottom: map.get(spaces.$spaces, '8');
+  font-size: 8rem;
 }
