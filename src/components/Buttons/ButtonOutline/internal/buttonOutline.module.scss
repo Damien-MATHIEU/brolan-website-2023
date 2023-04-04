@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use './../../../../styles/base/spaces.scss';
+@use './../../../../styles/variables/colors.scss';
+
+.buttonOutline {
+  padding: map.get(spaces.$spaces, '3') map.get(spaces.$spaces, '4');
+  background-color: transparent;
+  color: map.get(colors.$colors, 'white');
+  border-radius: map.get(spaces.$spaces, '2');
+  cursor: pointer;
+}
+.outlineAquamarine {
+  border: 1px map.get(colors.$colors, 'aquamarine') solid;
+}
+.outlinePink {
+  border: 1px map.get(colors.$colors, 'primary') solid;
+  // box-shadow: 0 0 8px map.get(colors.$colors, 'primary'),
+  //   0 0 10px map.get(colors.$colors, 'primary');
+}

@@ -7,7 +7,6 @@
   color: map.get(colors.$colors, 'white');
   text-align: center;
   font-size: 6rem;
-  letter-spacing: map.get(spaces.$spaces, '3');
 }
 .wordPink {
   animation: glowPink 2s alternate infinite;

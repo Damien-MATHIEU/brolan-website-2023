@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+
+.centerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  letter-spacing: map.get(spaces.$spaces, '3');
+}
