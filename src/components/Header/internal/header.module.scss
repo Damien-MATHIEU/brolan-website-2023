@@ -8,19 +8,20 @@
   flex-direction: row;
   padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '8');
   justify-content: space-between;
-  background-color: red;
+  position: sticky;
+  // background-color: red;
 
   @include media-query-max(breakpoints.$screenLarge) {
-    background-color: yellow;
+    // background-color: yellow;
     padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '7');
   }
   @include media-query-max(breakpoints.$screenMedium) {
-    background-color: blue;
+    // background-color: blue;
     padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '6');
   }
 
   @include media-query-max(breakpoints.$screenSmall) {
-    background-color: green;
+    // background-color: green;
     padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '5');
   }
 }
@@ -41,7 +42,7 @@
     flex-direction: column;
     margin-top: map.get(spaces.$spaces, '7');
     position: absolute;
-    background-color: aqua;
+    // background-color: aqua;
     height: calc(100svh - 14.5px);
     width: 100svw;
     left: -120%;

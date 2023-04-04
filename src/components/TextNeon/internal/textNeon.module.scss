@@ -1,0 +1,83 @@
+@use 'sass:map';
+@use './../../../styles/variables/colors.scss';
+@use './../../../styles/base/spaces.scss';
+
+.word {
+  font-family: 'Neon', sans-serif;
+  color: map.get(colors.$colors, 'white');
+  text-align: center;
+  font-size: 6rem;
+  letter-spacing: map.get(spaces.$spaces, '3');
+}
+.wordPink {
+  animation: glowPink 2s alternate infinite;
+}
+.wordAquamarine {
+  animation: glowAquamarine 2s alternate infinite;
+}
+.letter {
+  font-size: inherit;
+  font-family: 'Neon', sans-serif;
+}
+.letterBlinkFast {
+  animation: blincking 1s linear infinite;
+}
+.letterBlinkSlow {
+  animation: blincking 3s linear infinite;
+}
+
+@keyframes glowPink {
+  100% {
+    text-shadow: 0 0 4px map.get(colors.$colors, 'white'),
+      0 0 11px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary'),
+      0 0 40px map.get(colors.$colors, 'primary'), 0 0 80px map.get(colors.$colors, 'primary'),
+      0 0 90px map.get(colors.$colors, 'primary'), 0 0 100px map.get(colors.$colors, 'primary'),
+      0 0 150px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    text-shadow: 0 0 8px map.get(colors.$colors, 'white'),
+      0 0 10px map.get(colors.$colors, 'primary'), 0 0 12px map.get(colors.$colors, 'primary'),
+      0 0 18px map.get(colors.$colors, 'primary'), 0 0 45px map.get(colors.$colors, 'primary'),
+      0 0 55px map.get(colors.$colors, 'primary'), 0 0 70px map.get(colors.$colors, 'primary'),
+      0 0 80px map.get(colors.$colors, 'primary');
+  }
+}
+
+@keyframes glowAquamarine {
+  100% {
+    text-shadow: 0 0 10px map.get(colors.$colors, 'white'),
+      0 0 11px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine'),
+      0 0 40px map.get(colors.$colors, 'aquamarine'), 0 0 80px map.get(colors.$colors, 'aquamarine'),
+      0 0 90px map.get(colors.$colors, 'aquamarine'),
+      0 0 100px map.get(colors.$colors, 'aquamarine'),
+      0 0 150px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    text-shadow: 0 0 8px map.get(colors.$colors, 'white'),
+      0 0 10px map.get(colors.$colors, 'aquamarine'), 0 0 12px map.get(colors.$colors, 'aquamarine'),
+      0 0 18px map.get(colors.$colors, 'aquamarine'), 0 0 45px map.get(colors.$colors, 'aquamarine'),
+      0 0 55px map.get(colors.$colors, 'aquamarine'), 0 0 70px map.get(colors.$colors, 'aquamarine'),
+      0 0 80px map.get(colors.$colors, 'aquamarine');
+  }
+}
+
+@keyframes blincking {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}

@@ -1,5 +1,37 @@
+@use 'sass:map';
+@use './styles/variables/colors.scss';
+
+@font-face {
+  font-family: 'Neon';
+  src: local('Neon'), url('./fonts/Neon/Neon.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald-Regular'), url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+}
+
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+i,
+ul,
+td,
+th {
+  color: map.get(colors.$colors, 'white');
+  font-family: 'Oswald', sans-serif;
+}
 body {
   overflow-x: hidden;
+  background-color: map.get(colors.$colors, 'black');
 }
 
 h1 {

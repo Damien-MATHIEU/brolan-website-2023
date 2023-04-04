@@ -28,7 +28,7 @@ function Header() {
   return (
     <nav className={styles.container}>
       <div className={styles.logoContainer}>
-        <Hexagon />
+        <Hexagon color="#f7f7f2" size={24} />
       </div>
       {showMenuIcon && (
         <div
@@ -36,7 +36,7 @@ function Header() {
           onClick={() => {
             toggleMenu()
           }}>
-          {showMenu ? <X /> : <Menu />}
+          {showMenu ? <X color="#f7f7f2" size={24} /> : <Menu color="#f7f7f2" size={24} />}
         </div>
       )}
 
