@@ -1,0 +1,111 @@
+@use 'sass:map';
+@use './../../../styles/variables/colors.scss';
+@use './../../../styles/base/spaces.scss';
+
+@font-face {
+  font-family: 'Neon';
+  src: local('Neon'), url('./../../../fonts/Neon/Neon.ttf') format('truetype');
+}
+
+.word {
+  font-family: 'Neon' !important;
+  color: map.get(colors.$colors, 'white');
+  text-align: center;
+  font-size: 6rem;
+  letter-spacing: map.get(spaces.$spaces, '3');
+}
+.wordPink {
+  animation: glowPink 2s alternate infinite;
+}
+.wordAquamarine {
+  animation: glowAquamarine 2s alternate infinite;
+}
+.letter {
+  font-size: inherit;
+}
+.letterBlinkFast {
+  animation: blincking 1s linear infinite;
+}
+.letterBlinkSlow {
+  animation: blincking 3s linear infinite;
+}
+
+@keyframes glowPink {
+  100% {
+    /* Larger blur radius */
+    text-shadow: 1px 0px 4px map.get(colors.$colors, 'white'),
+      2px 0px 4px map.get(colors.$colors, 'white'), 3px 0px 4px map.get(colors.$colors, 'white'),
+      2px 0px 3px map.get(colors.$colors, 'primary'),
+      2px 3px 15px map.get(colors.$colors, 'primary'),
+      2px 0px 15px map.get(colors.$colors, 'primary'),
+      5px 0px 125px map.get(colors.$colors, 'primary'),
+      20px 0vw 200px map.get(colors.$colors, 'primary'),
+      40px 0vw 200px map.get(colors.$colors, 'primary');
+    // text-shadow: 0 0 4px map.get(colors.$colors, 'white'), 0 0 11px map.get(colors.$colors, 'white'),
+    //   0 0 19px map.get(colors.$colors, 'white'), 0 0 40px map.get(colors.$colors, 'primary'),
+    //   0 0 80px map.get(colors.$colors, 'primary'), 0 0 90px map.get(colors.$colors, 'primary'),
+    //   0 0 100px map.get(colors.$colors, 'primary'), 0 0 150px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow: 1px 0px 2px map.get(colors.$colors, 'white'),
+      2px 0px 2px map.get(colors.$colors, 'white'), 3px 0px 2px map.get(colors.$colors, 'white'),
+      2px 0px 3px map.get(colors.$colors, 'primary'),
+      2px 3px 10px map.get(colors.$colors, 'primary'),
+      2px 0px 10px map.get(colors.$colors, 'primary'),
+      5px 0px 100px map.get(colors.$colors, 'primary'),
+      20px 0vw 125px map.get(colors.$colors, 'primary'),
+      40px 0vw 125px map.get(colors.$colors, 'primary');
+    // text-shadow: 0 0 2px map.get(colors.$colors, 'white'), 0 0 4px map.get(colors.$colors, 'white'),
+    //   0 0 6px map.get(colors.$colors, 'white'), 0 0 10px map.get(colors.$colors, 'primary'),
+    //   0 0 45px map.get(colors.$colors, 'primary'), 0 0 55px map.get(colors.$colors, 'primary'),
+    //   0 0 70px map.get(colors.$colors, 'primary'), 0 0 80px map.get(colors.$colors, 'primary');
+  }
+}
+
+@keyframes glowAquamarine {
+  100% {
+    /* Larger blur radius */
+    text-shadow: 1px 0px 4px map.get(colors.$colors, 'white'),
+      2px 0px 4px map.get(colors.$colors, 'white'), 3px 0px 4px map.get(colors.$colors, 'white'),
+      2px 0px 3px map.get(colors.$colors, 'aquamarine'),
+      2px 3px 15px map.get(colors.$colors, 'aquamarine'),
+      2px 0px 15px map.get(colors.$colors, 'aquamarine'),
+      5px 0px 125px map.get(colors.$colors, 'aquamarine'),
+      20px 0vw 200px map.get(colors.$colors, 'aquamarine'),
+      40px 0vw 200px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow: 1px 0px 2px map.get(colors.$colors, 'white'),
+      2px 0px 2px map.get(colors.$colors, 'white'), 3px 0px 2px map.get(colors.$colors, 'white'),
+      2px 0px 3px map.get(colors.$colors, 'aquamarine'),
+      2px 3px 10px map.get(colors.$colors, 'aquamarine'),
+      2px 0px 10px map.get(colors.$colors, 'aquamarine'),
+      5px 0px 100px map.get(colors.$colors, 'aquamarine'),
+      20px 0vw 125px map.get(colors.$colors, 'aquamarine'),
+      40px 0vw 125px map.get(colors.$colors, 'aquamarine');
+  }
+}
+
+@keyframes blincking {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    //text-shadow: none;
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}
