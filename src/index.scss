@@ -27,7 +27,7 @@ ul,
 td,
 th {
   color: map.get(colors.$colors, 'white');
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
 }
 body {
   overflow-x: hidden;

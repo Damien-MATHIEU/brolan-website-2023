@@ -28,7 +28,7 @@ function TextNeon({
     case 'h1':
       return (
         <h1
-          className={`${styles.word} ${
+          className={`fontNeon ${styles.word} ${
             color === 'aquamarine' ? styles.wordAquamarine : styles.wordPink
           }`}>
           {styledText}
