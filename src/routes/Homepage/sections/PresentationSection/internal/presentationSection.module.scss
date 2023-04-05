@@ -14,6 +14,8 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   margin-top: map.get(spaces.$spaces, '8');
+  width: 80%;
+  margin-left: 10%;
 }
 .centerText {
   text-align: center;
@@ -21,12 +23,28 @@
 .subTitle {
   margin-bottom: map.get(spaces.$spaces, '4');
 }
+.paragrapheContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: map.get(spaces.$spaces, '5');
+}
 .paragraphe {
-  width: 80%;
-  margin-left: 10%;
   text-align: justify;
   line-height: 1.75rem;
 }
 .bold {
   font-family: 'Oswald-Regular', sans-serif;
+}
+.iconsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '2');
+}
+.iconTwitterMarginBottom {
+  margin-bottom: 11px;
 }

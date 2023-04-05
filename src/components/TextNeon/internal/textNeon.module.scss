@@ -19,10 +19,10 @@
   font-family: 'Neon', sans-serif;
 }
 .letterBlinkFast {
-  animation: blincking 1s linear infinite;
+  animation: blinking 1s linear infinite;
 }
 .letterBlinkSlow {
-  animation: blincking 3s linear infinite;
+  animation: blinking 3s linear infinite;
 }
 
 @keyframes glowPink {
@@ -60,7 +60,7 @@
   }
 }
 
-@keyframes blincking {
+@keyframes blinking {
   0%,
   19.999%,
   22%,
