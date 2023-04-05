@@ -64,8 +64,6 @@
   display: flex;
   flex-direction: column;
   gap: map.get(spaces.$spaces, '2');
-}
-.hoverIcon {
   &:hover .iconText {
     border-bottom: 1px map.get(colors.$colors, 'primary') solid;
     @include media-query-max(breakpoints.$screenMedium) {
@@ -79,5 +77,5 @@
   padding-bottom: 4px;
 }
 .iconTwitterMarginBottom {
-  margin-bottom: 11px;
+  margin-bottom: map.get(spaces.$spaces, '3');
 }
