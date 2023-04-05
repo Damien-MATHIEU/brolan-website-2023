@@ -15,6 +15,7 @@
   z-index: 999;
   background: map.get(colors.$colors, 'black');
   background: linear-gradient(0deg, rgba(1, 4, 0, 0) 0%, rgb(1, 4, 0) 80%);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 
@@ -74,6 +75,9 @@
 }
 
 .link {
+  padding-bottom: 0px;
+  border-bottom: 1px transparent solid;
+  transition: border-bottom 200ms ease, padding-bottom 200ms ease;
   @include media-query-max(breakpoints.$screenMedium) {
     text-align: center;
   }
@@ -81,10 +85,9 @@
 
 .linkContainer {
   padding: map.get(spaces.$spaces, '2');
-  border-bottom: 1px transparent solid;
-  transition: border-bottom 200ms ease;
 
-  &:hover {
+  &:hover .link {
+    padding-bottom: 4px;
     border-bottom: 1px map.get(colors.$colors, 'primary') solid;
     @include media-query-max(breakpoints.$screenMedium) {
       border-bottom: 1px transparent solid;
