@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use './../../../../../styles/base/spaces.scss';
+@use './../../../../../styles/base/breakpoints.scss';
+@import './../../../../../styles/base/mediaQueries.scss';
+
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: local('Oswald-Regular'),
+    url('./../../../../../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+}
+
+.container {
+  scroll-margin: map.get(spaces.$spaces, '8');
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin-top: map.get(spaces.$spaces, '8');
+}
+.centerText {
+  text-align: center;
+}
+.subTitle {
+  margin-bottom: map.get(spaces.$spaces, '4');
+}
+.paragraphe {
+  width: 80%;
+  margin-left: 10%;
+  text-align: justify;
+  line-height: 1.75rem;
+}
+.bold {
+  font-family: 'Oswald-Regular', sans-serif;
+}
