@@ -85,6 +85,7 @@
   transition: border-bottom 200ms ease, padding-bottom 200ms ease;
   @include media-query-max(breakpoints.$screenMedium) {
     text-align: center;
+    font-size: 1.25rem;
   }
 }
 
