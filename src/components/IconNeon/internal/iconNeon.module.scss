@@ -1,0 +1,81 @@
+@use 'sass:map';
+@use './../../../styles/variables/colors.scss';
+@use './../../../styles/base/spaces.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: map.get(spaces.$spaces, '7');
+  height: auto;
+}
+.iconAquamarine {
+  animation: glowAquamarine 2s alternate infinite;
+}
+.iconPink {
+  animation: glowPink 2s alternate infinite;
+}
+.iconAquamarineBlinkingFast {
+  animation: glowAquamarine 2s alternate infinite, blinking 2.5s linear infinite;
+}
+.iconPinkBlinkingFast {
+  animation: glowPink 2s alternate infinite, blinking 2.5s linear infinite;
+}
+.iconAquamarineBlinkingSlow {
+  animation: glowAquamarine 2s alternate infinite, blinking 4s linear infinite;
+}
+.iconPinkBlinkingSlow {
+  animation: glowPink 2s alternate infinite, blinking 4s linear infinite;
+}
+@keyframes glowPink {
+  100% {
+    filter: drop-shadow(0 0 4px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 11px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 19px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 25px map.get(colors.$colors, 'primary'));
+  }
+  0% {
+    filter: drop-shadow(0 0 8px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 10px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 12px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 18px map.get(colors.$colors, 'primary'));
+  }
+}
+
+@keyframes glowAquamarine {
+  100% {
+    filter: drop-shadow(0 0 10px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 11px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 19px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 25px map.get(colors.$colors, 'aquamarine'));
+  }
+  0% {
+    filter: drop-shadow(0 0 8px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 10px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 12px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 18px map.get(colors.$colors, 'aquamarine'));
+  }
+}
+
+@keyframes blinking {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+  }
+}
