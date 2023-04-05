@@ -1,7 +1,7 @@
 @use 'sass:map';
-@use './../../../styles/base/spaces.scss';
-@use './../../../styles/base/breakpoints.scss';
-@import './../../../styles/base/mediaQueries.scss';
+@use './../../../../../styles/base/spaces.scss';
+@use './../../../../../styles/base/breakpoints.scss';
+@import './../../../../../styles/base/mediaQueries.scss';
 
 .container {
   scroll-margin: map.get(spaces.$spaces, '8');

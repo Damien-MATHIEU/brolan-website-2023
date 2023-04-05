@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './internal/homepage.module.scss'
 import Header from '../../components/Header/Header'
-import HeroSection from '../../components/HeroSection/HeroSection'
+import HeroSection from './sections/HeroSection/HeroSection'
 
 function Homepage() {
   return (
