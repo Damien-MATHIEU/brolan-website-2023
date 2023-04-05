@@ -1,7 +1,9 @@
 interface IButtonOutline {
   children: string,
   outlineColor?: 'pink' | 'aquamarine'
-  propsClassName?: string
+  propsClassName?: string,
+  center?: boolean,
+  fontSize?: 'veryLarge' | 'large' | 'medium' | 'small'
 }
 
 export default IButtonOutline

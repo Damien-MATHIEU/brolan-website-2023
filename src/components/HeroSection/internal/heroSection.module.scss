@@ -3,11 +3,6 @@
 @use './../../../styles/base/breakpoints.scss';
 @import './../../../styles/base/mediaQueries.scss';
 
-.centerButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .title {
   letter-spacing: map.get(spaces.$spaces, '3');
   margin-top: map.get(spaces.$spaces, '8');
@@ -25,6 +20,8 @@
     font-size: 19svw;
     // font-size: 4.5rem;
   }
+}
+.registerButton {
 }
 .countdown {
   margin-bottom: map.get(spaces.$spaces, '7');

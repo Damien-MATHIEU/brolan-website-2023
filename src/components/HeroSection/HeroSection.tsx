@@ -15,7 +15,10 @@ function HeroSection() {
         BROLAN
       </TextNeon>
       <Countdown propsClassName={styles.countdown} />
-      <ButtonOutline propsClassName={styles.centerButton}>{`S'inscrire`}</ButtonOutline>
+      <ButtonOutline
+        propsClassName={styles.registerButton}
+        center={true}
+        fontSize="large">{`S'inscrire`}</ButtonOutline>
     </div>
   )
 }
