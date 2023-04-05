@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use './../../../../../styles/base/spaces.scss';
 @use './../../../../../styles/base/breakpoints.scss';
+@use './../../../../../styles/variables/colors.scss';
 @import './../../../../../styles/base/mediaQueries.scss';
 
 @font-face {
@@ -44,6 +45,16 @@
   display: flex;
   flex-direction: column;
   gap: map.get(spaces.$spaces, '2');
+}
+.hoverIcon {
+  &:hover .iconText {
+    border-bottom: 1px map.get(colors.$colors, 'primary') solid;
+  }
+}
+.iconText {
+  transition: border-bottom 200ms ease;
+  border-bottom: 1px transparent solid;
+  padding-bottom: 4px;
 }
 .iconTwitterMarginBottom {
   margin-bottom: 11px;
