@@ -4,13 +4,14 @@
 
 .word {
   font-family: 'Neon', sans-serif;
-  color: map.get(colors.$colors, 'white');
   text-align: center;
 }
 .wordPink {
+  color: map.get(colors.$colors, 'primaryWhitest');
   animation: glowPink 2s alternate infinite;
 }
 .wordAquamarine {
+  color: map.get(colors.$colors, 'aquamarineWhite');
   animation: glowAquamarine 2s alternate infinite;
 }
 .letter {
@@ -26,14 +27,14 @@
 
 @keyframes glowPink {
   100% {
-    text-shadow: 0 0 4px map.get(colors.$colors, 'white'),
+    text-shadow: 0 0 4px map.get(colors.$colors, 'primaryWhitest'),
       0 0 11px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary'),
       0 0 40px map.get(colors.$colors, 'primary'), 0 0 80px map.get(colors.$colors, 'primary'),
       0 0 90px map.get(colors.$colors, 'primary'), 0 0 100px map.get(colors.$colors, 'primary'),
       0 0 150px map.get(colors.$colors, 'primary');
   }
   0% {
-    text-shadow: 0 0 8px map.get(colors.$colors, 'white'),
+    text-shadow: 0 0 8px map.get(colors.$colors, 'primaryWhitest'),
       0 0 10px map.get(colors.$colors, 'primary'), 0 0 12px map.get(colors.$colors, 'primary'),
       0 0 18px map.get(colors.$colors, 'primary'), 0 0 45px map.get(colors.$colors, 'primary'),
       0 0 55px map.get(colors.$colors, 'primary'), 0 0 70px map.get(colors.$colors, 'primary'),
@@ -43,7 +44,7 @@
 
 @keyframes glowAquamarine {
   100% {
-    text-shadow: 0 0 10px map.get(colors.$colors, 'white'),
+    text-shadow: 0 0 10px map.get(colors.$colors, 'ebfffc'),
       0 0 11px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine'),
       0 0 40px map.get(colors.$colors, 'aquamarine'), 0 0 80px map.get(colors.$colors, 'aquamarine'),
       0 0 90px map.get(colors.$colors, 'aquamarine'),
@@ -51,7 +52,7 @@
       0 0 150px map.get(colors.$colors, 'aquamarine');
   }
   0% {
-    text-shadow: 0 0 8px map.get(colors.$colors, 'white'),
+    text-shadow: 0 0 8px map.get(colors.$colors, 'ebfffc'),
       0 0 10px map.get(colors.$colors, 'aquamarine'), 0 0 12px map.get(colors.$colors, 'aquamarine'),
       0 0 18px map.get(colors.$colors, 'aquamarine'), 0 0 45px map.get(colors.$colors, 'aquamarine'),
       0 0 55px map.get(colors.$colors, 'aquamarine'), 0 0 70px map.get(colors.$colors, 'aquamarine'),

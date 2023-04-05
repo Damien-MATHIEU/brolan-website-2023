@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './internal/presentationSection.module.scss'
+import LogoDiscord from './../../../../assets/LogoDiscord.svg'
+import LogoTwitter from './../../../../assets/LogoTwitter.svg'
 
 function PresentationSection() {
   return (
@@ -31,8 +33,14 @@ function PresentationSection() {
         prochaine édition !
       </p>
       <div>
-        <p>Twitter : @BROLAN_OFF</p>
-        <p>Discord : https://discord.gg/jDmFTYwv</p>
+        <div>
+          <img src={LogoDiscord} />
+          <p>Discord : https://discord.gg/jDmFTYwv</p>
+        </div>
+        <div>
+          <img src={LogoTwitter} />
+          <p>Twitter : @BROLAN_OFF</p>
+        </div>
       </div>
     </div>
   )
