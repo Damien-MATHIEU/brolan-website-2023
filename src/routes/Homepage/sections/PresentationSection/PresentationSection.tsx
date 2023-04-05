@@ -39,7 +39,11 @@ function PresentationSection() {
       <div className={styles.iconsContainer}>
         <div className={styles.iconContainer}>
           <IconNeon icon={LogoDiscord} color="pink" blinkingFast={true} />
-          <a href="https://discord.gg/jDmFTYwv" target="_blank" className={styles.hoverIcon}>
+          <a
+            href="https://discord.gg/jDmFTYwv"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.hoverIcon}>
             <h4 className={`${styles.centerText} ${styles.iconText}`}>
               Discord{' '}
               <span>
