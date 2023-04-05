@@ -7,10 +7,10 @@
   scroll-margin: map.get(spaces.$spaces, '8');
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  margin-top: map.get(spaces.$spaces, '8');
 }
 .title {
   letter-spacing: map.get(spaces.$spaces, '3');
-  margin-top: map.get(spaces.$spaces, '8');
   margin-bottom: map.get(spaces.$spaces, '8');
   font-size: 8rem;
   text-indent: map.get(spaces.$spaces, '3');
@@ -29,6 +29,6 @@
 .countdown {
   margin-bottom: map.get(spaces.$spaces, '7');
 }
-.scrollIcon {
-  margin-top: map.get(spaces.$spaces, '7');
+.registerButton {
+  margin-bottom: map.get(spaces.$spaces, '7');
 }
