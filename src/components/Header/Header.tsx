@@ -26,36 +26,38 @@ function Header() {
 
   return (
     <nav className={styles.container}>
-      <div className={styles.logoContainer}>
-        <Hexagon color="#f7f7f2" size={24} />
-      </div>
-      {showMenuIcon && (
-        <div
-          className={styles.burgerMenuContainer}
-          onClick={() => {
-            toggleMenu()
-          }}>
-          {showMenu ? <X color="#f7f7f2" size={24} /> : <Menu color="#f7f7f2" size={24} />}
+      <div className={styles.subContainer}>
+        <div className={styles.logoContainer}>
+          <Hexagon color="#f7f7f2" size={24} />
         </div>
-      )}
+        {showMenuIcon && (
+          <div
+            className={styles.burgerMenuContainer}
+            onClick={() => {
+              toggleMenu()
+            }}>
+            {showMenu ? <X color="#f7f7f2" size={24} /> : <Menu color="#f7f7f2" size={24} />}
+          </div>
+        )}
 
-      <div
-        className={`${styles.linksContainer}
+        <div
+          className={`${styles.linksContainer}
         ${showMenu || !showMenuIcon ? styles.showMobile : undefined}
          ${showMenuIcon ? styles.linksContainerActive : undefined}
         `}>
-        <a href="#" className={styles.linkContainer}>
-          <p className={styles.link}>Présentation</p>
-        </a>
-        <a href="#" className={styles.linkContainer}>
-          <p className={styles.link}>Les jeux</p>
-        </a>
-        <a href="#" className={styles.linkContainer}>
-          <p className={styles.link}>Equipes</p>
-        </a>
-        <a href="#" className={styles.linkContainer}>
-          <p className={styles.link}>S inscrire</p>
-        </a>
+          <a href="#" className={styles.linkContainer}>
+            <p className={styles.link}>Présentation</p>
+          </a>
+          <a href="#" className={styles.linkContainer}>
+            <p className={styles.link}>Les jeux</p>
+          </a>
+          <a href="#" className={styles.linkContainer}>
+            <p className={styles.link}>Equipes</p>
+          </a>
+          <a href="#" className={styles.linkContainer}>
+            <p className={styles.link}>S inscrire</p>
+          </a>
+        </div>
       </div>
     </nav>
   )

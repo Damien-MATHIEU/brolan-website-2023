@@ -1,33 +1,45 @@
 @use 'sass:map';
 @use './../../../styles/base/spaces.scss';
-@use './../../../styles/base/breakpoints.scss' as breakpoints;
+@use './../../../styles/base/breakpoints.scss';
+@use './../../../styles/variables/colors.scss';
 @import './../../../styles/base/mediaQueries.scss';
 
 .container {
-  display: flex;
-  flex-direction: row;
-  padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '8');
-  justify-content: space-between;
+  position: -webkit-sticky;
   position: sticky;
-  // background-color: red;
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 80px;
+  z-index: 999;
+  background: map.get(colors.$colors, 'black');
+  background: linear-gradient(0deg, rgba(1, 4, 0, 0) 0%, rgb(1, 4, 0) 80%);
+  backdrop-filter: blur(4px);
+}
+
+.subContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 map.get(spaces.$spaces, '9');
 
   @include media-query-max(breakpoints.$screenLarge) {
-    // background-color: yellow;
-    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '7');
+    padding: 0 96px;
   }
   @include media-query-max(breakpoints.$screenMedium) {
-    // background-color: blue;
-    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '6');
+    padding: 0 map.get(spaces.$spaces, '7');
   }
 
   @include media-query-max(breakpoints.$screenSmall) {
-    // background-color: green;
-    padding: map.get(spaces.$spaces, '4') map.get(spaces.$spaces, '5');
+    padding: 0 map.get(spaces.$spaces, '5');
   }
 }
 
 .logoContainer,
-.burgerMenuContainer {
+.burgerMenuContainer,
+.linkContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,17 +50,20 @@
   flex-direction: row;
   justify-content: space-between;
   gap: map.get(spaces.$spaces, '4');
+  background-color: transparent;
+
   @include media-query-max(breakpoints.$screenMedium) {
+    background-color: map.get(colors.$colors, 'black');
     flex-direction: column;
     margin-top: map.get(spaces.$spaces, '7');
     position: absolute;
-    // background-color: aqua;
     height: calc(100svh - 14.5px);
     width: 100svw;
     left: -120%;
     top: 7.5px;
     justify-content: flex-start;
     transition: left 250ms ease;
+    padding-top: map.get(spaces.$spaces, '6');
   }
 }
 
@@ -66,4 +81,13 @@
 
 .linkContainer {
   padding: map.get(spaces.$spaces, '2');
+  border-bottom: 1px transparent solid;
+  transition: border-bottom 200ms ease;
+
+  &:hover {
+    border-bottom: 1px map.get(colors.$colors, 'primary') solid;
+    @include media-query-max(breakpoints.$screenMedium) {
+      border-bottom: 1px transparent solid;
+    }
+  }
 }
