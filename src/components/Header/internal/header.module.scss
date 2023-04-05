@@ -45,6 +45,11 @@
   justify-content: center;
   align-items: center;
 }
+.logo {
+  height: map.get(spaces.$spaces, '5');
+  width: map.get(spaces.$spaces, '5');
+  filter: grayscale(100%);
+}
 
 .linksContainer {
   display: flex;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './internal/header.module.scss'
-import { Hexagon, Menu, X } from 'react-feather'
+import { Menu, X } from 'react-feather'
+import logo from './../../assets/LogoBrolan.svg'
 
 function Header() {
   const [showMenuIcon, setShowMenuIcon] = useState(false)
@@ -28,7 +29,7 @@ function Header() {
     <nav className={styles.container}>
       <div className={styles.subContainer}>
         <div className={styles.logoContainer}>
-          <Hexagon color="#f7f7f2" size={24} />
+          <img src={logo} className={styles.logo} />
         </div>
         {showMenuIcon && (
           <div
