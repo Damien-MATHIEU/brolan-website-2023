@@ -17,6 +17,19 @@
   margin-top: map.get(spaces.$spaces, '8');
   width: 80%;
   margin-left: 10%;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 95%;
+    margin-left: 2.5%;
+  }
 }
 .centerText {
   text-align: center;
@@ -40,6 +53,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 0px;
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    flex-direction: column;
+    gap: map.get(spaces.$spaces, '3');
+  }
 }
 .iconContainer {
   display: flex;
@@ -49,6 +68,9 @@
 .hoverIcon {
   &:hover .iconText {
     border-bottom: 1px map.get(colors.$colors, 'primary') solid;
+    @include media-query-max(breakpoints.$screenMedium) {
+      border-bottom: 1px transparent solid;
+    }
   }
 }
 .iconText {
