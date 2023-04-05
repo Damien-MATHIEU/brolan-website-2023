@@ -3,10 +3,11 @@ import styles from './internal/heroSection.module.scss'
 import TextNeon from '../TextNeon/TextNeon'
 import ButtonOutline from '../Buttons/ButtonOutline/ButtonOutline'
 import Countdown from '../Countdown/Countdown'
+import ScrollIcon from '../ScrollIcon/ScrollIcon'
 
 function HeroSection() {
   return (
-    <div>
+    <div className={styles.container}>
       <TextNeon
         color="pink"
         blinkingArrayFast={[2]}
@@ -19,6 +20,7 @@ function HeroSection() {
         propsClassName={styles.registerButton}
         center={true}
         fontSize="large">{`S'inscrire`}</ButtonOutline>
+      <ScrollIcon propsClassName={styles.scrollIcon} />
     </div>
   )
 }

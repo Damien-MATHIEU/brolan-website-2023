@@ -30,6 +30,9 @@ th {
   font-family: 'Oswald', sans-serif;
   font-size: 1.15rem;
 }
+html {
+  scroll-snap-type: y mandatory;
+}
 body {
   overflow-x: hidden;
   background-color: map.get(colors.$colors, 'black');
