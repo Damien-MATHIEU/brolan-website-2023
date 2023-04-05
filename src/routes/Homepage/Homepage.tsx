@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './internal/homepage.module.scss'
 import Header from '../../components/Header/Header'
 import HeroSection from '../../components/HeroSection/HeroSection'
 
@@ -6,7 +7,9 @@ function Homepage() {
   return (
     <>
       <Header />
-      <HeroSection />
+      <div className={styles.container}>
+        <HeroSection />
+      </div>
     </>
   )
 }

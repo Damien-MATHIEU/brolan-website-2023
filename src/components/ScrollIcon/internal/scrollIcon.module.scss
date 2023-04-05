@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.translateAnim {
+  animation: upAndDown 1s ease alternate infinite;
+}
+@keyframes upAndDown {
+  0% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}

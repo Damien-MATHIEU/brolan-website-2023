@@ -7,11 +7,11 @@ function TextNeon({
   color = 'pink',
   blinkingArrayFast = null,
   blinkingArraySlow = null,
-  size = 'h1'
+  size = 'h1',
+  propsClassName
 }: ITextNeon) {
   const splitedText = children.split('')
 
-  console.log(splitedText)
   const styledText = splitedText.map((letter, index) => {
     return (
       <span
@@ -28,46 +28,42 @@ function TextNeon({
     case 'h1':
       return (
         <h1
-          className={`fontNeon ${styles.word} ${
+          className={`${styles.word} ${
             color === 'aquamarine' ? styles.wordAquamarine : styles.wordPink
-          }`}>
+          } ${propsClassName}`}>
           {styledText}
         </h1>
       )
-      break
 
     case 'h2':
       return (
         <h2
           className={`${styles.word} ${
             color === 'aquamarine' ? styles.wordAquamarine : styles.wordPink
-          }`}>
+          } ${propsClassName}`}>
           {styledText}
         </h2>
       )
-      break
 
     case 'h3':
       return (
         <h3
           className={`${styles.word} ${
             color === 'aquamarine' ? styles.wordAquamarine : styles.wordPink
-          }`}>
+          } ${propsClassName}`}>
           {styledText}
         </h3>
       )
-      break
 
     default:
       return (
         <h1
           className={`${styles.word} ${
             color === 'aquamarine' ? styles.wordAquamarine : styles.wordPink
-          }`}>
+          } ${propsClassName}`}>
           {styledText}
         </h1>
       )
-      break
   }
 }
 

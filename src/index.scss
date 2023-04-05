@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Oswald';
-  src: local('Oswald-Regular'), url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+  src: local('Oswald-Light'), url('./fonts/Oswald/Oswald-Light.ttf') format('truetype');
 }
 
 span,
@@ -28,6 +28,10 @@ td,
 th {
   color: map.get(colors.$colors, 'white');
   font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem;
+}
+html {
+  scroll-snap-type: y mandatory;
 }
 body {
   overflow-x: hidden;

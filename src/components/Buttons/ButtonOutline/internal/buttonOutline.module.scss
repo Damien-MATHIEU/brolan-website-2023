@@ -1,0 +1,56 @@
+@use 'sass:map';
+@use './../../../../styles/base/spaces.scss';
+@use './../../../../styles/variables/colors.scss';
+@use './../../../../styles/base/breakpoints.scss';
+@import './../../../../styles/base/mediaQueries.scss';
+
+.buttonOutline {
+  padding: map.get(spaces.$spaces, '3') map.get(spaces.$spaces, '4');
+  background-color: transparent;
+  color: map.get(colors.$colors, 'white');
+  border-radius: map.get(spaces.$spaces, '2');
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow 200ms ease;
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 100%;
+  }
+}
+.centerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outlineAquamarine {
+  border: 1px map.get(colors.$colors, 'aquamarine') solid;
+
+  &:hover {
+    box-shadow: 0 0 15px map.get(colors.$colors, 'aquamarine');
+  }
+  &:active {
+    box-shadow: 0 0 8px map.get(colors.$colors, 'aquamarine');
+  }
+}
+.outlinePink {
+  border: 1px map.get(colors.$colors, 'primary') solid;
+
+  &:hover {
+    box-shadow: 0 0 15px map.get(colors.$colors, 'primary');
+  }
+  &:active {
+    box-shadow: 0 0 8px map.get(colors.$colors, 'primary');
+  }
+}
+.veryLargeFontSize {
+  font-size: 1.5625rem;
+}
+.largeFontSize {
+  font-size: 1.25rem;
+}
+.mediumFontSize {
+  font-size: 1.15rem;
+}
+.smallFontSize {
+  font-size: 1rem;
+}
