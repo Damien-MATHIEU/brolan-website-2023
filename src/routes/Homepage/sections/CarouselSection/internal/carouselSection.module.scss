@@ -1,19 +1,35 @@
 @use 'sass:map';
 @use './../../../../../styles/base/spaces.scss';
+@use './../../../../../styles/base/breakpoints.scss';
+@import './../../../../../styles/base/mediaQueries.scss';
 
 .container {
   scroll-margin: map.get(spaces.$spaces, '8');
   scroll-snap-align: start;
   scroll-snap-stop: always;
   margin-top: map.get(spaces.$spaces, '8');
-  width: 60%;
-  margin-left: 20%;
+  width: 70%;
+  margin-left: 15%;
   display: flex;
   flex-direction: column;
   gap: map.get(spaces.$spaces, '5');
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 80%;
+    margin-left: 10%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 95%;
+    margin-left: 2.5%;
+  }
 }
 .subTitle {
   font-size: 3.5rem;
   letter-spacing: map.get(spaces.$spaces, '2');
   text-indent: map.get(spaces.$spaces, '2');
+  margin-bottom: map.get(spaces.$spaces, '4');
 }

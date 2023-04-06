@@ -11,9 +11,7 @@ function CarouselSection() {
         JEUX
       </TextNeon>
       <Carousel />
-      <ButtonOutline center={true} fontSize="medium">
-        Tous les jeux
-      </ButtonOutline>
+      <ButtonOutline center={true}>Tous les jeux</ButtonOutline>
     </div>
   )
 }
