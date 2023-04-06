@@ -44,7 +44,7 @@
 
 @keyframes glowAquamarine {
   100% {
-    text-shadow: 0 0 10px map.get(colors.$colors, 'ebfffc'),
+    text-shadow: 0 0 10px map.get(colors.$colors, 'aquamarineWhite'),
       0 0 11px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine'),
       0 0 40px map.get(colors.$colors, 'aquamarine'), 0 0 80px map.get(colors.$colors, 'aquamarine'),
       0 0 90px map.get(colors.$colors, 'aquamarine'),
@@ -52,7 +52,7 @@
       0 0 150px map.get(colors.$colors, 'aquamarine');
   }
   0% {
-    text-shadow: 0 0 8px map.get(colors.$colors, 'ebfffc'),
+    text-shadow: 0 0 8px map.get(colors.$colors, 'aquamarineWhite'),
       0 0 10px map.get(colors.$colors, 'aquamarine'), 0 0 12px map.get(colors.$colors, 'aquamarine'),
       0 0 18px map.get(colors.$colors, 'aquamarine'), 0 0 45px map.get(colors.$colors, 'aquamarine'),
       0 0 55px map.get(colors.$colors, 'aquamarine'), 0 0 70px map.get(colors.$colors, 'aquamarine'),

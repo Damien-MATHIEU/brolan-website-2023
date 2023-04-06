@@ -11,6 +11,10 @@
   src: local('Oswald-Light'), url('./fonts/Oswald/Oswald-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: local('Oswald-Regular'), url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+}
 span,
 h1,
 h2,
@@ -57,4 +61,10 @@ h4 {
   font-size: 1.25rem;
   line-height: 1.25rem;
   font-weight: 700;
+}
+span.swiper-pagination-bullet {
+  background-color: map.get(colors.$colors, 'lightGrey');
+}
+span.swiper-pagination-bullet-active {
+  background-color: map.get(colors.$colors, 'aquamarine');
 }

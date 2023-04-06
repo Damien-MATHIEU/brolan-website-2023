@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './internal/presentationSection.module.scss'
-import LogoDiscord from './../../../../assets/LogoDiscord.svg'
-import LogoTwitter from './../../../../assets/LogoTwitter.svg'
+import LogoDiscord from './../../../../assets/Logos/LogoDiscord.svg'
+import LogoTwitter from './../../../../assets/Logos/LogoTwitter.svg'
 import IconNeon from '../../../../components/IconNeon/IconNeon'
 import { ExternalLink } from 'react-feather'
 
@@ -9,7 +9,7 @@ function PresentationSection() {
   return (
     <div className={styles.container}>
       <h2 className={`${styles.centerText} ${styles.subTitle}`}>
-        Bienvenue sur la page officielle de la BROLAN !
+        Bienvenue sur le site officiel de la BROLAN !
       </h2>
       <div className={styles.paragrapheContainer}>
         <p className={styles.paragraphe}>
@@ -17,18 +17,18 @@ function PresentationSection() {
           quoi vous êtes capables derrière un écran. Chaque année, des joueurs et joueuses de tout
           horizon se réunissent en binôme pour participer à un tournoi en deux temps :<br />
           <br />- <span className={styles.bold}>Qualifications</span> : ouvertes à tous, elles se
-          déroulent en ligne. Les jeux sont annoncés un mois à l'avance pour que vous puissiez vous
-          entraîner et passer à l'étape suivante. Tous les jeux sont joués le même soir en direct de
-          Twitch ! <br />
+          déroulent en ligne. Les jeux sont annoncés un mois à l&apos;avance pour que vous puissiez
+          vous entraîner et passer à l&apos;étape suivante. Tous les jeux sont joués le même soir en
+          direct de Twitch ! <br />
           <br />- <span className={styles.bold}>Jour J</span> : Vous faites partie des qualifiés à
           la suite des qualifications ? FÉLICITATIONS ! Prenez votre setup et direction le sud de la
-          France dans une villa prévue pour l'événement ! Sur ce format de finaliste, tout est
+          France dans une villa prévue pour l&apos;événement ! Sur ce format de finaliste, tout est
           possible ! Jeux vidéos, épreuves physiques, défis, il faudra tout donner pour espérer
-          soulever le titre. L'objectif, mettre en avant un format compétitif d'eSport, à notre
-          échelle, à travers un tournoi multi-gaming pendant l'année. Le point fort ? Participer
-          gratuitement à une LAN avec cashprize sur les jeux du moment dans la bonne humeur avec ton
-          binôme favori. Alors ne manquez pas votre chance de participer à cette expérience unique
-          et de rencontrer d'autres passionnés de jeux vidéos. <br />
+          soulever le titre. L&apos;objectif, mettre en avant un format compétitif d&apos;eSport, à
+          notre échelle, à travers un tournoi multi-gaming pendant l&apos;année. Le point fort ?
+          Participer gratuitement à une LAN avec cashprize sur les jeux du moment dans la bonne
+          humeur avec ton binôme favori. Alors ne manquez pas votre chance de participer à cette
+          expérience unique et de rencontrer d&apos;autres passionnés de jeux vidéos. <br />
           <br />
         </p>
         <p className={styles.centerText}>

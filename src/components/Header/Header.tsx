@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './internal/header.module.scss'
 import { Menu, X } from 'react-feather'
-import logo from './../../assets/LogoBrolan.svg'
+import logo from './../../assets/Logos/LogoBrolan.svg'
 
 function Header() {
   const [showMenuIcon, setShowMenuIcon] = useState(false)

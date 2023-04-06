@@ -1,0 +1,65 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@use './../../../styles/variables/colors.scss';
+@import './../../../styles/base/mediaQueries.scss';
+
+.container {
+  border: 1px map.get(colors.$colors, 'aquamarineWhite') solid;
+  border-radius: map.get(spaces.$spaces, '2');
+  padding: map.get(spaces.$spaces, '0');
+  animation: glowAquamarine 3s ease alternate infinite;
+}
+.carousel {
+  border-radius: map.get(spaces.$spaces, '2');
+}
+.carouselSlideContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carouselImage {
+  display: block;
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    height: 30rem;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    height: 25rem;
+  }
+}
+.carouselTextContainer {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 41, 35, 0) 0%, rgba(0, 41, 35, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.carouselText {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Oswald-Regular';
+}
+
+@keyframes glowAquamarine {
+  100% {
+    filter: drop-shadow(0 0 1px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 4px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 8px map.get(colors.$colors, 'aquamarine'));
+  }
+  0% {
+    filter: drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 3px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 5px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 7px map.get(colors.$colors, 'aquamarine'));
+  }
+}
