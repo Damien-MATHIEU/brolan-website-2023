@@ -5,16 +5,19 @@
   font-family: 'Neon';
   src: local('Neon'), url('./fonts/Neon/Neon.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Oswald';
   src: local('Oswald-Light'), url('./fonts/Oswald/Oswald-Light.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Oswald-Regular';
   src: local('Oswald-Regular'), url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: local('Oswald-Bold'), url('./fonts/Oswald/Oswald-Bold.ttf') format('truetype');
+}
+
 span,
 h1,
 h2,
