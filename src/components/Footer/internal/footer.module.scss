@@ -10,8 +10,8 @@
   padding-top: map.get(spaces.$spaces, '7');
   padding-bottom: map.get(spaces.$spaces, '8');
   scroll-margin: map.get(spaces.$spaces, '0');
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-align: end;
+  scroll-snap-stop: normal;
 }
 .subContainer {
   width: 80%;
@@ -19,6 +19,23 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: map.get(spaces.$spaces, '0');
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 90%;
+    margin-left: 5%;
+    flex-direction: column;
+    gap: map.get(spaces.$spaces, '4');
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 95%;
+    margin-left: 2.5%;
+    flex-direction: column;
+  }
 }
 .logoContainer,
 .brolanContainer,
@@ -29,6 +46,14 @@
   flex-direction: column;
   flex: 1 1 0;
   width: 0;
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    flex: auto;
+    width: 100%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 100%;
+  }
 }
 .otherContainer {
   gap: map.get(spaces.$spaces, '2');
@@ -53,6 +78,11 @@
   width: map.get(spaces.$spaces, '7');
   height: map.get(spaces.$spaces, '7');
   filter: grayscale(100%);
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: map.get(spaces.$spaces, '6');
+    height: map.get(spaces.$spaces, '6');
+  }
 }
 .paypalLogo {
   width: 1.15rem;
