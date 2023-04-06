@@ -4,12 +4,6 @@
 @use './../../../../../styles/variables/colors.scss';
 @import './../../../../../styles/base/mediaQueries.scss';
 
-@font-face {
-  font-family: 'Oswald-Regular';
-  src: local('Oswald-Regular'),
-    url('./../../../../../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
-}
-
 .container {
   scroll-margin: map.get(spaces.$spaces, '8');
   scroll-snap-align: start;

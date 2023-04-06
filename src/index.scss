@@ -11,6 +11,10 @@
   src: local('Oswald-Light'), url('./fonts/Oswald/Oswald-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: local('Oswald-Regular'), url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+}
 span,
 h1,
 h2,

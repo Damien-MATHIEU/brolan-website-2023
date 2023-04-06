@@ -6,6 +6,12 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   margin-top: map.get(spaces.$spaces, '8');
-  width: 80%;
-  margin-left: 10%;
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '5');
+}
+.subTitle {
+  font-size: 3rem;
 }
