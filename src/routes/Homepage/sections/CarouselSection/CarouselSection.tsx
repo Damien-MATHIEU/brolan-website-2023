@@ -7,7 +7,9 @@ import TextNeon from '../../../../components/TextNeon/TextNeon'
 function CarouselSection() {
   return (
     <div className={styles.container}>
-      <TextNeon propsClassName={styles.subTitle}>JEUX</TextNeon>
+      <TextNeon propsClassName={styles.subTitle} blinkingArraySlow={[3]}>
+        JEUX
+      </TextNeon>
       <Carousel />
       <ButtonOutline center={true} fontSize="medium">
         Tous les jeux

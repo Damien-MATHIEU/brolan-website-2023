@@ -14,7 +14,7 @@ import TrackMania from './../../assets/Games/TrackMania.png'
 
 function Carousel() {
   return (
-    <div>
+    <div className={styles.container}>
       <Swiper
         loop={true}
         autoplay={{
@@ -29,7 +29,7 @@ function Carousel() {
           hide: true
         }}
         modules={[Autoplay, Pagination, Scrollbar]}
-        className={styles.mySwiper}>
+        className={styles.carousel}>
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img src={TrackMania} className={styles.carouselImage} />

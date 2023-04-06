@@ -62,3 +62,9 @@ h4 {
   line-height: 1.25rem;
   font-weight: 700;
 }
+span.swiper-pagination-bullet {
+  background-color: map.get(colors.$colors, 'lightGrey');
+}
+span.swiper-pagination-bullet-active {
+  background-color: map.get(colors.$colors, 'aquamarine');
+}

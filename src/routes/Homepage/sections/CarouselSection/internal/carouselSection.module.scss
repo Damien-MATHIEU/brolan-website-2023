@@ -13,5 +13,7 @@
   gap: map.get(spaces.$spaces, '5');
 }
 .subTitle {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  letter-spacing: map.get(spaces.$spaces, '2');
+  text-indent: map.get(spaces.$spaces, '2');
 }
