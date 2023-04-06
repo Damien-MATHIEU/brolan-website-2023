@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@use './../../../styles/variables/colors.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin-left: 20%;
+}
+.table {
+  width: 100%;
+  border-spacing: 0;
+}
+.tableAquamarine {
+  border: 1px map.get(colors.$colors, 'aquamarineWhite') solid;
+  border-radius: map.get(spaces.$spaces, '2');
+  animation: glowAquamarine 2s ease alternate infinite;
+}
+.tablePink {
+  border: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+  border-radius: map.get(spaces.$spaces, '2');
+  animation: glowPink 2s ease alternate infinite;
+}
+.tableHeader,
+.tableData {
+  padding: map.get(spaces.$spaces, '3') map.get(spaces.$spaces, '3');
+  text-align: center;
+}
+.tableHeader {
+  font-family: 'Oswald-Regular', sans-serif;
+  background-color: map.get(colors.$colors, 'primary');
+  border-radius: 6px 6px 0 0;
+}
+
+@keyframes glowAquamarine {
+  100% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 4px map.get(colors.$colors, 'aquamarine'), 0 0 9px map.get(colors.$colors, 'aquamarine'),
+      0 0 16px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 0 0 2px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 3px map.get(colors.$colors, 'aquamarine'), 0 0 5px map.get(colors.$colors, 'aquamarine'),
+      0 0 7px map.get(colors.$colors, 'aquamarine');
+  }
+}
+@keyframes glowPink {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 8px map.get(colors.$colors, 'primary'), 0 0 14px map.get(colors.$colors, 'primary'),
+      0 0 22px map.get(colors.$colors, 'primary'), 0 0 28px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 4px map.get(colors.$colors, 'primary'), 0 0 9px map.get(colors.$colors, 'primary'),
+      0 0 16px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary');
+  }
+}

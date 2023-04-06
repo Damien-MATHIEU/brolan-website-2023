@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use './../../../../../styles/base/spaces.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  scroll-margin: map.get(spaces.$spaces, '8');
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin-top: map.get(spaces.$spaces, '8');
+  width: 80%;
+  margin-left: 10%;
+  gap: map.get(spaces.$spaces, '5');
+}
