@@ -27,3 +27,9 @@
     margin-left: 0%;
   }
 }
+.subTitle {
+  font-size: 3.5rem;
+  letter-spacing: map.get(spaces.$spaces, '2');
+  text-indent: map.get(spaces.$spaces, '2');
+  margin-bottom: map.get(spaces.$spaces, '4');
+}
