@@ -2,6 +2,7 @@
 @use './../../../styles/base/spaces.scss';
 @use './../../../styles/base/breakpoints.scss';
 @use './../../../styles/variables/colors.scss';
+@import './../../../styles/base/mediaQueries.scss';
 
 .container {
   display: flex;
@@ -9,6 +10,19 @@
   align-items: center;
   width: 60%;
   margin-left: 20%;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 80%;
+    margin-left: 10%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 95%;
+    margin-left: 2.5%;
+  }
 }
 .table {
   width: 100%;

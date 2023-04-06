@@ -14,23 +14,26 @@ function TableNeon({
         className={`${styles.table} ${
           color === 'aquamarine' ? styles.tableAquamarine : styles.tablePink
         }`}>
-        <tr>
-          {tableHeaders?.map((element, index) => {
+        <thead>
+          <tr>
+            {tableHeaders?.map((element, index) => {
+              return (
+                <th key={index} className={styles.tableHeader}>
+                  {element}
+                </th>
+              )
+            })}
+          </tr>
+        </thead>
+        <tbody>
+          {tableContent.map((element, index) => {
             return (
-              <th key={index} className={styles.tableHeader}>
-                {element}
-              </th>
+              <tr key={index}>
+                <td className={styles.tableData}>{element}</td>
+              </tr>
             )
           })}
-        </tr>
-
-        {tableContent.map((element, index) => {
-          return (
-            <tr key={index}>
-              <td className={styles.tableData}>{element}</td>
-            </tr>
-          )
-        })}
+        </tbody>
       </table>
     </div>
   )

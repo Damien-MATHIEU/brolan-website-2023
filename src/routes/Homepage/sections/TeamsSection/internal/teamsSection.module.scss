@@ -1,5 +1,7 @@
 @use 'sass:map';
 @use './../../../../../styles/base/spaces.scss';
+@use './../../../../../styles/base/breakpoints.scss';
+@import './../../../../../styles/base/mediaQueries.scss';
 
 .container {
   display: flex;
@@ -8,7 +10,20 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   margin-top: map.get(spaces.$spaces, '8');
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   gap: map.get(spaces.$spaces, '5');
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 100%;
+    margin-left: 0%;
+  }
 }
