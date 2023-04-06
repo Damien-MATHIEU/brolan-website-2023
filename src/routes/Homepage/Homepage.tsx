@@ -5,6 +5,7 @@ import HeroSection from './sections/HeroSection/HeroSection'
 import PresentationSection from './sections/PresentationSection/PresentationSection'
 import CarouselSection from './sections/CarouselSection/CarouselSection'
 import TeamsSection from './sections/TeamsSection/TeamsSection'
+import Footer from '../../components/Footer/Footer'
 
 function Homepage() {
   return (
@@ -16,6 +17,7 @@ function Homepage() {
         <CarouselSection />
         <TeamsSection />
       </div>
+      <Footer />
     </>
   )
 }

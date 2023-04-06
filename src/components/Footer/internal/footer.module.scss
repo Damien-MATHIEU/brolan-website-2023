@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@use './../../../styles/variables/colors.scss';
+@import './../../../styles/base/mediaQueries.scss';
+
+.container {
+  border-top: 1px map.get(colors.$colors, 'aquamarine') solid;
+  margin-top: map.get(spaces.$spaces, '8');
+  padding-top: map.get(spaces.$spaces, '7');
+  padding-bottom: map.get(spaces.$spaces, '8');
+  scroll-margin: map.get(spaces.$spaces, '0');
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.subContainer {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.logoContainer,
+.brolanContainer,
+.otherContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 1 0;
+  width: 0;
+}
+.otherContainer {
+  gap: map.get(spaces.$spaces, '2');
+}
+.link {
+  transition: border-bottom 200ms ease;
+  border-bottom: 1px transparent solid;
+
+  &:hover {
+    border-bottom: 1px map.get(colors.$colors, 'primary') solid;
+    @include media-query-max(breakpoints.$screenMedium) {
+      border-bottom: 1px transparent solid;
+    }
+  }
+}
+.logo,
+.brolan,
+.link {
+  padding: map.get(spaces.$spaces, '2');
+}
+.logo {
+  width: map.get(spaces.$spaces, '7');
+  height: map.get(spaces.$spaces, '7');
+  filter: grayscale(100%);
+}
+.paypalLogo {
+  width: 1.15rem;
+  height: auto;
+}
