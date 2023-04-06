@@ -6,7 +6,9 @@ import TextNeon from '../../../../components/TextNeon/TextNeon'
 function TeamsSection() {
   return (
     <div className={styles.container}>
-      <TextNeon>EQUIPES</TextNeon>
+      <TextNeon blinkingArrayFast={[1]} blinkingArraySlow={[4]}>
+        EQUIPES
+      </TextNeon>
       <TableNeon
         tableContent={[
           'TOP1OURIEN',
