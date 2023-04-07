@@ -45,31 +45,44 @@
 }
 .tableHeader {
   font-family: 'Oswald-Regular', sans-serif;
-  background-color: map.get(colors.$colors, 'primary');
-  border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0px 0px;
+  animation: glowPink 2s ease alternate infinite;
+  border-bottom: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+}
+.tableBody {
+  border-top: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+  border-radius: 0px 0px 6px 6px;
 }
 
 @keyframes glowAquamarine {
   100% {
-    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
-      0 0 4px map.get(colors.$colors, 'aquamarine'), 0 0 9px map.get(colors.$colors, 'aquamarine'),
-      0 0 16px map.get(colors.$colors, 'aquamarine');
+    box-shadow: 0 0 2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 0 2px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 7px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 7px map.get(colors.$colors, 'aquamarine'),
+      0 0 21px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 21px map.get(colors.$colors, 'aquamarine');
   }
   0% {
-    box-shadow: 0 0 2px map.get(colors.$colors, 'aquamarineWhite'),
-      0 0 3px map.get(colors.$colors, 'aquamarine'), 0 0 5px map.get(colors.$colors, 'aquamarine'),
-      0 0 7px map.get(colors.$colors, 'aquamarine');
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 7px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 7px map.get(colors.$colors, 'aquamarine'),
+      0 0 13px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 13px map.get(colors.$colors, 'aquamarine');
   }
 }
 @keyframes glowPink {
   100% {
-    box-shadow: 0 0 3px map.get(colors.$colors, 'primaryWhitest'),
-      0 0 8px map.get(colors.$colors, 'primary'), 0 0 14px map.get(colors.$colors, 'primary'),
-      0 0 22px map.get(colors.$colors, 'primary'), 0 0 28px map.get(colors.$colors, 'primary');
+    box-shadow: 0 0 2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 0 0 2px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 7px map.get(colors.$colors, 'primary'), inset 0 0 7px map.get(colors.$colors, 'primary'),
+      0 0 21px map.get(colors.$colors, 'primary'), inset 0 0 21px map.get(colors.$colors, 'primary');
   }
   0% {
     box-shadow: 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
-      0 0 4px map.get(colors.$colors, 'primary'), 0 0 9px map.get(colors.$colors, 'primary'),
-      0 0 16px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary');
+      inset 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 7px map.get(colors.$colors, 'primary'), inset 0 0 7px map.get(colors.$colors, 'primary'),
+      0 0 13px map.get(colors.$colors, 'primary'), inset 0 0 13px map.get(colors.$colors, 'primary');
   }
 }

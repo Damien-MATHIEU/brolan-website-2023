@@ -25,7 +25,7 @@ function TableNeon({
             })}
           </tr>
         </thead>
-        <tbody>
+        <tbody className={styles.tableBody}>
           {tableContent.map((element, index) => {
             return (
               <tr key={index}>
