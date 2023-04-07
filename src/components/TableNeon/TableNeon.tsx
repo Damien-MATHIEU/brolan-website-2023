@@ -15,7 +15,7 @@ function TableNeon({ tableHeaders = [], tableContent = [], propsClassName }: ITa
                   className={`${styles.tableHeader} ${
                     index % 2 === 0 ? styles.glowPinkHeader : styles.glowAquamarineHeader
                   }`}>
-                  {element}
+                  <h4 className={styles.text}>{element}</h4>
                 </th>
               )
             })}
@@ -23,14 +23,15 @@ function TableNeon({ tableHeaders = [], tableContent = [], propsClassName }: ITa
         </thead>
         <tbody className={styles.tableBody}>
           {tableContent.map((teamObject, indexOne) => {
-            console.log(teamObject)
             return (
               <tr key={indexOne}>
-                <td className={styles.tableData}>{Object.keys(teamObject)}</td>
+                <td className={styles.tableData}>
+                  <p className={styles.text}>{Object.keys(teamObject)}</p>
+                </td>
                 {Object.values(teamObject).map((players, indexTwo) => {
                   return (
                     <td className={styles.tableData} key={indexTwo}>
-                      {players.join(' & ')}
+                      <p className={styles.text}>{players.join(' & ')}</p>
                     </td>
                   )
                 })}

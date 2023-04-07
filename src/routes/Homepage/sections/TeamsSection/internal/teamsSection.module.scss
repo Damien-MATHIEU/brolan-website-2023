@@ -10,8 +10,8 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   margin-top: map.get(spaces.$spaces, '8');
-  width: 90%;
-  margin-left: 5%;
+  width: 80%;
+  margin-left: 10%;
   gap: map.get(spaces.$spaces, '5');
 
   @include media-query-max(breakpoints.$screenLarge) {
