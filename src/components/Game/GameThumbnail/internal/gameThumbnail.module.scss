@@ -17,6 +17,19 @@
   &:hover .image {
     transform: scale(1.1);
   }
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 80%;
+    margin-left: 10%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 .pinkGlow {
   border: 1px map.get(colors.$colors, 'primaryWhitest') solid;

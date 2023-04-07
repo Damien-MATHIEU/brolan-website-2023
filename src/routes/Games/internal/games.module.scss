@@ -14,14 +14,16 @@
   @include media-query-max(breakpoints.$screenLarge) {
     width: 80%;
     margin-left: 10%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   @include media-query-max(breakpoints.$screenMedium) {
-    width: 85%;
-    margin-left: 7.5%;
-  }
-  @include media-query-max(breakpoints.$screenSmall) {
     width: 90%;
     margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 95%;
+    margin-left: 2.5%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
