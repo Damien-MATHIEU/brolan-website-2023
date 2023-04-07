@@ -1,0 +1,80 @@
+@use 'sass:map';
+@use './../../../../styles/base/spaces.scss';
+@use './../../../../styles/base/breakpoints.scss';
+@use './../../../../styles/variables/colors.scss';
+@import './../../../../styles/base/mediaQueries.scss';
+
+.container {
+  border-radius: map.get(spaces.$spaces, '2');
+  padding: map.get(spaces.$spaces, '0');
+  animation: glowAquamarine 3s ease alternate infinite;
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:hover .image {
+    transform: scale(1.1);
+  }
+}
+.pinkGlow {
+  border: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+  animation: glowPink 2s ease alternate infinite;
+}
+.aquamarineGlow {
+  border: 1px map.get(colors.$colors, 'aquamarineWhite') solid;
+  animation: glowAquamarine 2s ease alternate infinite;
+}
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: map.get(spaces.$spaces, '2') map.get(spaces.$spaces, '2')
+    map.get(spaces.$spaces, '0') map.get(spaces.$spaces, '0');
+}
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: map.get(spaces.$spaces, '3');
+}
+.text {
+  font-family: 'Oswald-Regular';
+  font-size: 1.5rem;
+}
+@keyframes glowPink {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 8px map.get(colors.$colors, 'primary'), 0 0 14px map.get(colors.$colors, 'primary'),
+      0 0 22px map.get(colors.$colors, 'primary'), 0 0 28px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 4px map.get(colors.$colors, 'primary'), 0 0 9px map.get(colors.$colors, 'primary'),
+      0 0 16px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary');
+  }
+}
+@keyframes glowAquamarine {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 8px map.get(colors.$colors, 'aquamarine'), 0 0 14px map.get(colors.$colors, 'aquamarine'),
+      0 0 22px map.get(colors.$colors, 'aquamarine'), 0 0 28px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 4px map.get(colors.$colors, 'aquamarine'), 0 0 9px map.get(colors.$colors, 'aquamarine'),
+      0 0 16px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine');
+  }
+}

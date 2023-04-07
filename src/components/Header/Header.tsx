@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import styles from './internal/header.module.scss'
 import { Menu, X } from 'react-feather'
 import logo from './../../assets/Logos/LogoBrolan.svg'
-import { Link } from 'react-router-dom'
 import ButtonOutline from '../Buttons/ButtonOutline/ButtonOutline'
 
 function Header() {
@@ -55,19 +54,19 @@ function Header() {
          ${showMenuIcon ? styles.linksContainerActive : undefined}
         `}>
           <a
-            href="#presentationSection"
+            href="/#presentationSection"
             className={styles.linkContainer}
             onClick={() => handleMobileClick()}>
             <p className={styles.link}>Présentation</p>
           </a>
           <a
-            href="#carouselSection"
+            href="/#carouselSection"
             className={styles.linkContainer}
             onClick={() => handleMobileClick()}>
             <p className={styles.link}>Les jeux</p>
           </a>
           <a
-            href="#teamsSection"
+            href="/#teamsSection"
             className={styles.linkContainer}
             onClick={() => handleMobileClick()}>
             <p className={styles.link}>Equipes</p>
