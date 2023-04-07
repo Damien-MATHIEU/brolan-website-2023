@@ -31,12 +31,12 @@
 .tableAquamarine {
   border: 1px map.get(colors.$colors, 'aquamarineWhite') solid;
   border-radius: map.get(spaces.$spaces, '2');
-  animation: glowAquamarine 2s ease alternate infinite;
+  // animation: glowAquamarine 2s ease alternate infinite;
 }
 .tablePink {
-  border: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+  border: 1px map.get(colors.$colors, 'white') solid;
   border-radius: map.get(spaces.$spaces, '2');
-  animation: glowPink 2s ease alternate infinite;
+  // animation: glowPink 2s ease alternate infinite;
 }
 .tableHeader,
 .tableData {
@@ -45,13 +45,72 @@
 }
 .tableHeader {
   font-family: 'Oswald-Regular', sans-serif;
-  border-radius: 6px 6px 0px 0px;
+  // border-radius: 6px 6px 0px 0px;
+  // animation: glowPink 2s ease alternate infinite;
+  border-bottom: 1px map.get(colors.$colors, 'white') solid;
+}
+.glowPinkHeader {
+  border-radius: 6px 0px 0px 0px;
   animation: glowPink 2s ease alternate infinite;
-  border-bottom: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+}
+.glowAquamarineHeader {
+  border-radius: 0px 6px 0px 0px;
+  animation: glowAquamarine 2s ease alternate infinite;
+}
+.glowPinkData {
+  animation: glowPinkLeft 2s ease alternate infinite;
+  // border-right: 1px map.get(colors.$colors, 'white') solid;
+}
+.glowAquamarineData {
+  animation: glowAquamarineRight 2s ease alternate infinite;
+  // border-left: 1px map.get(colors.$colors, 'white') solid;
+}
+.glowPinkDataLastChild {
+  border-radius: 0px 0px 0px 6px;
+  animation: glowPinkLeftBottom 2s ease alternate infinite;
+}
+.glowAquamarineDataLastChild {
+  border-radius: 0px 0px 6px 0px;
+  animation: glowAquamarineRightBottom 2s ease alternate infinite;
 }
 .tableBody {
-  border-top: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+  border-top: 1px map.get(colors.$colors, 'white') solid;
   border-radius: 0px 0px 6px 6px;
+}
+.shadow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: map.get(colors.$colors, 'black');
+  border-radius: map.get(spaces.$spaces, '2');
+}
+.shadow:before,
+.shadow:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 140, 1),
+    rgba(255, 0, 140, 1),
+    rgba(255, 0, 140, 1),
+    rgba(255, 0, 140, 1),
+    rgba(0, 255, 221, 1),
+    rgba(0, 255, 221, 1),
+    rgba(0, 255, 221, 1),
+    rgba(0, 255, 221, 1)
+  );
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: map.get(spaces.$spaces, '2');
+}
+
+.shadow:after {
+  filter: blur(map.get(spaces.$spaces, '4'));
 }
 
 @keyframes glowAquamarine {
@@ -84,5 +143,137 @@
       inset 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
       0 0 7px map.get(colors.$colors, 'primary'), inset 0 0 7px map.get(colors.$colors, 'primary'),
       0 0 13px map.get(colors.$colors, 'primary'), inset 0 0 13px map.get(colors.$colors, 'primary');
+  }
+}
+@keyframes glowPinkLeft {
+  100% {
+    box-shadow: -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      -10px 0 10px -10px map.get(colors.$colors, 'primary'),
+      inset 10px 0 10px -10px map.get(colors.$colors, 'primary'),
+      inset -10px 0 10px -10px map.get(colors.$colors, 'primary'),
+      -13px 0 13px -13px map.get(colors.$colors, 'primary'),
+      inset 13px 0 13px -13px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    box-shadow: -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      -4px 0 4px -4px map.get(colors.$colors, 'primary'),
+      inset 4px 0 4px -4px map.get(colors.$colors, 'primary'),
+      inset -4px 0 4px -4px map.get(colors.$colors, 'primary'),
+      -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      -9px 0 9px -9px map.get(colors.$colors, 'primary'),
+      inset 9px 0 9px -9px map.get(colors.$colors, 'primary'),
+      inset -9px 0 9px -9px map.get(colors.$colors, 'primary');
+  }
+}
+@keyframes glowAquamarineRight {
+  100% {
+    box-shadow: 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      10px 0 10px -10px map.get(colors.$colors, 'aquamarine'),
+      inset 10px 0 10px -10px map.get(colors.$colors, 'aquamarine'),
+      inset -10px 0 10px -10px map.get(colors.$colors, 'aquamarine'),
+      13px 0 13px -13px map.get(colors.$colors, 'aquamarine'),
+      inset 13px 0 13px -13px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      4px 0 4px -4px map.get(colors.$colors, 'aquamarine'),
+      inset 4px 0 4px -4px map.get(colors.$colors, 'aquamarine'),
+      inset -4px 0 4px -4px map.get(colors.$colors, 'aquamarine'),
+      6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      9px 0 9px -9px map.get(colors.$colors, 'aquamarine'),
+      inset 9px 0 9px -9px map.get(colors.$colors, 'aquamarine'),
+      inset -9px 0 9px -9px map.get(colors.$colors, 'aquamarine');
+  }
+}
+@keyframes glowPinkLeftBottom {
+  100% {
+    box-shadow: -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 0 -2px 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset 0 -6px 6px -6px map.get(colors.$colors, 'primary'),
+      -10px 0 10px -10px map.get(colors.$colors, 'primary'),
+      inset 10px 0 10px -10px map.get(colors.$colors, 'primary'),
+      inset -10px 0 10px -10px map.get(colors.$colors, 'primary'),
+      inset 0 -10px 10px -10px map.get(colors.$colors, 'primary'),
+      -13px 0 13px -13px map.get(colors.$colors, 'primary'),
+      inset 13px 0 13px -13px map.get(colors.$colors, 'primary'),
+      inset 0 -13px 13px -13px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    box-shadow: -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 0 -2px 2px -2px map.get(colors.$colors, 'primaryWhitest'),
+      -4px 0 4px -4px map.get(colors.$colors, 'primary'),
+      inset 4px 0 4px -4px map.get(colors.$colors, 'primary'),
+      inset -4px 0 4px -4px map.get(colors.$colors, 'primary'),
+      inset 0 -4px 4px -4px map.get(colors.$colors, 'primary'),
+      -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'primary'),
+      inset 0 -6px 6px -6px map.get(colors.$colors, 'primary'),
+      -9px 0 9px -9px map.get(colors.$colors, 'primary'),
+      inset 9px 0 9px -9px map.get(colors.$colors, 'primary'),
+      inset -9px 0 9px -9px map.get(colors.$colors, 'primary'),
+      inset 0 -9px 9px -9px map.get(colors.$colors, 'primary');
+  }
+}
+@keyframes glowAquamarineRightBottom {
+  100% {
+    box-shadow: 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 -2px 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset 0 -6px 6px -6px map.get(colors.$colors, 'aquamarine'),
+      10px 0 10px -10px map.get(colors.$colors, 'aquamarine'),
+      inset 10px 0 10px -10px map.get(colors.$colors, 'aquamarine'),
+      inset -10px 0 10px -10px map.get(colors.$colors, 'aquamarine'),
+      inset 0 -10px 10px -10px map.get(colors.$colors, 'aquamarine'),
+      13px 0 13px -13px map.get(colors.$colors, 'aquamarine'),
+      inset 13px 0 13px -13px map.get(colors.$colors, 'aquamarine'),
+      inset 0 -13px 13px -13px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset -2px 0 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 -2px 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      4px 0 4px -4px map.get(colors.$colors, 'aquamarine'),
+      inset 4px 0 4px -4px map.get(colors.$colors, 'aquamarine'),
+      inset -4px 0 4px -4px map.get(colors.$colors, 'aquamarine'),
+      inset 0 -4px 4px -4px map.get(colors.$colors, 'aquamarine'),
+      6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset 6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset -6px 0 6px -6px map.get(colors.$colors, 'aquamarine'),
+      inset 0 -6px 6px -6px map.get(colors.$colors, 'aquamarine'),
+      9px 0 9px -9px map.get(colors.$colors, 'aquamarine'),
+      inset 9px 0 9px -9px map.get(colors.$colors, 'aquamarine'),
+      inset -9px 0 9px -9px map.get(colors.$colors, 'aquamarine'),
+      inset 0 -9px 9px -9px map.get(colors.$colors, 'aquamarine');
   }
 }
