@@ -12,14 +12,11 @@ function TeamsSection() {
       </TextNeon>
       <TableNeon
         tableContent={[
-          'TOP1OURIEN',
-          'Morbi ex',
-          'finibus vel elit',
-          'Sed at erat',
-          'laoreet',
-          'Morbi lobortis'
+          { TOP1OURIEN: ['Dam', 'Ben'] },
+          { 'Morbi ex': ['Roscoe', 'Jace '] },
+          { 'finibus vel elit': ['Manuel', 'Abby'] }
         ]}
-        tableHeaders={["Nom d'équipe"]}
+        tableHeaders={["Nom d'équipe", 'Joueurs']}
       />
       <ButtonOutline center={true}>S&apos;inscrire</ButtonOutline>
     </div>
