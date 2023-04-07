@@ -12,10 +12,14 @@
   cursor: pointer;
   box-shadow: none;
   transition: box-shadow 200ms ease;
+  font-family: 'Oswald-Bold';
 
   @include media-query-max(breakpoints.$screenSmall) {
     width: 100%;
   }
+}
+.buttonHeader {
+  padding: map.get(spaces.$spaces, '2') map.get(spaces.$spaces, '3');
 }
 .centerButton {
   display: flex;

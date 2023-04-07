@@ -7,7 +7,7 @@ import { ExternalLink } from 'react-feather'
 
 function PresentationSection() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container} id="presentationSection">
       <h2 className={`${styles.centerText} ${styles.subTitle}`}>
         Bienvenue sur le site officiel de la BROLAN !
       </h2>
@@ -64,7 +64,7 @@ function PresentationSection() {
           <h4 className={`${styles.centerText} ${styles.iconText}`}>@BROLAN_OFF</h4>
         </a>
       </div>
-    </div>
+    </section>
   )
 }
 

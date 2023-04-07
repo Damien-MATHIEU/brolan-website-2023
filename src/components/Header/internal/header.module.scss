@@ -97,6 +97,12 @@
     border-bottom: 1px map.get(colors.$colors, 'primary') solid;
     @include media-query-max(breakpoints.$screenMedium) {
       border-bottom: 1px transparent solid;
+      padding-bottom: 0px;
     }
+  }
+}
+.buttonMobile {
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 100%;
   }
 }

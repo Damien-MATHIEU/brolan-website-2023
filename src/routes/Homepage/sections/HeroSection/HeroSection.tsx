@@ -7,7 +7,7 @@ import ScrollIcon from './../../../../components/ScrollIcon/ScrollIcon'
 
 function HeroSection() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <TextNeon
         color="pink"
         blinkingArrayFast={[2]}
@@ -16,12 +16,11 @@ function HeroSection() {
         BROLAN
       </TextNeon>
       <Countdown propsClassName={styles.countdown} />
-      <ButtonOutline
-        propsClassName={styles.registerButton}
-        center={true}
-        fontSize="large">{`S'inscrire`}</ButtonOutline>
+      <ButtonOutline propsClassName={styles.registerButton} center={true} fontSize="large">
+        S&apos;inscrire
+      </ButtonOutline>
       <ScrollIcon propsClassName={styles.scrollIcon} />
-    </div>
+    </section>
   )
 }
 

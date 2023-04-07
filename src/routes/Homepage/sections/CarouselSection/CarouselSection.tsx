@@ -6,13 +6,13 @@ import TextNeon from '../../../../components/TextNeon/TextNeon'
 
 function CarouselSection() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container} id="carouselSection">
       <TextNeon propsClassName={styles.subTitle} blinkingArraySlow={[3]}>
         JEUX
       </TextNeon>
       <Carousel />
       <ButtonOutline center={true}>Tous les jeux</ButtonOutline>
-    </div>
+    </section>
   )
 }
 

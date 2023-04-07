@@ -7,7 +7,8 @@ function ButtonOutline({
   outlineColor = 'pink',
   propsClassName,
   center = false,
-  fontSize = 'medium'
+  fontSize = 'medium',
+  header = false
 }: IButtonOutline) {
   let fontSizeStyle = styles.mediumFontSize
   switch (fontSize) {
@@ -33,7 +34,7 @@ function ButtonOutline({
       <button
         className={`${styles.buttonOutline} ${
           outlineColor === 'aquamarine' ? styles.outlineAquamarine : styles.outlinePink
-        } ${fontSizeStyle}`}>
+        } ${fontSizeStyle} ${header ? styles.buttonHeader : undefined}`}>
         {children}
       </button>
     </div>

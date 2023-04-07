@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import styles from './internal/header.module.scss'
 import { Menu, X } from 'react-feather'
 import logo from './../../assets/Logos/LogoBrolan.svg'
+import { Link } from 'react-router-dom'
+import ButtonOutline from '../Buttons/ButtonOutline/ButtonOutline'
 
 function Header() {
   const [showMenuIcon, setShowMenuIcon] = useState(false)
@@ -16,6 +18,12 @@ function Header() {
       setShowMenuIcon(true)
     } else {
       setShowMenuIcon(false)
+    }
+  }
+
+  function handleMobileClick() {
+    if (window.innerWidth <= 768) {
+      setShowMenu(!showMenu)
     }
   }
 
@@ -46,17 +54,28 @@ function Header() {
         ${showMenu || !showMenuIcon ? styles.showMobile : undefined}
          ${showMenuIcon ? styles.linksContainerActive : undefined}
         `}>
-          <a href="#" className={styles.linkContainer}>
+          <a
+            href="#presentationSection"
+            className={styles.linkContainer}
+            onClick={() => handleMobileClick()}>
             <p className={styles.link}>Présentation</p>
           </a>
-          <a href="#" className={styles.linkContainer}>
+          <a
+            href="#carouselSection"
+            className={styles.linkContainer}
+            onClick={() => handleMobileClick()}>
             <p className={styles.link}>Les jeux</p>
           </a>
-          <a href="#" className={styles.linkContainer}>
+          <a
+            href="#teamsSection"
+            className={styles.linkContainer}
+            onClick={() => handleMobileClick()}>
             <p className={styles.link}>Equipes</p>
           </a>
-          <a href="#" className={styles.linkContainer}>
-            <p className={styles.link}>S inscrire</p>
+          <a href="#" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+            <ButtonOutline fontSize="small" header={true} propsClassName={styles.buttonMobile}>
+              S&apos;inscrire
+            </ButtonOutline>
           </a>
         </div>
       </div>

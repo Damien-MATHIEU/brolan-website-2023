@@ -6,7 +6,7 @@ import ButtonOutline from '../../../../components/Buttons/ButtonOutline/ButtonOu
 
 function TeamsSection() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container} id="teamsSection">
       <TextNeon blinkingArrayFast={[1]} blinkingArraySlow={[4]} propsClassName={styles.subTitle}>
         EQUIPES
       </TextNeon>
@@ -19,7 +19,7 @@ function TeamsSection() {
         tableHeaders={["Nom d'équipe", 'Joueurs']}
       />
       <ButtonOutline center={true}>S&apos;inscrire</ButtonOutline>
-    </div>
+    </section>
   )
 }
 
