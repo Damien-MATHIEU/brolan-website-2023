@@ -10,10 +10,7 @@ function TableNeon({
 }: ITableNeon) {
   return (
     <div className={`${styles.container} ${styles.shadow} ${propsClassName}`}>
-      <table
-        className={`${styles.table} ${
-          color === 'aquamarine' ? styles.tableAquamarine : styles.tablePink
-        }`}>
+      <table className={`${styles.table}`}>
         <thead>
           <tr>
             {tableHeaders?.map((element, index) => {
@@ -34,22 +31,10 @@ function TableNeon({
             console.log(teamObject)
             return (
               <tr key={indexOne}>
-                <td
-                  className={`${styles.tableData} ${styles.glowPinkData} ${
-                    indexOne === tableContent.length - 1 ? styles.glowPinkDataLastChild : undefined
-                  }`}>
-                  {Object.keys(teamObject)}
-                </td>
+                <td className={styles.tableData}>{Object.keys(teamObject)}</td>
                 {Object.values(teamObject).map((players, indexTwo) => {
-                  // console.log(players)
                   return (
-                    <td
-                      className={`${styles.tableData} ${styles.glowAquamarineData} ${
-                        indexOne === tableContent.length - 1
-                          ? styles.glowAquamarineDataLastChild
-                          : undefined
-                      }`}
-                      key={indexTwo}>
+                    <td className={styles.tableData} key={indexTwo}>
                       {players.join(' & ')}
                     </td>
                   )
