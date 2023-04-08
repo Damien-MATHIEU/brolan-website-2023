@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './internal/header.module.scss'
-import { Menu, X } from 'react-feather'
+import { X } from 'react-feather'
 import logo from './../../assets/Logos/LogoBrolan.svg'
 import ButtonOutline from '../Buttons/ButtonOutline/ButtonOutline'
 
@@ -46,7 +46,14 @@ function Header() {
             onClick={() => {
               toggleMenu()
             }}>
-            {showMenu ? <X color="#f7f7f2" size={24} /> : <Menu color="#f7f7f2" size={24} />}
+            {showMenu ? (
+              <X color="#f7f7f2" size={24} />
+            ) : (
+              <div className={styles.burgerMenu}>
+                <div className={styles.burgerMenuBigStroke}></div>
+                <div className={styles.burgerMenuLittleStroke}></div>
+              </div>
+            )}
           </div>
         )}
 

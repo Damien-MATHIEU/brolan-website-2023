@@ -39,6 +39,24 @@
   width: map.get(spaces.$spaces, '5');
   filter: grayscale(100%);
 }
+.burgerMenu {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+}
+.burgerMenuBigStroke {
+  width: 100%;
+  height: 1px;
+  background-color: map.get(colors.$colors, 'white');
+}
+.burgerMenuLittleStroke {
+  width: 66%;
+  height: 1px;
+  background-color: map.get(colors.$colors, 'white');
+}
 
 .linksContainer {
   display: flex;
