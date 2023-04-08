@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@import './../../../styles/base/mediaQueries.scss';
+
+.container {
+  margin-top: map.get(spaces.$spaces, '7');
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '7') map.get(spaces.$spaces, '0');
+  scroll-margin: 207px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 80%;
+    margin-left: 10%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
+
+.gamesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: map.get(spaces.$spaces, '8') map.get(spaces.$spaces, '0');
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
