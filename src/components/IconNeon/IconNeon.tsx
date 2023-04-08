@@ -7,7 +7,8 @@ function IconNeon({
   color = 'pink',
   propsClassName,
   blinkingFast = false,
-  blinkingSlow = false
+  blinkingSlow = false,
+  propsAlt
 }: IIconNeon) {
   let animationStyle: string = styles.iconPink
   if (blinkingFast || blinkingSlow) {
@@ -28,7 +29,11 @@ function IconNeon({
 
   return (
     <div className={styles.container}>
-      <img src={icon} className={`${styles.icon} ${animationStyle} ${propsClassName}`} />
+      <img
+        src={icon}
+        className={`${styles.icon} ${animationStyle} ${propsClassName}`}
+        alt={propsAlt}
+      />
     </div>
   )
 }

@@ -8,7 +8,8 @@ function GameThumbnail({
   gameName,
   color = 'pink',
   propsClassName,
-  propsOnClick
+  propsOnClick,
+  propsAlt
 }: IGameThumbnail) {
   const navigate = useNavigate()
 
@@ -24,7 +25,7 @@ function GameThumbnail({
       } ${propsClassName}`}
       onClick={() => handleOnClick(propsOnClick)}>
       <div className={styles.imageContainer}>
-        <img src={imageSrc} className={styles.image} />
+        <img src={imageSrc} className={styles.image} alt={propsAlt} />
       </div>
       <div className={styles.textContainer}>
         <p className={styles.text}>{gameName}</p>
