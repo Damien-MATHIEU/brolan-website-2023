@@ -3,7 +3,6 @@ import styles from './internal/carouselSection.module.scss'
 import Carousel from '../../../../components/Carousel/Carousel'
 import ButtonOutline from '../../../../components/Buttons/ButtonOutline/ButtonOutline'
 import TextNeon from '../../../../components/TextNeon/TextNeon'
-import { Link } from 'react-router-dom'
 
 function CarouselSection() {
   return (
@@ -12,9 +11,9 @@ function CarouselSection() {
         JEUX
       </TextNeon>
       <Carousel />
-      <Link to={'games'}>
+      <a href="/games">
         <ButtonOutline center={true}>Tous les jeux</ButtonOutline>
-      </Link>
+      </a>
     </section>
   )
 }

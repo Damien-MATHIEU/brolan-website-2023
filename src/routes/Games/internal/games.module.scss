@@ -4,7 +4,7 @@
 @import './../../../styles/base/mediaQueries.scss';
 
 .container {
-  margin-top: map.get(spaces.$spaces, '7');
+  margin-top: map.get(spaces.$spaces, '8');
   width: 70%;
   margin-left: 15%;
   display: grid;
@@ -25,15 +25,4 @@
     margin-left: 2.5%;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-}
-
-.scrollSnapOne,
-.scrollSnapTwo,
-.scrollSnapThree,
-.scrollSnapFour,
-.scrollSnapFive,
-.scrollSnapSix {
-  scroll-margin: map.get(spaces.$spaces, '8');
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }

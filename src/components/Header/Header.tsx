@@ -72,7 +72,11 @@ function Header() {
             <p className={styles.link}>Equipes</p>
           </a>
           <a href="#" className={styles.linkContainer} onClick={() => handleMobileClick()}>
-            <ButtonOutline fontSize="small" header={true} propsClassName={styles.buttonMobile}>
+            <ButtonOutline
+              fontSize="small"
+              header={true}
+              propsClassName={styles.buttonMobile}
+              center={true}>
               S&apos;inscrire
             </ButtonOutline>
           </a>

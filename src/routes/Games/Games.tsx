@@ -15,36 +15,11 @@ function Games() {
     <>
       <Header />
       <div className={styles.container}>
-        <GameThumbnail
-          imageSrc={TrackMania}
-          gameName="TrackMania"
-          color="aquamarine"
-          propsClassName={styles.scrollSnapOne}
-        />
-        <GameThumbnail
-          imageSrc={Minecraft}
-          gameName="Minecraft"
-          color="pink"
-          propsClassName={styles.scrollSnapTwo}
-        />
-        <GameThumbnail
-          imageSrc={Fortnite}
-          gameName="Fortnite"
-          color="aquamarine"
-          propsClassName={styles.scrollSnapFour}
-        />
-        <GameThumbnail
-          imageSrc={GeoGuesser}
-          gameName="GeoGuesser"
-          color="pink"
-          propsClassName={styles.scrollSnapFive}
-        />
-        <GameThumbnail
-          imageSrc={FallGuys}
-          gameName="FallGuys"
-          color="aquamarine"
-          propsClassName={styles.scrollSnapSix}
-        />
+        <GameThumbnail imageSrc={TrackMania} gameName="TrackMania" color="aquamarine" />
+        <GameThumbnail imageSrc={Minecraft} gameName="Minecraft" color="pink" />
+        <GameThumbnail imageSrc={Fortnite} gameName="Fortnite" color="aquamarine" />
+        <GameThumbnail imageSrc={GeoGuesser} gameName="GeoGuesser" color="pink" />
+        <GameThumbnail imageSrc={FallGuys} gameName="FallGuys" color="aquamarine" />
         <GameThumbnail imageSrc={Osu} gameName="Osu" color="pink" />
       </div>
       <Footer />

@@ -5,6 +5,10 @@
 @import './../../../../styles/base/mediaQueries.scss';
 
 .container {
+  scroll-margin: 207px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
   border-radius: map.get(spaces.$spaces, '2');
   padding: map.get(spaces.$spaces, '0');
   animation: glowAquamarine 3s ease alternate infinite;
