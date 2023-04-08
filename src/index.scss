@@ -39,6 +39,7 @@ img {
   font-size: 1.15rem;
 }
 html {
+  -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
 }
 body {

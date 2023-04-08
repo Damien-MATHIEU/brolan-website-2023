@@ -12,31 +12,67 @@
   height: auto;
 }
 .iconAquamarine {
+  -webkit-animation: glowAquamarine 2s alternate infinite;
   animation: glowAquamarine 2s alternate infinite;
 }
 .iconPink {
+  -webkit-animation: glowPink 2s alternate infinite;
   animation: glowPink 2s alternate infinite;
 }
 .iconAquamarineBlinkingFast {
+  -webkit-animation: glowAquamarine 2s alternate infinite, blinking 2.5s linear infinite;
   animation: glowAquamarine 2s alternate infinite, blinking 2.5s linear infinite;
 }
 .iconPinkBlinkingFast {
+  -webkit-animation: glowPink 2s alternate infinite, blinking 2.5s linear infinite;
   animation: glowPink 2s alternate infinite, blinking 2.5s linear infinite;
 }
 .iconAquamarineBlinkingSlow {
+  -webkit-animation: glowAquamarine 2s alternate infinite, blinking 4s linear infinite;
   animation: glowAquamarine 2s alternate infinite, blinking 4s linear infinite;
 }
 .iconPinkBlinkingSlow {
+  -webkit-animation: glowPink 2s alternate infinite, blinking 4s linear infinite;
   animation: glowPink 2s alternate infinite, blinking 4s linear infinite;
 }
-@keyframes glowPink {
+@-webkit-keyframes glowPink {
   100% {
+    -webkit-filter: drop-shadow(0 0 1px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 2px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 4px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 8px map.get(colors.$colors, 'primary'));
     filter: drop-shadow(0 0 1px map.get(colors.$colors, 'primaryWhitest'))
       drop-shadow(0 0 2px map.get(colors.$colors, 'primary'))
       drop-shadow(0 0 4px map.get(colors.$colors, 'primary'))
       drop-shadow(0 0 8px map.get(colors.$colors, 'primary'));
   }
   0% {
+    -webkit-filter: drop-shadow(0 0 2px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 3px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 5px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 7px map.get(colors.$colors, 'primary'));
+    filter: drop-shadow(0 0 2px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 3px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 5px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 7px map.get(colors.$colors, 'primary'));
+  }
+}
+@keyframes glowPink {
+  100% {
+    -webkit-filter: drop-shadow(0 0 1px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 2px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 4px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 8px map.get(colors.$colors, 'primary'));
+    filter: drop-shadow(0 0 1px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 2px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 4px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 8px map.get(colors.$colors, 'primary'));
+  }
+  0% {
+    -webkit-filter: drop-shadow(0 0 2px map.get(colors.$colors, 'primaryWhitest'))
+      drop-shadow(0 0 3px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 5px map.get(colors.$colors, 'primary'))
+      drop-shadow(0 0 7px map.get(colors.$colors, 'primary'));
     filter: drop-shadow(0 0 2px map.get(colors.$colors, 'primaryWhitest'))
       drop-shadow(0 0 3px map.get(colors.$colors, 'primary'))
       drop-shadow(0 0 5px map.get(colors.$colors, 'primary'))
@@ -44,18 +80,70 @@
   }
 }
 
-@keyframes glowAquamarine {
+@-webkit-keyframes glowAquamarine {
   100% {
+    -webkit-filter: drop-shadow(0 0 1px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 4px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 8px map.get(colors.$colors, 'aquamarine'));
     filter: drop-shadow(0 0 1px map.get(colors.$colors, 'aquamarineWhite'))
       drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarine'))
       drop-shadow(0 0 4px map.get(colors.$colors, 'aquamarine'))
       drop-shadow(0 0 8px map.get(colors.$colors, 'aquamarine'));
   }
   0% {
+    -webkit-filter: drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 3px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 5px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 7px map.get(colors.$colors, 'aquamarine'));
     filter: drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarineWhite'))
       drop-shadow(0 0 3px map.get(colors.$colors, 'aquamarine'))
       drop-shadow(0 0 5px map.get(colors.$colors, 'aquamarine'))
       drop-shadow(0 0 7px map.get(colors.$colors, 'aquamarine'));
+  }
+}
+
+@keyframes glowAquamarine {
+  100% {
+    -webkit-filter: drop-shadow(0 0 1px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 4px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 8px map.get(colors.$colors, 'aquamarine'));
+    filter: drop-shadow(0 0 1px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 4px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 8px map.get(colors.$colors, 'aquamarine'));
+  }
+  0% {
+    -webkit-filter: drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 3px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 5px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 7px map.get(colors.$colors, 'aquamarine'));
+    filter: drop-shadow(0 0 2px map.get(colors.$colors, 'aquamarineWhite'))
+      drop-shadow(0 0 3px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 5px map.get(colors.$colors, 'aquamarine'))
+      drop-shadow(0 0 7px map.get(colors.$colors, 'aquamarine'));
+  }
+}
+
+@-webkit-keyframes blinking {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
   }
 }
 

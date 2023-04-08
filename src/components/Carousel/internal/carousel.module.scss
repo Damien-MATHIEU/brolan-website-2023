@@ -8,6 +8,7 @@
   border: 1px map.get(colors.$colors, 'aquamarineWhite') solid;
   border-radius: map.get(spaces.$spaces, '2');
   padding: map.get(spaces.$spaces, '0');
+  -webkit-animation: glowAquamarine 3s ease alternate infinite;
   animation: glowAquamarine 3s ease alternate infinite;
 }
 .carousel {
@@ -22,6 +23,7 @@
   display: block;
   width: 100%;
   height: 30rem;
+  -o-object-fit: cover;
   object-fit: cover;
 
   @include media-query-max(breakpoints.$screenLarge) {
@@ -47,6 +49,19 @@
   font-size: 2rem;
   font-weight: 700;
   font-family: 'Oswald-Regular';
+}
+
+@-webkit-keyframes glowAquamarine {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 8px map.get(colors.$colors, 'aquamarine'), 0 0 14px map.get(colors.$colors, 'aquamarine'),
+      0 0 22px map.get(colors.$colors, 'aquamarine'), 0 0 28px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 4px map.get(colors.$colors, 'aquamarine'), 0 0 9px map.get(colors.$colors, 'aquamarine'),
+      0 0 16px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine');
+  }
 }
 
 @keyframes glowAquamarine {

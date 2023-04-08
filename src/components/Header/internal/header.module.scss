@@ -37,6 +37,7 @@
 .logo {
   height: map.get(spaces.$spaces, '5');
   width: map.get(spaces.$spaces, '5');
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 .burgerMenu {
