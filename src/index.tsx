@@ -6,13 +6,15 @@ import './index.scss'
 import Homepage from './routes/Homepage/Homepage'
 import Games from './routes/Games/Games'
 import Game from './routes/Game/Game'
+import Error404 from './routes/Error404/Error404'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Homepage />
+    element: <Homepage />,
+    errorElement: <Error404 />
   },
   {
     path: '/games',
