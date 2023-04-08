@@ -15,6 +15,14 @@
 }
 .title {
   font-size: 5rem;
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    font-size: 4rem;
+  }
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    line-height: 4rem;
+  }
 }
 .subTitle {
   text-align: center;
