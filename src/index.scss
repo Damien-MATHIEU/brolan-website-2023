@@ -32,7 +32,8 @@ a,
 i,
 ul,
 td,
-th {
+th,
+img {
   color: map.get(colors.$colors, 'white');
   font-family: 'Oswald', sans-serif;
   font-size: 1.15rem;

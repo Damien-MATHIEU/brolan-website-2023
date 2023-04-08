@@ -14,17 +14,21 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
 
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    width: 60%;
+    margin-left: 20%;
+  }
   @include media-query-max(breakpoints.$screenLarge) {
     width: 80%;
     margin-left: 10%;
   }
   @include media-query-max(breakpoints.$screenMedium) {
-    width: 90%;
-    margin-left: 5%;
+    width: 85%;
+    margin-left: 7.5%;
   }
   @include media-query-max(breakpoints.$screenSmall) {
-    width: 95%;
-    margin-left: 2.5%;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 
