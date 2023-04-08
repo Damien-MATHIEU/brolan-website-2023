@@ -16,9 +16,11 @@ function HeroSection() {
         BROLAN
       </TextNeon>
       <Countdown propsClassName={styles.countdown} />
-      <ButtonOutline propsClassName={styles.registerButton} center={true} fontSize="large">
-        S&apos;inscrire
-      </ButtonOutline>
+      <a href="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
+        <ButtonOutline propsClassName={styles.registerButton} center={true} fontSize="large">
+          S&apos;inscrire
+        </ButtonOutline>
+      </a>
       <ScrollIcon propsClassName={styles.scrollIcon} />
     </section>
   )

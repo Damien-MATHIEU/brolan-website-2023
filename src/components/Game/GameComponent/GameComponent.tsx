@@ -12,7 +12,7 @@ function GameComponent() {
       <h2 className={styles.subTitle}>
         Les règles de chaque jeux arriveront une fois les inscriptions terminées
       </h2>
-      <a href="#">
+      <a href="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
         <ButtonOutline center={true}>S&apos;inscrire</ButtonOutline>
       </a>
     </div>

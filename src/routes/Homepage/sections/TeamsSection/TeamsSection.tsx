@@ -18,7 +18,9 @@ function TeamsSection() {
         ]}
         tableHeaders={["Nom d'équipe", 'Joueurs']}
       />
-      <ButtonOutline center={true}>S&apos;inscrire</ButtonOutline>
+      <a href="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
+        <ButtonOutline center={true}>S&apos;inscrire</ButtonOutline>
+      </a>
     </section>
   )
 }
