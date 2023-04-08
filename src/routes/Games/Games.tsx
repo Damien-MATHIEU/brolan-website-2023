@@ -18,12 +18,37 @@ function Games() {
       <div className={styles.container}>
         <TextNeon>LES JEUX</TextNeon>
         <div className={styles.gamesContainer}>
-          <GameThumbnail imageSrc={TrackMania} gameName="TrackMania" color="aquamarine" />
-          <GameThumbnail imageSrc={Minecraft} gameName="Minecraft" color="pink" />
-          <GameThumbnail imageSrc={Fortnite} gameName="Fortnite" color="aquamarine" />
-          <GameThumbnail imageSrc={GeoGuesser} gameName="GeoGuesser" color="pink" />
-          <GameThumbnail imageSrc={FallGuys} gameName="FallGuys" color="aquamarine" />
-          <GameThumbnail imageSrc={Osu} gameName="Osu" color="pink" />
+          <GameThumbnail
+            imageSrc={TrackMania}
+            gameName="TrackMania"
+            color="aquamarine"
+            propsOnClick="/game/trackmania"
+          />
+          <GameThumbnail
+            imageSrc={Minecraft}
+            gameName="Minecraft"
+            color="pink"
+            propsOnClick="/game/minecraft"
+          />
+          <GameThumbnail
+            imageSrc={Fortnite}
+            gameName="Fortnite"
+            color="aquamarine"
+            propsOnClick="/game/fortnite"
+          />
+          <GameThumbnail
+            imageSrc={GeoGuesser}
+            gameName="GeoGuesser"
+            color="pink"
+            propsOnClick="/game/geoguesser"
+          />
+          <GameThumbnail
+            imageSrc={FallGuys}
+            gameName="FallGuys"
+            color="aquamarine"
+            propsOnClick="/game/fallguys"
+          />
+          <GameThumbnail imageSrc={Osu} gameName="Osu" color="pink" propsOnClick="/game/osu" />
         </div>
       </div>
       <Footer />
