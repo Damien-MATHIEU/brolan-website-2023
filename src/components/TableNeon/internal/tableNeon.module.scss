@@ -47,10 +47,12 @@
 }
 .glowPinkHeader {
   border-radius: 6px 0px 0px 0px;
+  -webkit-animation: glowPink 2s ease alternate infinite;
   animation: glowPink 2s ease alternate infinite;
 }
 .glowAquamarineHeader {
   border-radius: 0px 6px 0px 0px;
+  -webkit-animation: glowAquamarine 2s ease alternate infinite;
   animation: glowAquamarine 2s ease alternate infinite;
 }
 .tableBody {
@@ -94,7 +96,27 @@
 }
 
 .shadow:after {
+  -webkit-filter: blur(map.get(spaces.$spaces, '4'));
   filter: blur(map.get(spaces.$spaces, '4'));
+}
+
+@-webkit-keyframes glowAquamarine {
+  100% {
+    box-shadow: 0 0 2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 0 2px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 7px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 7px map.get(colors.$colors, 'aquamarine'),
+      0 0 21px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 21px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 7px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 7px map.get(colors.$colors, 'aquamarine'),
+      0 0 13px map.get(colors.$colors, 'aquamarine'),
+      inset 0 0 13px map.get(colors.$colors, 'aquamarine');
+  }
 }
 
 @keyframes glowAquamarine {
@@ -113,6 +135,20 @@
       inset 0 0 7px map.get(colors.$colors, 'aquamarine'),
       0 0 13px map.get(colors.$colors, 'aquamarine'),
       inset 0 0 13px map.get(colors.$colors, 'aquamarine');
+  }
+}
+@-webkit-keyframes glowPink {
+  100% {
+    box-shadow: 0 0 2px map.get(colors.$colors, 'primaryWhitest'),
+      inset 0 0 2px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 7px map.get(colors.$colors, 'primary'), inset 0 0 7px map.get(colors.$colors, 'primary'),
+      0 0 21px map.get(colors.$colors, 'primary'), inset 0 0 21px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
+      inset 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 7px map.get(colors.$colors, 'primary'), inset 0 0 7px map.get(colors.$colors, 'primary'),
+      0 0 13px map.get(colors.$colors, 'primary'), inset 0 0 13px map.get(colors.$colors, 'primary');
   }
 }
 @keyframes glowPink {

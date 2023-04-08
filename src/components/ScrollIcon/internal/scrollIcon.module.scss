@@ -5,7 +5,16 @@
   align-items: center;
 }
 .translateAnim {
+  -webkit-animation: upAndDown 1s ease alternate infinite;
   animation: upAndDown 1s ease alternate infinite;
+}
+@-webkit-keyframes upAndDown {
+  0% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
 }
 @keyframes upAndDown {
   0% {

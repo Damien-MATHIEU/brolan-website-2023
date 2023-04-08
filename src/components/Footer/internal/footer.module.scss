@@ -6,6 +6,7 @@
 
 .container {
   border-top: 1px map.get(colors.$colors, 'aquamarine') solid;
+  -webkit-animation: glowAquamarine 2s ease alternate infinite;
   animation: glowAquamarine 2s ease alternate infinite;
   margin-top: map.get(spaces.$spaces, '8');
   padding-top: map.get(spaces.$spaces, '7');
@@ -78,6 +79,7 @@
 .logo {
   width: map.get(spaces.$spaces, '7');
   height: map.get(spaces.$spaces, '7');
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 
   @include media-query-max(breakpoints.$screenSmall) {
@@ -88,6 +90,25 @@
 .paypalLogo {
   width: 1.15rem;
   height: auto;
+}
+
+@-webkit-keyframes glowAquamarine {
+  100% {
+    box-shadow: 0 0 2px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 3px 3px -3px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 7px map.get(colors.$colors, 'aquamarine'),
+      inset 0 9px 9px -9px map.get(colors.$colors, 'aquamarine'),
+      0 0 21px map.get(colors.$colors, 'aquamarine'),
+      inset 0 24px 24px -24px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      inset 0 2px 2px -2px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 7px map.get(colors.$colors, 'aquamarine'),
+      inset 0 9px 9px -9px map.get(colors.$colors, 'aquamarine'),
+      0 0 13px map.get(colors.$colors, 'aquamarine'),
+      inset 0 15px 15px -15px map.get(colors.$colors, 'aquamarine');
+  }
 }
 
 @keyframes glowAquamarine {
