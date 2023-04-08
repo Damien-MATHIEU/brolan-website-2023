@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: map.get(spaces.$spaces, '7') map.get(spaces.$spaces, '0');
-  scroll-margin: 207px;
+  scroll-margin: 143px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 

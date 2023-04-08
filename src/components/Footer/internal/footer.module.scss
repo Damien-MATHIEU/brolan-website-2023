@@ -12,7 +12,7 @@
   padding-bottom: map.get(spaces.$spaces, '8');
   scroll-margin: map.get(spaces.$spaces, '0');
   scroll-snap-align: end;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
 }
 .subContainer {
   width: 80%;

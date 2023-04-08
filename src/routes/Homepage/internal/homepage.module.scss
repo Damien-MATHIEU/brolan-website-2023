@@ -8,7 +8,7 @@
   margin-left: 15%;
   display: flex;
   flex-direction: column;
-  gap: map.get(spaces.$spaces, '8');
+  gap: map.get(spaces.$spaces, '13');
 
   @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
     width: 60%;
