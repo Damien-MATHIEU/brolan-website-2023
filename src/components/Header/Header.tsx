@@ -53,23 +53,14 @@ function Header() {
         ${showMenu || !showMenuIcon ? styles.showMobile : undefined}
          ${showMenuIcon ? styles.linksContainerActive : undefined}
         `}>
-          <a
-            href="/#presentationSection"
-            className={styles.linkContainer}
-            onClick={() => handleMobileClick()}>
-            <p className={styles.link}>Présentation</p>
+          <a href="/" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+            <p className={styles.link}>Accueil</p>
           </a>
-          <a
-            href="/#carouselSection"
-            className={styles.linkContainer}
-            onClick={() => handleMobileClick()}>
-            <p className={styles.link}>Les jeux</p>
+          <a href="/games" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+            <p className={styles.link}>Jeux</p>
           </a>
-          <a
-            href="/#teamsSection"
-            className={styles.linkContainer}
-            onClick={() => handleMobileClick()}>
-            <p className={styles.link}>Equipes</p>
+          <a href="/contact" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+            <p className={styles.link}>Contact</p>
           </a>
           <a href="#" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <ButtonOutline

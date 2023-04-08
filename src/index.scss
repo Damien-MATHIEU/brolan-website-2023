@@ -38,7 +38,7 @@ th {
   font-size: 1.15rem;
 }
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 body {
   overflow-x: hidden;
