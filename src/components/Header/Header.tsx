@@ -36,7 +36,9 @@ function Header() {
     <nav className={styles.container}>
       <div className={styles.subContainer}>
         <div className={styles.logoContainer}>
-          <img src={logo} className={styles.logo} alt="Logo de la Brolan" />
+          <a href="/">
+            <img src={logo} className={styles.logo} alt="Logo de la Brolan" />
+          </a>
         </div>
         {showMenuIcon && (
           <div
