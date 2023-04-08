@@ -32,7 +32,11 @@ function Carousel() {
         className={styles.carousel}>
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
-            <img src={TrackMania} className={styles.carouselImage} />
+            <img
+              src={TrackMania}
+              className={styles.carouselImage}
+              alt="Une image du jeu vidéo TrackMania"
+            />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>TrackMania</p>
             </div>
@@ -41,7 +45,11 @@ function Carousel() {
 
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
-            <img src={Minecraft} className={styles.carouselImage} />
+            <img
+              src={Minecraft}
+              className={styles.carouselImage}
+              alt="Une image du jeu vidéo Minecraft"
+            />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>Minecraft</p>
             </div>
@@ -50,7 +58,11 @@ function Carousel() {
 
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
-            <img src={Fortnite} className={styles.carouselImage} />
+            <img
+              src={Fortnite}
+              className={styles.carouselImage}
+              alt="Une image du jeu vidéo Fortnite"
+            />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>Fortnite</p>
             </div>
@@ -59,7 +71,11 @@ function Carousel() {
 
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
-            <img src={GeoGuesser} className={styles.carouselImage} />
+            <img
+              src={GeoGuesser}
+              className={styles.carouselImage}
+              alt="Une image du jeu vidéo GeoGuesser"
+            />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>GeoGuesser</p>
             </div>
@@ -68,7 +84,11 @@ function Carousel() {
 
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
-            <img src={FallGuys} className={styles.carouselImage} />
+            <img
+              src={FallGuys}
+              className={styles.carouselImage}
+              alt="Une image du jeu vidéo Fall Guys"
+            />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>Fall Guys</p>
             </div>
@@ -77,7 +97,7 @@ function Carousel() {
 
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
-            <img src={Osu} className={styles.carouselImage} />
+            <img src={Osu} className={styles.carouselImage} alt="Une image du jeu vidéo Osu" />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>Osu</p>
             </div>

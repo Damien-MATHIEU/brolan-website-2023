@@ -4,6 +4,7 @@ interface IIconNeon {
   propsClassName?: string
   blinkingFast?: boolean
   blinkingSlow?: boolean
+  propsAlt?: string
 }
 
 export default IIconNeon

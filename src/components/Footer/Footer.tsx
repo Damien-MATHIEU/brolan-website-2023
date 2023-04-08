@@ -8,7 +8,7 @@ function Footer() {
     <div className={styles.container}>
       <div className={styles.subContainer}>
         <div className={styles.logoContainer}>
-          <img src={LogoBrolan} className={styles.logo} />
+          <img src={LogoBrolan} className={styles.logo} alt="Logo de la Brolan" />
         </div>
         <div className={styles.brolanContainer}>
           <h4 className={styles.brolan}>©Brolan 2023</h4>

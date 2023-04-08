@@ -23,32 +23,43 @@ function Games() {
             gameName="TrackMania"
             color="aquamarine"
             propsOnClick="/game/trackmania"
+            propsAlt="Une image du jeu vidéo TrackMania"
           />
           <GameThumbnail
             imageSrc={Minecraft}
             gameName="Minecraft"
             color="pink"
             propsOnClick="/game/minecraft"
+            propsAlt="Une image du jeu vidéo Minecraft"
           />
           <GameThumbnail
             imageSrc={Fortnite}
             gameName="Fortnite"
             color="aquamarine"
             propsOnClick="/game/fortnite"
+            propsAlt="Une image du jeu vidéo Fortnite"
           />
           <GameThumbnail
             imageSrc={GeoGuesser}
             gameName="GeoGuesser"
             color="pink"
             propsOnClick="/game/geoguesser"
+            propsAlt="Une image du jeu vidéo GeoGuesser"
           />
           <GameThumbnail
             imageSrc={FallGuys}
             gameName="FallGuys"
             color="aquamarine"
             propsOnClick="/game/fallguys"
+            propsAlt="Une image du jeu vidéo FallGuys"
           />
-          <GameThumbnail imageSrc={Osu} gameName="Osu" color="pink" propsOnClick="/game/osu" />
+          <GameThumbnail
+            imageSrc={Osu}
+            gameName="Osu"
+            color="pink"
+            propsOnClick="/game/osu"
+            propsAlt="Une image du jeu vidéo Osu"
+          />
         </div>
       </div>
       <Footer />

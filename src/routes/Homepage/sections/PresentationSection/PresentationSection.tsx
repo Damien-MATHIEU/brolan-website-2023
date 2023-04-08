@@ -42,7 +42,12 @@ function PresentationSection() {
           target="_blank"
           rel="noreferrer"
           className={styles.iconContainer}>
-          <IconNeon icon={LogoDiscord} color="pink" blinkingFast={true} />
+          <IconNeon
+            icon={LogoDiscord}
+            color="pink"
+            blinkingFast={true}
+            propsAlt={'Logo de Discord'}
+          />
           <h4 className={`${styles.centerText} ${styles.iconText}`}>
             Discord{' '}
             <span>
@@ -60,6 +65,7 @@ function PresentationSection() {
             color="aquamarine"
             blinkingSlow={true}
             propsClassName={styles.iconTwitterMarginBottom}
+            propsAlt={'Logo de Twitter'}
           />
           <h4 className={`${styles.centerText} ${styles.iconText}`}>@BROLAN_OFF</h4>
         </a>
