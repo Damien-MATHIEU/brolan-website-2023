@@ -62,7 +62,12 @@ function Header() {
           <a href="/contact" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Contact</p>
           </a>
-          <a href="#" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+          <a
+            href="https://forms.gle/JV7X5dSvTJ6KSG5w6"
+            target="blank"
+            rel="noopener noreferrer"
+            className={styles.linkContainer}
+            onClick={() => handleMobileClick()}>
             <ButtonOutline
               fontSize="small"
               header={true}
