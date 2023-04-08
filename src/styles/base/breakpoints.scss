@@ -2,10 +2,12 @@ $screenSmall: 576px;
 $screenMedium: 768px;
 $screenLarge: 992px;
 $screenExtraLarge: 1200px;
+$screenDoubleExtraLarge: 1680px;
 
 :export {
   screenSmall: $screenSmall;
   screenMedium: $screenMedium;
   screenLarge: $screenLarge;
   screenExtraLarge: $screenExtraLarge;
+  screenDoubleExtraLarge: $screenDoubleExtraLarge;
 }

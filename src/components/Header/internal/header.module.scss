@@ -21,21 +21,10 @@
 
 .subContainer {
   display: flex;
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 map.get(spaces.$spaces, '9');
-
-  @include media-query-max(breakpoints.$screenLarge) {
-    padding: 0 96px;
-  }
-  @include media-query-max(breakpoints.$screenMedium) {
-    padding: 0 map.get(spaces.$spaces, '7');
-  }
-
-  @include media-query-max(breakpoints.$screenSmall) {
-    padding: 0 map.get(spaces.$spaces, '5');
-  }
 }
 
 .logoContainer,

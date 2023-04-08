@@ -3,3 +3,8 @@
     @content;
   }
 }
+@mixin media-query-min($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

@@ -15,7 +15,8 @@ function PresentationSection() {
         <p className={styles.paragraphe}>
           Le tournoi annuel de jeux vidéos qui vous permet de vous surpasser et de montrer enfin de
           quoi vous êtes capables derrière un écran. Chaque année, des joueurs et joueuses de tout
-          horizon se réunissent en binôme pour participer à un tournoi en deux temps :<br />
+          horizon se réunissent en binôme pour participer à un tournoi en deux phases.
+          <br />
           <br />- <span className={styles.bold}>Qualifications</span> : ouvertes à tous, elles se
           déroulent en ligne. Les jeux sont annoncés un mois à l&apos;avance pour que vous puissiez
           vous entraîner et passer à l&apos;étape suivante. Tous les jeux sont joués le même soir en

@@ -4,10 +4,9 @@
 @import './../../../../../styles/base/mediaQueries.scss';
 
 .container {
-  scroll-margin: map.get(spaces.$spaces, '8');
+  scroll-margin: 88px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  margin-top: map.get(spaces.$spaces, '8');
   width: 70%;
   margin-left: 15%;
   display: flex;
