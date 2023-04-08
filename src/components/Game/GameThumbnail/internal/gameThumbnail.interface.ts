@@ -3,6 +3,7 @@ interface IGameThumbnail {
   gameName: string
   color?: 'pink' | 'aquamarine'
   propsClassName?: string
+  propsOnClick?: string
 }
 
 export default IGameThumbnail

@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use './../../../../styles/base/breakpoints.scss';
+@use './../../../../styles/base/spaces.scss';
+@use './../../../../styles/variables/colors.scss';
+@import './../../../../styles/base/mediaQueries.scss';
+
+.container {
+  scroll-margin: 207px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin-top: map.get(spaces.$spaces, '8');
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '7');
+}
+.title {
+  font-size: 5rem;
+}
+.subTitle {
+  text-align: center;
+}
