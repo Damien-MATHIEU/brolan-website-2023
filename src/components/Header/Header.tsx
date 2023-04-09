@@ -3,6 +3,7 @@ import styles from './internal/header.module.scss'
 import { X } from 'react-feather'
 import logo from './../../assets/Logos/LogoBrolan.svg'
 import ButtonOutline from '../Buttons/ButtonOutline/ButtonOutline'
+import { Link } from 'react-router-dom'
 
 function Header() {
   const [showMenuIcon, setShowMenuIcon] = useState(false)
@@ -36,9 +37,9 @@ function Header() {
     <nav className={styles.container}>
       <div className={styles.subContainer}>
         <div className={styles.logoContainer}>
-          <a href="/">
+          <Link to="/">
             <img src={logo} className={styles.logo} alt="Logo de la Brolan" />
-          </a>
+          </Link>
         </div>
         {showMenuIcon && (
           <div
@@ -62,17 +63,17 @@ function Header() {
         ${showMenu || !showMenuIcon ? styles.showMobile : undefined}
          ${showMenuIcon ? styles.linksContainerActive : undefined}
         `}>
-          <a href="/" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+          <Link to="/" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Accueil</p>
-          </a>
-          <a href="/games" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+          </Link>
+          <Link to="/games" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Jeux</p>
-          </a>
-          <a href="/contact" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+          </Link>
+          <Link to="/contact" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Contact</p>
-          </a>
-          <a
-            href="https://forms.gle/JV7X5dSvTJ6KSG5w6"
+          </Link>
+          <Link
+            to="https://forms.gle/JV7X5dSvTJ6KSG5w6"
             target="blank"
             rel="noopener noreferrer"
             className={styles.linkContainer}
@@ -84,7 +85,7 @@ function Header() {
               center={true}>
               S&apos;inscrire
             </ButtonOutline>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

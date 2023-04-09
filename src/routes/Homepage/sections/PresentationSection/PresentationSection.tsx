@@ -4,6 +4,7 @@ import LogoDiscord from './../../../../assets/Logos/LogoDiscord.svg'
 import LogoTwitter from './../../../../assets/Logos/LogoTwitter.svg'
 import IconNeon from '../../../../components/IconNeon/IconNeon'
 import { ExternalLink } from 'react-feather'
+import { Link } from 'react-router-dom'
 
 function PresentationSection() {
   return (
@@ -38,8 +39,8 @@ function PresentationSection() {
         </p>
       </div>
       <div className={styles.iconsContainer}>
-        <a
-          href="https://discord.gg/jDmFTYwv"
+        <Link
+          to="https://discord.gg/jDmFTYwv"
           target="_blank"
           rel="noreferrer"
           className={styles.iconContainer}>
@@ -55,9 +56,9 @@ function PresentationSection() {
               <ExternalLink color="#f7f7f2" size={16} />
             </span>
           </h4>
-        </a>
-        <a
-          href="https://twitter.com/BROLAN_OFF"
+        </Link>
+        <Link
+          to="https://twitter.com/BROLAN_OFF"
           target="_blank"
           rel="noreferrer"
           className={styles.iconContainer}>
@@ -69,7 +70,7 @@ function PresentationSection() {
             propsAlt={'Logo de Twitter'}
           />
           <h4 className={`${styles.centerText} ${styles.iconText}`}>@BROLAN_OFF</h4>
-        </a>
+        </Link>
       </div>
     </section>
   )

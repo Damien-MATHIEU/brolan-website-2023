@@ -3,6 +3,7 @@ import styles from './internal/teamsSection.module.scss'
 import TableNeon from '../../../../components/TableNeon/TableNeon'
 import TextNeon from '../../../../components/TextNeon/TextNeon'
 import ButtonOutline from '../../../../components/Buttons/ButtonOutline/ButtonOutline'
+import { Link } from 'react-router-dom'
 
 function TeamsSection() {
   return (
@@ -18,9 +19,9 @@ function TeamsSection() {
         ]}
         tableHeaders={["Nom d'équipe", 'Joueurs']}
       />
-      <a href="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
+      <Link to="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
         <ButtonOutline center={true}>S&apos;inscrire</ButtonOutline>
-      </a>
+      </Link>
     </section>
   )
 }

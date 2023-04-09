@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './internal/gameComponent.module.scss'
 import TextNeon from '../../TextNeon/TextNeon'
 import ButtonOutline from '../../Buttons/ButtonOutline/ButtonOutline'
+import { Link } from 'react-router-dom'
 
 function GameComponent() {
   return (
@@ -12,9 +13,9 @@ function GameComponent() {
       <h2 className={styles.subTitle}>
         Les règles de chaque jeux arriveront une fois les inscriptions terminées
       </h2>
-      <a href="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
-        <ButtonOutline center={true}>S&apos;inscrire</ButtonOutline>
-      </a>
+      <Link to="/">
+        <ButtonOutline center={true}>Accueil</ButtonOutline>
+      </Link>
     </div>
   )
 }

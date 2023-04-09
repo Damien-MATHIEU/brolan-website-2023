@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './internal/footer.module.scss'
 import LogoBrolan from './../../assets/Logos/LogoBrolan.svg'
 import { ExternalLink } from 'react-feather'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -14,8 +15,8 @@ function Footer() {
           <h4 className={styles.brolan}>©Brolan 2023</h4>
         </div>
         <div className={styles.otherContainer}>
-          <a
-            href="https://www.paypal.com/paypalme/BROLANOFF?country.x=FR&locale.x=fr_FR"
+          <Link
+            to="https://www.paypal.com/paypalme/BROLANOFF?country.x=FR&locale.x=fr_FR"
             target="blank"
             className={styles.link}>
             <p>
@@ -24,10 +25,10 @@ function Footer() {
                 <ExternalLink color="#f7f7f2" size={16} />
               </span>
             </p>
-          </a>
-          <a href="mentions-legales" className={styles.link}>
+          </Link>
+          <Link to="mentions-legales" className={styles.link}>
             <p>Mentions légales</p>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

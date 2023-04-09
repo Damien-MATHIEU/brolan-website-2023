@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './internal/error404.module.scss'
 import TextNeon from '../../components/TextNeon/TextNeon'
 import ButtonOutline from '../../components/Buttons/ButtonOutline/ButtonOutline'
+import { Link } from 'react-router-dom'
 
 function Error404() {
   return (
@@ -10,9 +11,9 @@ function Error404() {
         Erreur 404
       </TextNeon>
       <h2 className={styles.subTitle}>La page que vous avez demandé n&apos;existe pas</h2>
-      <a href="/">
+      <Link to="/">
         <ButtonOutline center={true}>Accueil</ButtonOutline>
-      </a>
+      </Link>
     </div>
   )
 }
