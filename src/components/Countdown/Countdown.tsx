@@ -27,6 +27,25 @@ function Countdown({ propsClassName }: ICountdownContainer) {
     return timeLeft
   }
 
+  function handleTranslation(word: string) {
+    switch (word) {
+      case 'days':
+        return 'Jours'
+
+      case 'hours':
+        return 'Heures'
+
+      case 'minutes':
+        return 'Minutes'
+
+      case 'seconds':
+        return 'Secondes'
+
+      default:
+        return word
+    }
+  }
+
   const [timeLeft, setTimeLeft] = useState<ICountdown>(calculateTimeLeft())
 
   useEffect(() => {
@@ -52,7 +71,7 @@ function Countdown({ propsClassName }: ICountdownContainer) {
           <TextNeon propsClassName={styles.countdownNumber} color="aquamarine" size="h2">
             {timeLeft[key]}
           </TextNeon>
-          <p className={styles.countdownText}>{key}</p>
+          <p className={styles.countdownText}>{handleTranslation(key)}</p>
         </div>
       )
     } else {
@@ -61,7 +80,7 @@ function Countdown({ propsClassName }: ICountdownContainer) {
           <TextNeon propsClassName={styles.countdownNumber} color="aquamarine" size="h2">
             {timeLeft[key]}
           </TextNeon>
-          <p className={styles.countdownText}>{key}</p>
+          <p className={styles.countdownText}>{handleTranslation(key)}</p>
         </div>
       )
     }
