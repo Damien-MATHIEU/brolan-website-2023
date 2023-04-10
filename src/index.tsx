@@ -9,30 +9,61 @@ import Game from './routes/Game/Game'
 import Error404 from './routes/Error404/Error404'
 import LegalNotice from './routes/LegalNotice/LegalNotice'
 import Contact from './routes/Contact/Contact'
+import ScrollToTop from './customHooks/ScrollToTOp/ScrollToTop'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Homepage />,
-    errorElement: <Error404 />
+    element: (
+      <>
+        <ScrollToTop />
+        <Homepage />
+      </>
+    ),
+    errorElement: (
+      <>
+        <ScrollToTop />
+        <Error404 />
+      </>
+    )
   },
   {
     path: '/games',
-    element: <Games />
+    element: (
+      <>
+        <ScrollToTop />
+        <Games />
+      </>
+    )
   },
   {
     path: '/game/:gameName',
-    element: <Game />
+    element: (
+      <>
+        <ScrollToTop />
+        <Game />
+      </>
+    )
   },
   {
     path: '/mentions-legales',
-    element: <LegalNotice />
+    element: (
+      <>
+        <ScrollToTop />
+        <LegalNotice />
+      </>
+    )
   },
   {
     path: '/contact',
-    element: <Contact />
+    element: (
+      <>
+        <ScrollToTop />
+        <Contact />
+      </>
+    )
   }
 ])
 
