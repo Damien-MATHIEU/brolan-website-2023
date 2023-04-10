@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@use './../../../styles/variables/colors.scss';
+@import './../../../styles/base/mediaQueries.scss';
+
+.container {
+  width: 70%;
+  margin-left: 15%;
+  scroll-margin: 207px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin-top: map.get(spaces.$spaces, '8');
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '7');
+
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    width: 60%;
+    margin-left: 20%;
+  }
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 80%;
+    margin-left: 10%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+.title {
+  font-size: 5rem;
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    font-size: 4rem;
+  }
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    line-height: 4rem;
+  }
+}
+.iconsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: map.get(spaces.$spaces, '6');
+}
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '2');
+
+  &:hover .iconText {
+    border-bottom: 1px map.get(colors.$colors, 'primary') solid;
+    @include media-query-max(breakpoints.$screenMedium) {
+      border-bottom: 1px transparent solid;
+    }
+  }
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    flex-direction: column;
+  }
+}
+.iconText {
+  text-align: center;
+  transition: border-bottom 200ms ease;
+  border-bottom: 1px transparent solid;
+  padding-bottom: 4px;
+}

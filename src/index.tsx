@@ -8,6 +8,7 @@ import Games from './routes/Games/Games'
 import Game from './routes/Game/Game'
 import Error404 from './routes/Error404/Error404'
 import LegalNotice from './routes/LegalNotice/LegalNotice'
+import Contact from './routes/Contact/Contact'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/mentions-legales',
     element: <LegalNotice />
+  },
+  {
+    path: '/contact',
+    element: <Contact />
   }
 ])
 
