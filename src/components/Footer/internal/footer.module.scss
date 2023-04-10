@@ -6,14 +6,23 @@
 
 .container {
   border-top: 1px map.get(colors.$colors, 'aquamarine') solid;
-  -webkit-animation: glowAquamarine 2s ease alternate infinite;
-  animation: glowAquamarine 2s ease alternate infinite;
   margin-top: map.get(spaces.$spaces, '8');
   padding-top: map.get(spaces.$spaces, '7');
   padding-bottom: map.get(spaces.$spaces, '8');
   scroll-margin: map.get(spaces.$spaces, '0');
   scroll-snap-align: end;
   scroll-snap-stop: always;
+  position: relative;
+}
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: glowAquamarine 2s ease alternate infinite;
+  animation: glowAquamarine 2s ease alternate infinite;
 }
 .subContainer {
   width: 80%;
