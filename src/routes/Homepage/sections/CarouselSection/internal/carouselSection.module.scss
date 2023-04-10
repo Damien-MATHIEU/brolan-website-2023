@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   gap: map.get(spaces.$spaces, '5');
+  padding-bottom: map.get(spaces.$spaces, '11');
 
   @include media-query-max(breakpoints.$screenLarge) {
     width: 80%;

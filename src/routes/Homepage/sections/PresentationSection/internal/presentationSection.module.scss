@@ -10,6 +10,7 @@
   scroll-snap-stop: always;
   width: 80%;
   margin-left: 10%;
+  padding-bottom: map.get(spaces.$spaces, '11');
 
   @include media-query-max(breakpoints.$screenLarge) {
     width: 90%;
