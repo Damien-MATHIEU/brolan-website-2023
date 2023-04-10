@@ -10,28 +10,15 @@ function IconNeon({
   blinkingSlow = false,
   propsAlt
 }: IIconNeon) {
-  let animationStyle: string = styles.iconPink
-  if (blinkingFast || blinkingSlow) {
-    if (color === 'pink' && blinkingFast) {
-      animationStyle = styles.iconPinkBlinkingFast
-    } else if (color === 'pink' && blinkingSlow) {
-      animationStyle = styles.iconPinkBlinkingSlow
-    } else if (color === 'aquamarine' && blinkingFast) {
-      animationStyle = styles.iconAquamarineBlinkingFast
-    } else if (color === 'aquamarine' && blinkingSlow) {
-      animationStyle = styles.iconAquamarineBlinkingSlow
-    }
-  } else {
-    if (color === 'aquamarine') {
-      animationStyle = styles.iconAquamarine
-    }
-  }
-
   return (
     <div className={styles.container}>
       <img
         src={icon}
-        className={`${styles.icon} ${animationStyle} ${propsClassName}`}
+        className={`${styles.icon} ${
+          color === 'aquamarine' ? styles.iconAquamarine : styles.iconPink
+        } ${blinkingFast ? styles.iconBlinkingFast : undefined} ${
+          blinkingSlow ? styles.iconBlinkingSlow : undefined
+        } ${propsClassName}`}
         alt={propsAlt}
       />
     </div>

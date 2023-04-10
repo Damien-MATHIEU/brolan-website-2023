@@ -8,13 +8,19 @@
 }
 .wordPink {
   color: map.get(colors.$colors, 'primaryWhitest');
-  -webkit-animation: glowPink 2s alternate infinite;
-  animation: glowPink 2s alternate infinite;
+  text-shadow: 0 0 4px map.get(colors.$colors, 'primaryWhitest'),
+    0 0 11px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary'),
+    0 0 40px map.get(colors.$colors, 'primary'), 0 0 80px map.get(colors.$colors, 'primary'),
+    0 0 90px map.get(colors.$colors, 'primary'), 0 0 100px map.get(colors.$colors, 'primary'),
+    0 0 150px map.get(colors.$colors, 'primary');
 }
 .wordAquamarine {
   color: map.get(colors.$colors, 'aquamarineWhite');
-  -webkit-animation: glowAquamarine 2s alternate infinite;
-  animation: glowAquamarine 2s alternate infinite;
+  text-shadow: 0 0 10px map.get(colors.$colors, 'aquamarineWhite'),
+    0 0 11px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine'),
+    0 0 40px map.get(colors.$colors, 'aquamarine'), 0 0 80px map.get(colors.$colors, 'aquamarine'),
+    0 0 90px map.get(colors.$colors, 'aquamarine'), 0 0 100px map.get(colors.$colors, 'aquamarine'),
+    0 0 150px map.get(colors.$colors, 'aquamarine');
 }
 .letter {
   font-size: inherit;
@@ -27,76 +33,6 @@
 .letterBlinkSlow {
   -webkit-animation: blinking 3s linear infinite;
   animation: blinking 3s linear infinite;
-}
-
-@-webkit-keyframes glowPink {
-  100% {
-    text-shadow: 0 0 4px map.get(colors.$colors, 'primaryWhitest'),
-      0 0 11px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary'),
-      0 0 40px map.get(colors.$colors, 'primary'), 0 0 80px map.get(colors.$colors, 'primary'),
-      0 0 90px map.get(colors.$colors, 'primary'), 0 0 100px map.get(colors.$colors, 'primary'),
-      0 0 150px map.get(colors.$colors, 'primary');
-  }
-  0% {
-    text-shadow: 0 0 8px map.get(colors.$colors, 'primaryWhitest'),
-      0 0 10px map.get(colors.$colors, 'primary'), 0 0 12px map.get(colors.$colors, 'primary'),
-      0 0 18px map.get(colors.$colors, 'primary'), 0 0 45px map.get(colors.$colors, 'primary'),
-      0 0 55px map.get(colors.$colors, 'primary'), 0 0 70px map.get(colors.$colors, 'primary'),
-      0 0 80px map.get(colors.$colors, 'primary');
-  }
-}
-
-@keyframes glowPink {
-  100% {
-    text-shadow: 0 0 4px map.get(colors.$colors, 'primaryWhitest'),
-      0 0 11px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary'),
-      0 0 40px map.get(colors.$colors, 'primary'), 0 0 80px map.get(colors.$colors, 'primary'),
-      0 0 90px map.get(colors.$colors, 'primary'), 0 0 100px map.get(colors.$colors, 'primary'),
-      0 0 150px map.get(colors.$colors, 'primary');
-  }
-  0% {
-    text-shadow: 0 0 8px map.get(colors.$colors, 'primaryWhitest'),
-      0 0 10px map.get(colors.$colors, 'primary'), 0 0 12px map.get(colors.$colors, 'primary'),
-      0 0 18px map.get(colors.$colors, 'primary'), 0 0 45px map.get(colors.$colors, 'primary'),
-      0 0 55px map.get(colors.$colors, 'primary'), 0 0 70px map.get(colors.$colors, 'primary'),
-      0 0 80px map.get(colors.$colors, 'primary');
-  }
-}
-
-@-webkit-keyframes glowAquamarine {
-  100% {
-    text-shadow: 0 0 10px map.get(colors.$colors, 'aquamarineWhite'),
-      0 0 11px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine'),
-      0 0 40px map.get(colors.$colors, 'aquamarine'), 0 0 80px map.get(colors.$colors, 'aquamarine'),
-      0 0 90px map.get(colors.$colors, 'aquamarine'),
-      0 0 100px map.get(colors.$colors, 'aquamarine'),
-      0 0 150px map.get(colors.$colors, 'aquamarine');
-  }
-  0% {
-    text-shadow: 0 0 8px map.get(colors.$colors, 'aquamarineWhite'),
-      0 0 10px map.get(colors.$colors, 'aquamarine'), 0 0 12px map.get(colors.$colors, 'aquamarine'),
-      0 0 18px map.get(colors.$colors, 'aquamarine'), 0 0 45px map.get(colors.$colors, 'aquamarine'),
-      0 0 55px map.get(colors.$colors, 'aquamarine'), 0 0 70px map.get(colors.$colors, 'aquamarine'),
-      0 0 80px map.get(colors.$colors, 'aquamarine');
-  }
-}
-
-@keyframes glowAquamarine {
-  100% {
-    text-shadow: 0 0 10px map.get(colors.$colors, 'aquamarineWhite'),
-      0 0 11px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine'),
-      0 0 40px map.get(colors.$colors, 'aquamarine'), 0 0 80px map.get(colors.$colors, 'aquamarine'),
-      0 0 90px map.get(colors.$colors, 'aquamarine'),
-      0 0 100px map.get(colors.$colors, 'aquamarine'),
-      0 0 150px map.get(colors.$colors, 'aquamarine');
-  }
-  0% {
-    text-shadow: 0 0 8px map.get(colors.$colors, 'aquamarineWhite'),
-      0 0 10px map.get(colors.$colors, 'aquamarine'), 0 0 12px map.get(colors.$colors, 'aquamarine'),
-      0 0 18px map.get(colors.$colors, 'aquamarine'), 0 0 45px map.get(colors.$colors, 'aquamarine'),
-      0 0 55px map.get(colors.$colors, 'aquamarine'), 0 0 70px map.get(colors.$colors, 'aquamarine'),
-      0 0 80px map.get(colors.$colors, 'aquamarine');
-  }
 }
 
 @-webkit-keyframes blinking {
