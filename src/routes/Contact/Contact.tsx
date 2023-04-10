@@ -29,7 +29,11 @@ function Contact() {
             target="_blank"
             rel="noreferrer"
             className={styles.iconContainer}>
-            <IconNeon icon={LogoTwitter} color="aquamarine" />
+            <IconNeon
+              icon={LogoTwitter}
+              color="aquamarine"
+              propsClassName={styles.iconTwitterMarginBottom}
+            />
             <h4 className={styles.iconText}>Twitter</h4>
           </Link>
           <Link

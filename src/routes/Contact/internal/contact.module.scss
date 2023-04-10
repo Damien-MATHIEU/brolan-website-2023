@@ -72,3 +72,6 @@
   border-bottom: 1px transparent solid;
   padding-bottom: 4px;
 }
+.iconTwitterMarginBottom {
+  margin-bottom: map.get(spaces.$spaces, '3');
+}
