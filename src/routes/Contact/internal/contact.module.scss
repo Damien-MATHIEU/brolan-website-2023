@@ -49,6 +49,10 @@
   flex-direction: row;
   justify-content: space-around;
   gap: map.get(spaces.$spaces, '6');
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    flex-direction: column;
+  }
 }
 .iconContainer {
   display: flex;
@@ -60,10 +64,6 @@
     @include media-query-max(breakpoints.$screenMedium) {
       border-bottom: 1px transparent solid;
     }
-  }
-
-  @include media-query-max(breakpoints.$screenMedium) {
-    flex-direction: column;
   }
 }
 .iconText {
