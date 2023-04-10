@@ -12,11 +12,7 @@ function TeamsSection() {
         EQUIPES
       </TextNeon>
       <TableNeon
-        tableContent={[
-          { TOP1OURIEN: ['Dam', 'Ben'] },
-          { 'Morbi ex': ['Roscoe', 'Jace '] },
-          { 'finibus vel elit': ['Manuel', 'Abby'] }
-        ]}
+        tableContent={[{ TOP1OURIEN: ['Dam', 'Ben'] }]}
         tableHeaders={["Nom d'équipe", 'Joueurs']}
       />
       <Link to="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
