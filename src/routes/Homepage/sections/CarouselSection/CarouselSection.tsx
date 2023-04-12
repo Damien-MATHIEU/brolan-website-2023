@@ -12,9 +12,9 @@ function CarouselSection() {
         JEUX
       </TextNeon>
       <Carousel />
-      <Link to="/games">
-        <ButtonOutline center={true}>Tous les jeux</ButtonOutline>
-      </Link>
+      <ButtonOutline center={true} propsOnClick="/games">
+        Tous les jeux
+      </ButtonOutline>
     </section>
   )
 }

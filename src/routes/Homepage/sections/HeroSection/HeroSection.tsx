@@ -4,7 +4,6 @@ import TextNeon from './../../../../components/TextNeon/TextNeon'
 import ButtonOutline from './../../../../components/Buttons/ButtonOutline/ButtonOutline'
 import Countdown from './../../../../components/Countdown/Countdown'
 import ScrollIcon from './../../../../components/ScrollIcon/ScrollIcon'
-import { Link } from 'react-router-dom'
 
 function HeroSection() {
   return (
@@ -17,11 +16,14 @@ function HeroSection() {
         BROLAN
       </TextNeon>
       <Countdown propsClassName={styles.countdown} />
-      <Link to="https://forms.gle/JV7X5dSvTJ6KSG5w6" target="blank" rel="noopener noreferrer">
-        <ButtonOutline propsClassName={styles.registerButton} center={true} fontSize="large">
-          S&apos;inscrire
-        </ButtonOutline>
-      </Link>
+      <ButtonOutline
+        propsClassName={styles.registerButton}
+        center={true}
+        fontSize="large"
+        propsOnClick="https://forms.gle/JV7X5dSvTJ6KSG5w6"
+        openNewTab={true}>
+        S&apos;inscrire
+      </ButtonOutline>
       <ScrollIcon propsClassName={styles.scrollIcon} />
     </section>
   )

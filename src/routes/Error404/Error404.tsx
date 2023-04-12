@@ -11,9 +11,9 @@ function Error404() {
         Erreur 404
       </TextNeon>
       <h2 className={styles.subTitle}>La page que vous avez demandé n&apos;existe pas</h2>
-      <Link to="/">
-        <ButtonOutline center={true}>Accueil</ButtonOutline>
-      </Link>
+      <ButtonOutline center={true} propsOnClick="/">
+        Accueil
+      </ButtonOutline>
     </section>
   )
 }

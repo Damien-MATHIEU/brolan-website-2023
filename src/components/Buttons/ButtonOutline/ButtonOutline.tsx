@@ -1,6 +1,7 @@
 import React from 'react'
 import IButtonOutline from './internal/buttonOutline.interface'
 import styles from './internal/buttonOutline.module.scss'
+import { Link } from 'react-router-dom'
 
 function ButtonOutline({
   children,
@@ -8,7 +9,9 @@ function ButtonOutline({
   propsClassName,
   center = false,
   fontSize = 'medium',
-  header = false
+  header = false,
+  propsOnClick,
+  openNewTab
 }: IButtonOutline) {
   let fontSizeStyle = styles.mediumFontSize
   switch (fontSize) {
@@ -29,14 +32,26 @@ function ButtonOutline({
       fontSizeStyle = styles.mediumFontSize
       break
   }
+
   return (
     <div className={`${propsClassName} ${center ? styles.centerButton : undefined}`}>
-      <button
-        className={`${styles.buttonOutline} ${
-          outlineColor === 'aquamarine' ? styles.outlineAquamarine : styles.outlinePink
-        } ${fontSizeStyle} ${header ? styles.buttonHeader : undefined}`}>
-        {children}
-      </button>
+      {propsOnClick ? (
+        <Link to={propsOnClick} target={openNewTab ? '_blank' : '_self'}>
+          <button
+            className={`${styles.buttonOutline} ${
+              outlineColor === 'aquamarine' ? styles.outlineAquamarine : styles.outlinePink
+            } ${fontSizeStyle} ${header ? styles.buttonHeader : undefined}`}>
+            {children}
+          </button>
+        </Link>
+      ) : (
+        <button
+          className={`${styles.buttonOutline} ${
+            outlineColor === 'aquamarine' ? styles.outlineAquamarine : styles.outlinePink
+          } ${fontSizeStyle} ${header ? styles.buttonHeader : undefined}`}>
+          {children}
+        </button>
+      )}
     </div>
   )
 }

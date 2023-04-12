@@ -13,9 +13,9 @@ function GameComponent() {
       <h2 className={styles.subTitle}>
         Les règles de chaque jeux arriveront une fois les inscriptions terminées
       </h2>
-      <Link to="/">
-        <ButtonOutline center={true}>Accueil</ButtonOutline>
-      </Link>
+      <ButtonOutline center={true} propsOnClick="/">
+        Accueil
+      </ButtonOutline>
     </div>
   )
 }
