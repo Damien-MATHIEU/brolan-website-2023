@@ -7,7 +7,7 @@ function LegalNotice() {
   return (
     <>
       <Header />
-      <div className={styles.container}>
+      <section className={styles.container}>
         <h1>MENTIONS LÉGALES</h1>
         <p>
           Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en
@@ -33,7 +33,7 @@ function LegalNotice() {
           Par téléphone : +33649305746 Par email : contact.brolan@gmail.com Par courrier : 1 Place
           de l&apos;Hotel de Ville 13100 Aix-en-Provence
         </p>
-      </div>
+      </section>
       <Footer />
     </>
   )

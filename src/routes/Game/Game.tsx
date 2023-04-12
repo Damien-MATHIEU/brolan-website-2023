@@ -8,9 +8,9 @@ function Game() {
   return (
     <>
       <Header />
-      <div className={styles.container}>
+      <section className={styles.container}>
         <GameComponent />
-      </div>
+      </section>
       <Footer />
     </>
   )

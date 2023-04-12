@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 function Error404() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <TextNeon propsClassName={styles.title} blinkingArrayFast={[2]} blinkingArraySlow={[9]}>
         Erreur 404
       </TextNeon>
@@ -14,7 +14,7 @@ function Error404() {
       <Link to="/">
         <ButtonOutline center={true}>Accueil</ButtonOutline>
       </Link>
-    </div>
+    </section>
   )
 }
 

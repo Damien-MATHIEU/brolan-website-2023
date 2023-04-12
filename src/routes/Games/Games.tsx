@@ -15,7 +15,7 @@ function Games() {
   return (
     <>
       <Header />
-      <div className={styles.container}>
+      <section className={styles.container}>
         <TextNeon>LES JEUX</TextNeon>
         <div className={styles.gamesContainer}>
           <GameThumbnail
@@ -61,7 +61,7 @@ function Games() {
             propsAlt="Une image du jeu vidéo Osu"
           />
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   )
