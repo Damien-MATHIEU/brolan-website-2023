@@ -60,8 +60,7 @@ function Header() {
 
         <div
           className={`${styles.linksContainer}
-        ${showMenu || !showMenuIcon ? styles.showMobile : undefined}
-         ${showMenuIcon ? styles.linksContainerActive : undefined}
+        ${showMenu && showMenuIcon ? styles.showMobile : undefined}
         `}>
           <Link to="/" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Accueil</p>
