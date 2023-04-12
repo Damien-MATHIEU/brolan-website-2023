@@ -23,6 +23,7 @@
   height: 100%;
   -webkit-animation: glowAquamarine 2s ease alternate infinite;
   animation: glowAquamarine 2s ease alternate infinite;
+  pointer-events: none;
 }
 .subContainer {
   width: 80%;
