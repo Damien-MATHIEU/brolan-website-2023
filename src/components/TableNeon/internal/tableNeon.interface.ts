@@ -1,11 +1,11 @@
 interface ITableNeon {
+  tableHeaders: Array<string>
   tableContent: Array<ITeamObject>
-  tableHeaders?: Array<string>
   propsClassName?: string
 }
 
 interface ITeamObject {
-  [key: string]: string[]
+  [key: string]: any
 }
 
 export default ITableNeon
