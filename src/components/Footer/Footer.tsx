@@ -26,7 +26,7 @@ function Footer() {
               </span>
             </p>
           </Link>
-          <Link to="mentions-legales" className={styles.link}>
+          <Link to="/mentions-legales" className={styles.link}>
             <p>Mentions légales</p>
           </Link>
         </div>
