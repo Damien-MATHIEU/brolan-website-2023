@@ -18,11 +18,11 @@
   @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
     width: 60%;
     margin-left: 20%;
-    gap: map.get(spaces.$spaces, '8');
   }
   @include media-query-max(breakpoints.$screenLarge) {
     width: 80%;
     margin-left: 10%;
+    gap: map.get(spaces.$spaces, '7');
   }
   @include media-query-max(breakpoints.$screenMedium) {
     width: 85%;
