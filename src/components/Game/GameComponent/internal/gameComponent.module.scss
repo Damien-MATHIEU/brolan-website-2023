@@ -12,6 +12,10 @@
   display: flex;
   flex-direction: column;
   gap: map.get(spaces.$spaces, '7');
+
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    gap: map.get(spaces.$spaces, '7');
+  }
 }
 .title {
   font-size: 5rem;

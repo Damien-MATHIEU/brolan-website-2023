@@ -14,6 +14,10 @@
   gap: map.get(spaces.$spaces, '5');
   padding-bottom: map.get(spaces.$spaces, '11');
 
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    scroll-margin: 144px;
+  }
+
   @include media-query-max(breakpoints.$screenLarge) {
     width: 80%;
     margin-left: 10%;

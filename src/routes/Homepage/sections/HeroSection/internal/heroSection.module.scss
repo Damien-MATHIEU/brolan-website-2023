@@ -9,6 +9,11 @@
   scroll-snap-stop: always;
   margin-top: map.get(spaces.$spaces, '8');
   padding-bottom: map.get(spaces.$spaces, '11');
+
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    margin-top: map.get(spaces.$spaces, '9');
+    scroll-margin: 243px;
+  }
 }
 .title {
   letter-spacing: map.get(spaces.$spaces, '3');
