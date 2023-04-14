@@ -14,7 +14,7 @@
   gap: map.get(spaces.$spaces, '7');
 
   @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
-    gap: map.get(spaces.$spaces, '7');
+    gap: map.get(spaces.$spaces, '8');
   }
 }
 .title {
