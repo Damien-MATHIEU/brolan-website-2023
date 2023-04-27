@@ -27,7 +27,7 @@ http.createServer(function (req, res) {
         case "/game/fortnite":
             showPage(req, res)
             break
-        case "/game/geoguesser":
+        case "/game/geoguessr":
             showPage(req, res)
             break
         case "/game/fallguys":

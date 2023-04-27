@@ -7,7 +7,7 @@ import 'swiper/css/scrollbar'
 import styles from './internal/carousel.module.scss'
 import FallGuys from './../../assets/Games/FallGuys.png'
 import Fortnite from './../../assets/Games/Fortnite.png'
-import GeoGuesser from './../../assets/Games/GeoGuesser.png'
+import GeoGuessr from './../../assets/Games/GeoGuessr.png'
 import Minecraft from './../../assets/Games/Minecraft.png'
 import Osu from './../../assets/Games/Osu.png'
 import TrackMania from './../../assets/Games/TrackMania.png'
@@ -72,12 +72,12 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={GeoGuesser}
+              src={GeoGuessr}
               className={styles.carouselImage}
-              alt="Une image du jeu vidéo GeoGuesser"
+              alt="Une image du jeu vidéo GeoGuessr"
             />
             <div className={styles.carouselTextContainer}>
-              <p className={styles.carouselText}>GeoGuesser</p>
+              <p className={styles.carouselText}>GeoGuessr</p>
             </div>
           </div>
         </SwiperSlide>

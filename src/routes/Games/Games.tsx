@@ -6,7 +6,7 @@ import GameThumbnail from '../../components/Game/GameThumbnail/GameThumbnail'
 import TrackMania from './../../assets/Games/TrackMania.png'
 import Minecraft from './../../assets/Games/Minecraft.png'
 import Fortnite from './../../assets/Games/Fortnite.png'
-import GeoGuesser from './../../assets/Games/GeoGuesser.png'
+import GeoGuessr from './../../assets/Games/GeoGuessr.png'
 import FallGuys from './../../assets/Games/FallGuys.png'
 import Osu from './../../assets/Games/Osu.png'
 import TextNeon from '../../components/NeonComponents/TextNeon/TextNeon'
@@ -40,11 +40,11 @@ function Games() {
             propsAlt="Une image du jeu vidéo Fortnite"
           />
           <GameThumbnail
-            imageSrc={GeoGuesser}
-            gameName="GeoGuesser"
+            imageSrc={GeoGuessr}
+            gameName="GeoGuessr"
             color="pink"
-            propsOnClick="/game/geoguesser"
-            propsAlt="Une image du jeu vidéo GeoGuesser"
+            propsOnClick="/game/geoguessr"
+            propsAlt="Une image du jeu vidéo GeoGuessr"
           />
           <GameThumbnail
             imageSrc={FallGuys}
