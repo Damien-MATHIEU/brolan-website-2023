@@ -19,13 +19,15 @@
 }
 .title {
   font-size: 5rem;
+  letter-spacing: map.get(spaces.$spaces, '2');
+  text-indent: map.get(spaces.$spaces, '2');
 
   @include media-query-max(breakpoints.$screenMedium) {
     font-size: 4rem;
   }
 
   @include media-query-max(breakpoints.$screenSmall) {
-    line-height: 4rem;
+    font-size: 3.5rem;
   }
 }
 .subTitle {
