@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './internal/contact.module.scss'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import TextNeon from '../../components/TextNeon/TextNeon'
+import TextNeon from '../../components/NeonComponents/TextNeon/TextNeon'
 import LogoDiscord from './../../assets/Logos/LogoDiscord.svg'
 import LogoTwitter from './../../assets/Logos/LogoTwitter.svg'
 import LogoMail from './../../assets/Logos/LogoMail.svg'
-import IconNeon from '../../components/IconNeon/IconNeon'
+import IconNeon from '../../components/NeonComponents/IconNeon/IconNeon'
 import { Link } from 'react-router-dom'
 
 function Contact() {

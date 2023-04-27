@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './internal/heroSection.module.scss'
-import TextNeon from './../../../../components/TextNeon/TextNeon'
+import TextNeon from './../../../../components/NeonComponents/TextNeon/TextNeon'
 import ButtonOutline from './../../../../components/Buttons/ButtonOutline/ButtonOutline'
 import Countdown from './../../../../components/Countdown/Countdown'
 import ScrollIcon from './../../../../components/ScrollIcon/ScrollIcon'

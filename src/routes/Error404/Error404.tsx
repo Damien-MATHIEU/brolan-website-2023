@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './internal/error404.module.scss'
-import TextNeon from '../../components/TextNeon/TextNeon'
+import TextNeon from '../../components/NeonComponents/TextNeon/TextNeon'
 import ButtonOutline from '../../components/Buttons/ButtonOutline/ButtonOutline'
 import { Link } from 'react-router-dom'
 

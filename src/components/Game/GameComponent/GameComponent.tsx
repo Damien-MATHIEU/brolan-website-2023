@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './internal/gameComponent.module.scss'
-import TextNeon from '../../TextNeon/TextNeon'
+import TextNeon from '../../NeonComponents/TextNeon/TextNeon'
 import ButtonOutline from '../../Buttons/ButtonOutline/ButtonOutline'
 import { Link } from 'react-router-dom'
 

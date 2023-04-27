@@ -9,7 +9,7 @@ import Fortnite from './../../assets/Games/Fortnite.png'
 import GeoGuesser from './../../assets/Games/GeoGuesser.png'
 import FallGuys from './../../assets/Games/FallGuys.png'
 import Osu from './../../assets/Games/Osu.png'
-import TextNeon from '../../components/TextNeon/TextNeon'
+import TextNeon from '../../components/NeonComponents/TextNeon/TextNeon'
 
 function Games() {
   return (
