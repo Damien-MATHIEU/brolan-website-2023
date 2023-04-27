@@ -1,7 +1,8 @@
 interface ITableNeon {
-  tableHeaders: Array<string>
   tableContent: Array<ITeamObject>
+  tableHeaders?: Array<string>
   propsClassName?: string
+  noHeader?: boolean
 }
 
 interface ITeamObject {
