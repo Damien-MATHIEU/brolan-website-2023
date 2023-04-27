@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ICountdown, ICountdownContainer } from './internal/countdown.interface'
 import styles from './internal/countdown.module.scss'
-import TextNeon from '../TextNeon/TextNeon'
+import TextNeon from '../NeonComponents/TextNeon/TextNeon'
 
 function Countdown({ propsClassName }: ICountdownContainer) {
   const targetDate = '2023-04-28T18:00:00.000Z'

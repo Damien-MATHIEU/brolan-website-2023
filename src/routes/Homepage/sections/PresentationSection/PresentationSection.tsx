@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './internal/presentationSection.module.scss'
 import LogoDiscord from './../../../../assets/Logos/LogoDiscord.svg'
 import LogoTwitter from './../../../../assets/Logos/LogoTwitter.svg'
-import IconNeon from '../../../../components/IconNeon/IconNeon'
+import IconNeon from '../../../../components/NeonComponents/IconNeon/IconNeon'
 import { ExternalLink } from 'react-feather'
 import { Link } from 'react-router-dom'
 

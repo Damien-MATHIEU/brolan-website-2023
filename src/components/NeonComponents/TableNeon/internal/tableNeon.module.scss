@@ -1,8 +1,8 @@
 @use 'sass:map';
-@use './../../../styles/base/spaces.scss';
-@use './../../../styles/base/breakpoints.scss';
-@use './../../../styles/variables/colors.scss';
-@import './../../../styles/base/mediaQueries.scss';
+@use './../../../../styles/base/spaces.scss';
+@use './../../../../styles/base/breakpoints.scss';
+@use './../../../../styles/variables/colors.scss';
+@import './../../../../styles/base/mediaQueries.scss';
 
 .container {
   display: flex;

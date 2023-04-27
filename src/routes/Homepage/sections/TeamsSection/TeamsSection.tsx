@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './internal/teamsSection.module.scss'
-import TableNeon from '../../../../components/TableNeon/TableNeon'
-import TextNeon from '../../../../components/TextNeon/TextNeon'
+import TableNeon from '../../../../components/NeonComponents/TableNeon/TableNeon'
+import TextNeon from '../../../../components/NeonComponents/TextNeon/TextNeon'
 import ButtonOutline from '../../../../components/Buttons/ButtonOutline/ButtonOutline'
 import Teams from './../../../../data/teams.json'
 
