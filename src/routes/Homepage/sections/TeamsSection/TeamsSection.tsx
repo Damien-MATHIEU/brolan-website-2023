@@ -11,7 +11,6 @@ function TeamsSection() {
       <TextNeon blinkingArrayFast={[1]} blinkingArraySlow={[4]} propsClassName={styles.subTitle}>
         EQUIPES
       </TextNeon>
-      {/* @ts */}
       <TableNeon tableContent={Teams} tableHeaders={["Nom d'équipe", 'Joueurs']} />
       <ButtonOutline
         center={true}

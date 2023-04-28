@@ -19,15 +19,36 @@
 }
 .title {
   font-size: 5rem;
+  letter-spacing: map.get(spaces.$spaces, '2');
+  text-indent: map.get(spaces.$spaces, '2');
 
   @include media-query-max(breakpoints.$screenMedium) {
     font-size: 4rem;
   }
 
   @include media-query-max(breakpoints.$screenSmall) {
-    line-height: 4rem;
+    font-size: 3.5rem;
   }
 }
 .subTitle {
   text-align: center;
+}
+.additionnalInfos,
+.image {
+  width: 80%;
+  margin-left: 10%;
+}
+.additionnalInfos {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '4');
+  scroll-margin: 88px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    scroll-margin: 144px;
+  }
+}
+.additionnalInfo {
+  text-align: justify;
 }

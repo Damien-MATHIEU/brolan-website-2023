@@ -3,6 +3,7 @@ import styles from './internal/game.module.scss'
 import GameComponent from '../../components/Game/GameComponent/GameComponent'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { useParams } from 'react-router-dom'
 
 function Game() {
   return (
