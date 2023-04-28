@@ -33,3 +33,22 @@
 .subTitle {
   text-align: center;
 }
+.additionnalInfos,
+.image {
+  width: 80%;
+  margin-left: 10%;
+}
+.additionnalInfos {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '4');
+  scroll-margin: 88px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    scroll-margin: 144px;
+  }
+}
+.additionnalInfo {
+  text-align: justify;
+}
