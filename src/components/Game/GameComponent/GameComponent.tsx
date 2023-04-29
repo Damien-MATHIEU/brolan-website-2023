@@ -63,8 +63,14 @@ function GameComponent() {
       <TextNeon propsClassName={styles.title} blinkingArrayFast={[2]} blinkingArraySlow={[9]}>
         {gameName}
       </TextNeon>
-      {/* @ts-ignore */}
-      <TableNeon tableContent={tableRule} tableHeaders={tableHeader} />
+
+      <TableNeon
+        // @ts-ignore
+        tableContent={tableRule}
+        // @ts-ignore
+        tableHeaders={tableHeader}
+        propsClassName={styles.gameTableRules}
+      />
       {gameName === 'minecraft' && (
         <div className={styles.additionnalInfos}>
           <p className={styles.additionnalInfo}>
