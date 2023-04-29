@@ -26,25 +26,32 @@ function GameComponent() {
     return null
   }
   let tableRule = null
+  let tableHeader = null
 
   switch (gameName) {
     case 'trackmania':
       tableRule = TrackmaniaRules
+      tableHeader = ['Type', 'Partie personnalisée']
       break
     case 'minecraft':
       tableRule = MinecraftRules
+      tableHeader = ['Type', 'Parkour']
       break
     case 'fortnite':
       tableRule = FortniteRules
+      tableHeader = ['Type', 'Tilted Zone War']
       break
     case 'fallguys':
       tableRule = FallGuysRules
+      tableHeader = ['Type', 'Partie personnalisée']
       break
     case 'geoguessr':
       tableRule = GeoGuessrRules
+      tableHeader = ['Type', 'World']
       break
     case 'osu':
       tableRule = OsuRules
+      tableHeader = ['Type', 'Format de carte classique']
       break
 
     default:
@@ -57,7 +64,7 @@ function GameComponent() {
         {gameName}
       </TextNeon>
       {/* @ts-ignore */}
-      <TableNeon tableContent={tableRule} noHeader={true} />
+      <TableNeon tableContent={tableRule} tableHeaders={tableHeader} />
       {gameName === 'minecraft' && (
         <div className={styles.additionnalInfos}>
           <p className={styles.additionnalInfo}>

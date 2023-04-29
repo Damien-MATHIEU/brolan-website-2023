@@ -71,17 +71,7 @@ function Header() {
           <Link to="/contact" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Contact</p>
           </Link>
-          <div className={styles.linkContainer} onClick={() => handleMobileClick()}>
-            <ButtonOutline
-              fontSize="small"
-              header={true}
-              propsClassName={styles.buttonMobile}
-              center={true}
-              propsOnClick="https://forms.gle/JV7X5dSvTJ6KSG5w6"
-              openNewTab={true}>
-              S&apos;inscrire
-            </ButtonOutline>
-          </div>
+          <div className={styles.linkContainer} onClick={() => handleMobileClick()}></div>
         </div>
       </div>
     </nav>
