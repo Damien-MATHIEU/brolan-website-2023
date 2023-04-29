@@ -1,5 +1,4 @@
 [
-  {"Type": ["World"]},
   {"Format": ["20 sec / no move / 5 rounds de 5 manches"]},
   {"Condition de victoire": ["Sois le plus proche sur la carte (pas au trésor hein)"]},
   {"Url": ["https://www.geoguessr.com/fr"]}
