@@ -4,7 +4,7 @@ import styles from './internal/countdown.module.scss'
 import TextNeon from '../NeonComponents/TextNeon/TextNeon'
 
 function Countdown({ propsClassName }: ICountdownContainer) {
-  const targetDate = '2023-04-28T18:00:00.000Z'
+  const targetDate = '2023-06-02T17:30:00.000Z'
 
   const calculateTimeLeft = (): ICountdown => {
     const difference = new Date(targetDate).getTime() - new Date().getTime()

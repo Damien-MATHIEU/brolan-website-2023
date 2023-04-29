@@ -12,12 +12,6 @@ function TeamsSection() {
         EQUIPES
       </TextNeon>
       <TableNeon tableContent={Teams} tableHeaders={["Nom d'équipe", 'Joueurs']} />
-      <ButtonOutline
-        center={true}
-        propsOnClick="https://forms.gle/JV7X5dSvTJ6KSG5w6"
-        openNewTab={true}>
-        S&apos;inscrire
-      </ButtonOutline>
     </section>
   )
 }
