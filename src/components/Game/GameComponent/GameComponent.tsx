@@ -48,7 +48,6 @@ function GameComponent() {
       break
 
     default:
-      return null
       break
   }
 
@@ -57,6 +56,7 @@ function GameComponent() {
       <TextNeon propsClassName={styles.title} blinkingArrayFast={[2]} blinkingArraySlow={[9]}>
         {gameName}
       </TextNeon>
+      {/* @ts-ignore */}
       <TableNeon tableContent={tableRule} noHeader={true} />
       {gameName === 'minecraft' && (
         <div className={styles.additionnalInfos}>
