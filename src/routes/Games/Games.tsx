@@ -9,6 +9,11 @@ import Fortnite from './../../assets/Games/Fortnite.png'
 import GeoGuessr from './../../assets/Games/GeoGuessr.png'
 import FallGuys from './../../assets/Games/FallGuys.png'
 import Osu from './../../assets/Games/Osu.png'
+import Tennis from './../../assets/Games/tennis.jpg'
+import Petanque from './../../assets/Games/petanque.jpg'
+import Darts from './../../assets/Games/darts.jpg'
+import PingPong from './../../assets/Games/pingPong.jpg'
+import Triathlon from './../../assets/Games/triathlon.jpg'
 import TextNeon from '../../components/NeonComponents/TextNeon/TextNeon'
 
 function Games() {
@@ -16,8 +21,9 @@ function Games() {
     <>
       <Header />
       <section className={styles.container}>
-        <TextNeon>LES JEUX</TextNeon>
+        <TextNeon size="h1">LES JEUX</TextNeon>
         <div className={styles.gamesContainer}>
+          {/* Video games */}
           <GameThumbnail
             imageSrc={TrackMania}
             gameName="TrackMania"
@@ -59,6 +65,42 @@ function Games() {
             color="pink"
             propsOnClick="/game/osu"
             propsAlt="Une image du jeu vidéo Osu"
+          />
+          {/* IRL */}
+          <GameThumbnail
+            imageSrc={Tennis}
+            gameName="Tennis"
+            color="aquamarine"
+            propsOnClick="/game/tennis"
+            propsAlt="Une image d'une raquette de tennis et une balle de tennis"
+          />
+          <GameThumbnail
+            imageSrc={Petanque}
+            gameName="Pétanque"
+            color="pink"
+            propsOnClick="/game/petanque"
+            propsAlt="Une image de boules de pétanques"
+          />
+          <GameThumbnail
+            imageSrc={PingPong}
+            gameName="Ping Pong"
+            color="aquamarine"
+            propsOnClick="/game/pingpong"
+            propsAlt="Une image d'une raquette de ping pong et une balle de ping pong"
+          />
+          <GameThumbnail
+            imageSrc={Darts}
+            gameName="Fléchettes"
+            color="pink"
+            propsOnClick="/game/darts"
+            propsAlt="Une d'un jeu de fléchette"
+          />
+          <GameThumbnail
+            imageSrc={Triathlon}
+            gameName="Triathlon"
+            color="aquamarine"
+            propsOnClick="/game/triathlon"
+            propsAlt="Une homme sur une piste de course"
           />
         </div>
       </section>

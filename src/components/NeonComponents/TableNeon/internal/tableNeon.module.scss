@@ -107,3 +107,8 @@
   -webkit-filter: blur(map.get(spaces.$spaces, '4'));
   filter: blur(map.get(spaces.$spaces, '4'));
 }
+
+.eliminated {
+  text-decoration: line-through;
+  color: #a3a3a3;
+}

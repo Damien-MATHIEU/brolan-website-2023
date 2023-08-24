@@ -1,14 +1,14 @@
 [
-  {"TOP1OURIEN": ["Ben", "Tyroflunk"]},
-  {"Ninja de Konoha": ["HG Viqo", "Choco"]},
-  {"Pro adibou": ["MistiCookie", "Alfi"]},
-  {"Les casseur flowtteur de cul": ["Makost", "dfbh"]},
-  {"-DSM-": ["TERRY_KDN", "Kroma"]},
-  {"Jax top": ["Sha", "Yuria"]},
-  {"Les Co-loc": ["Bordeo", "Ben-Skilsaw"]},
-  {"PETASSE": ["Thessa", "Dolgarek"]},
-  {"The wicked Ducks": ["Raptorfou", "Clem113"]},
-  {"Pastis Bretzel": ["DJesusCry", "xAkito"]},
-  {"Deux Frères, Deux Fauves": ["Taupitos", "LULU LA TERREUR"]},
-  {"PIPI PARTOUT": ["VnOm_pro", "ArthurScoub"]}
+  {"TOP1OURIEN": ["Ben", "Tyroflunk"], "eliminated": false},
+  {"Ninja de Konoha": ["HG Viqo", "Choco"], "eliminated": false},
+  {"Pro adibou": ["MistiCookie", "Alfi"], "eliminated": true},
+  {"Les casseur flowtteur de cul": ["Makost", "dfbh"], "eliminated": true},
+  {"-DSM-": ["TERRY_KDN", "Kroma"], "eliminated": false},
+  {"Jax top": ["Sha", "Yuria"], "eliminated": true},
+  {"Les Co-loc": ["Bordeo", "Ben-Skilsaw"], "eliminated": false},
+  {"PETASSE": ["Thessa", "Dolgarek"], "eliminated": true},
+  {"The wicked Ducks": ["Raptorfou", "Clem113"], "eliminated": true},
+  {"Pastis Bretzel": ["DJesusCry", "xAkito"], "eliminated": true},
+  {"Deux Frères, Deux Fauves": ["Taupitos", "LULU LA TERREUR"], "eliminated": false},
+  {"PIPI PARTOUT": ["VnOm_pro", "ArthurScoub"], "eliminated": false}
 ]

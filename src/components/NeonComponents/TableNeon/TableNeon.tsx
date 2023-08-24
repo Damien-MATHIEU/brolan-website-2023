@@ -10,6 +10,9 @@ function TableNeon({ tableHeaders, tableContent, propsClassName, noHeader = fals
           <thead>
             <tr>
               {tableHeaders.map((element, index) => {
+                if (typeof element !== 'string') {
+                  return
+                }
                 return (
                   <th
                     key={index}
@@ -26,15 +29,23 @@ function TableNeon({ tableHeaders, tableContent, propsClassName, noHeader = fals
 
         <tbody className={styles.tableBody}>
           {tableContent.map((teamObject, indexOne) => {
+            const isEliminated: boolean = teamObject.eliminated
             return (
               <tr key={indexOne}>
                 <td className={styles.tableData}>
-                  <p className={styles.text}>{Object.keys(teamObject)}</p>
+                  <p className={`${styles.text} ${isEliminated && styles.eliminated}`}>
+                    {Object.keys(teamObject)[0]}
+                  </p>
                 </td>
                 {Object.values(teamObject).map((players, indexTwo) => {
+                  if (typeof players !== 'object') {
+                    return
+                  }
                   return (
                     <td className={styles.tableData} key={indexTwo}>
-                      <p className={styles.text}>{players.join(' & ')}</p>
+                      <p className={`${styles.text} ${isEliminated && styles.eliminated}`}>
+                        {players.join(' & ')}
+                      </p>
                     </td>
                   )
                 })}
