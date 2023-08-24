@@ -1,15 +1,21 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import styles from './internal/gameComponent.module.scss'
 import TextNeon from '../../NeonComponents/TextNeon/TextNeon'
-import ButtonOutline from '../../Buttons/ButtonOutline/ButtonOutline'
-import { Link, useParams } from 'react-router-dom'
 import TableNeon from '../../NeonComponents/TableNeon/TableNeon'
+
 import TrackmaniaRules from './../../../data/rules/trackmania.json'
 import FallGuysRules from './../../../data/rules/fallguys.json'
 import FortniteRules from './../../../data/rules/fortnite.json'
 import GeoGuessrRules from './../../../data/rules/geoguessr.json'
 import OsuRules from './../../../data/rules/osu.json'
 import MinecraftRules from './../../../data/rules/minecraft.json'
+import DartsRules from './../../../data/rules/darts.json'
+import PetanqueRules from './../../../data/rules/petanque.json'
+import PingPongRules from './../../../data/rules/pingpong.json'
+import TennisRules from './../../../data/rules/tennis.json'
+import TriathlonRules from './../../../data/rules/triathlon.json'
+
 import GameHomepage from './../../../assets/Tutorial/Minecraft/GameHomepage.jpg'
 import Tlauncher from './../../../assets/Tutorial/Minecraft/Tlauncher.jpg'
 import WebsiteHomepage from './../../../assets/Tutorial/Minecraft/WebsiteHomepage.jpg'
@@ -20,8 +26,6 @@ import TrackmaniaImage from './../../../assets/Tutorial/Trackmania/image.jpg'
 function GameComponent() {
   const { gameName } = useParams()
 
-  // console.log(gameName)
-
   if (gameName == undefined) {
     return null
   }
@@ -29,6 +33,7 @@ function GameComponent() {
   let tableHeader = null
 
   switch (gameName) {
+    // Video games
     case 'trackmania':
       tableRule = TrackmaniaRules
       tableHeader = ['Type', 'Partie personnalisée']
@@ -52,6 +57,27 @@ function GameComponent() {
     case 'osu':
       tableRule = OsuRules
       tableHeader = ['Type', 'Format de carte classique']
+      break
+    // IRL
+    case 'tennis':
+      tableRule = TennisRules
+      tableHeader = ['Type', 'Match 2 v 2']
+      break
+    case 'darts':
+      tableRule = DartsRules
+      tableHeader = ['Type', 'Match 2 v 2']
+      break
+    case 'petanque':
+      tableRule = PetanqueRules
+      tableHeader = ['Type', 'Match 2 v 2']
+      break
+    case 'pingpong':
+      tableRule = PingPongRules
+      tableHeader = ['Type', 'Match 2 v 2']
+      break
+    case 'triathlon':
+      tableRule = TriathlonRules
+      tableHeader = ['Type', 'Match 2 v 2']
       break
 
     default:
