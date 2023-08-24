@@ -1,4 +1,5 @@
 [
   {"IP Serveur": ["62.210.41.50:27323"]},
+  {"Mode de jeu": ["Relais"]},
   {"Condition de victoire": ["Finir le parkour en étant le mieux classé possible"]}
 ]

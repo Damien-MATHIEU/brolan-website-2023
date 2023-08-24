@@ -1,4 +1,5 @@
 [
-  {"Format": ["3 manches sur les 4 cartes avec 1 min d'échauffement par carte (voir tutoriel ci-dessous pour accéder au serveur)"]},
+  {"Format": ["Champion : Vous gagnez des points chaque manche en fonction de votre classement. Arrivé à 100 points, il faut finir une manche 1er(e) pour valider sa victoire"]},
+  {"Cartes": ["Il y a de nouvelles cartes, 4 cartes sur 7 seront tirées au sort"]},
   {"Condition de victoire": ["Roule vite ma fois et n'oublie pas de checkpoints 😉"]}
 ]
