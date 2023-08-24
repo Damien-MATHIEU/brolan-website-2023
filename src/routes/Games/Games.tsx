@@ -30,6 +30,8 @@ function Games() {
             color="aquamarine"
             propsOnClick="/game/trackmania"
             propsAlt="Une image du jeu vidéo TrackMania"
+            tagMode="Mise à jour"
+            tagColor="aquamarine"
           />
           <GameThumbnail
             imageSrc={Minecraft}
@@ -37,6 +39,8 @@ function Games() {
             color="pink"
             propsOnClick="/game/minecraft"
             propsAlt="Une image du jeu vidéo Minecraft"
+            tagMode="Mise à jour"
+            tagColor="pink"
           />
           <GameThumbnail
             imageSrc={Fortnite}
@@ -44,6 +48,8 @@ function Games() {
             color="aquamarine"
             propsOnClick="/game/fortnite"
             propsAlt="Une image du jeu vidéo Fortnite"
+            tagMode="Mise à jour"
+            tagColor="aquamarine"
           />
           <GameThumbnail
             imageSrc={GeoGuessr}
@@ -65,6 +71,8 @@ function Games() {
             color="pink"
             propsOnClick="/game/osu"
             propsAlt="Une image du jeu vidéo Osu"
+            tagMode="Mise à jour"
+            tagColor="pink"
           />
           {/* IRL */}
           <GameThumbnail
@@ -73,6 +81,8 @@ function Games() {
             color="aquamarine"
             propsOnClick="/game/tennis"
             propsAlt="Une image d'une raquette de tennis et une balle de tennis"
+            tagMode="Nouveau"
+            tagColor="aquamarine"
           />
           <GameThumbnail
             imageSrc={Petanque}
@@ -80,6 +90,8 @@ function Games() {
             color="pink"
             propsOnClick="/game/petanque"
             propsAlt="Une image de boules de pétanques"
+            tagMode="Nouveau"
+            tagColor="pink"
           />
           <GameThumbnail
             imageSrc={PingPong}
@@ -87,6 +99,8 @@ function Games() {
             color="aquamarine"
             propsOnClick="/game/pingpong"
             propsAlt="Une image d'une raquette de ping pong et une balle de ping pong"
+            tagMode="Nouveau"
+            tagColor="aquamarine"
           />
           <GameThumbnail
             imageSrc={Darts}
@@ -94,6 +108,8 @@ function Games() {
             color="pink"
             propsOnClick="/game/darts"
             propsAlt="Une d'un jeu de fléchette"
+            tagMode="Nouveau"
+            tagColor="pink"
           />
           <GameThumbnail
             imageSrc={Triathlon}
@@ -101,6 +117,8 @@ function Games() {
             color="aquamarine"
             propsOnClick="/game/triathlon"
             propsAlt="Une homme sur une piste de course"
+            tagMode="Nouveau"
+            tagColor="aquamarine"
           />
         </div>
       </section>

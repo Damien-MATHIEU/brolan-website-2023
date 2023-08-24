@@ -5,6 +5,8 @@ interface IGameThumbnail {
   propsClassName?: string
   propsOnClick?: string
   propsAlt?: string
+  tagMode?: string
+  tagColor?: 'pink' | 'aquamarine'
 }
 
 export default IGameThumbnail

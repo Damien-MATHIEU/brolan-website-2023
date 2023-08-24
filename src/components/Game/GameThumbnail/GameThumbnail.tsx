@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './internal/gameThumbnail.module.scss'
 import IGameThumbnail from './internal/gameThumbnail.interface'
 import { useNavigate } from 'react-router-dom'
+import Tag from '../../Tag/Tag'
 
 function GameThumbnail({
   imageSrc,
@@ -9,7 +10,9 @@ function GameThumbnail({
   color = 'pink',
   propsClassName,
   propsOnClick,
-  propsAlt
+  propsAlt,
+  tagMode,
+  tagColor
 }: IGameThumbnail) {
   const navigate = useNavigate()
 
@@ -24,6 +27,7 @@ function GameThumbnail({
         color === 'aquamarine' ? styles.aquamarineGlow : styles.pinkGlow
       } ${propsClassName}`}
       onClick={() => handleOnClick(propsOnClick)}>
+      {tagMode && <Tag tagMode={tagMode} color={tagColor} />}
       <div className={styles.imageContainer}>
         <img src={imageSrc} className={styles.image} alt={propsAlt} />
       </div>

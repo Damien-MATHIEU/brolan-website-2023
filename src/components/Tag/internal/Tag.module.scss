@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use './../../../styles/variables/colors.scss';
+@use './../../../styles/base/spaces.scss';
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  padding: 4px;
+  // background-color: map.get(colors.$colors, 'black');
+  border-radius: map.get(spaces.$spaces, '2');
+  z-index: 999;
+  > p {
+    font-size: 1rem;
+  }
+}
+
+.pinkGlow {
+  border: 1px map.get(colors.$colors, 'primaryWhitest') solid;
+  background-color: map.get(colors.$colors, 'primary');
+}
+.pinkGlow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: map.get(spaces.$spaces, '2');
+  -webkit-animation: glowPink 2s ease alternate infinite;
+  animation: glowPink 2s ease alternate infinite;
+}
+
+.aquamarineGlow {
+  border: 1px map.get(colors.$colors, 'aquamarineWhite') solid;
+  background-color: #00ccb1;
+}
+.aquamarineGlow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: map.get(spaces.$spaces, '2');
+  -webkit-animation: glowAquamarine 2s ease alternate infinite;
+  animation: glowAquamarine 2s ease alternate infinite;
+}
+
+@-webkit-keyframes glowPink {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 8px map.get(colors.$colors, 'primary'), 0 0 14px map.get(colors.$colors, 'primary'),
+      0 0 22px map.get(colors.$colors, 'primary'), 0 0 28px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 4px map.get(colors.$colors, 'primary'), 0 0 9px map.get(colors.$colors, 'primary'),
+      0 0 16px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary');
+  }
+}
+@keyframes glowPink {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 8px map.get(colors.$colors, 'primary'), 0 0 14px map.get(colors.$colors, 'primary'),
+      0 0 22px map.get(colors.$colors, 'primary'), 0 0 28px map.get(colors.$colors, 'primary');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'primaryWhitest'),
+      0 0 4px map.get(colors.$colors, 'primary'), 0 0 9px map.get(colors.$colors, 'primary'),
+      0 0 16px map.get(colors.$colors, 'primary'), 0 0 19px map.get(colors.$colors, 'primary');
+  }
+}
+@-webkit-keyframes glowAquamarine {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 8px map.get(colors.$colors, 'aquamarine'), 0 0 14px map.get(colors.$colors, 'aquamarine'),
+      0 0 22px map.get(colors.$colors, 'aquamarine'), 0 0 28px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 4px map.get(colors.$colors, 'aquamarine'), 0 0 9px map.get(colors.$colors, 'aquamarine'),
+      0 0 16px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine');
+  }
+}
+@keyframes glowAquamarine {
+  100% {
+    box-shadow: 0 0 3px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 8px map.get(colors.$colors, 'aquamarine'), 0 0 14px map.get(colors.$colors, 'aquamarine'),
+      0 0 22px map.get(colors.$colors, 'aquamarine'), 0 0 28px map.get(colors.$colors, 'aquamarine');
+  }
+  0% {
+    box-shadow: 0 0 1px map.get(colors.$colors, 'aquamarineWhite'),
+      0 0 4px map.get(colors.$colors, 'aquamarine'), 0 0 9px map.get(colors.$colors, 'aquamarine'),
+      0 0 16px map.get(colors.$colors, 'aquamarine'), 0 0 19px map.get(colors.$colors, 'aquamarine');
+  }
+}
