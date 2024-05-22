@@ -50,6 +50,7 @@ export default function ShopProduct({ name, price, images }: ShopProduct) {
           to={
             'https://docs.google.com/forms/d/e/1FAIpQLSevQAu11a2VbZ__WPGPxb6q3fHZhYxqrPdxUh1A4mnuWD8auA/viewform?usp=sf_link'
           }
+          target="_blank"
           className={styles.linkContainer}>
           <ButtonOutline>Commander</ButtonOutline>
         </Link>
