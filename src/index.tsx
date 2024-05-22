@@ -39,15 +39,15 @@ const router = createBrowserRouter([
       </>
     )
   },
-  {
-    path: '/game/:gameName',
-    element: (
-      <>
-        <ScrollToTop />
-        <Game />
-      </>
-    )
-  },
+  // {
+  //   path: '/game/:gameName',
+  //   element: (
+  //     <>
+  //       <ScrollToTop />
+  //       <Game />
+  //     </>
+  //   )
+  // },
   {
     path: '/mentions-legales',
     element: (
