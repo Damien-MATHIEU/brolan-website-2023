@@ -4,19 +4,7 @@ import { Autoplay, Pagination, Scrollbar } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
-
 import styles from './internal/carousel.module.scss'
-import FallGuys from './../../assets/Games/FallGuys.png'
-import Fortnite from './../../assets/Games/Fortnite.png'
-import GeoGuessr from './../../assets/Games/GeoGuessr.png'
-import Minecraft from './../../assets/Games/Minecraft.png'
-import Osu from './../../assets/Games/Osu.png'
-import TrackMania from './../../assets/Games/TrackMania.png'
-import Darts from './../../assets/Games/darts.jpg'
-import Petanque from './../../assets/Games/petanque.jpg'
-import PingPong from './../../assets/Games/pingPong.jpg'
-import Tennis from './../../assets/Games/tennis.jpg'
-import Triathlon from './../../assets/Games/triathlon.jpg'
 
 function Carousel() {
   return (
@@ -39,12 +27,12 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={TrackMania}
+              src={'/games/rocketLeague.webp'}
               className={styles.carouselImage}
-              alt="Une image du jeu vidéo TrackMania"
+              alt="Une image du jeu vidéo Rocket League"
             />
             <div className={styles.carouselTextContainer}>
-              <p className={styles.carouselText}>TrackMania</p>
+              <p className={styles.carouselText}>Rocket League</p>
             </div>
           </div>
         </SwiperSlide>
@@ -52,7 +40,7 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={Tennis}
+              src={'/games/tennis.webp'}
               className={styles.carouselImage}
               alt="Une image d'une rasuette et une balle de tennis"
             />
@@ -65,12 +53,12 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={Minecraft}
+              src={'/games/squiz.webp'}
               className={styles.carouselImage}
-              alt="Une image du jeu vidéo Minecraft"
+              alt="Une image du mot Quiz"
             />
             <div className={styles.carouselTextContainer}>
-              <p className={styles.carouselText}>Minecraft</p>
+              <p className={styles.carouselText}>sQuiz</p>
             </div>
           </div>
         </SwiperSlide>
@@ -78,7 +66,7 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={Petanque}
+              src={'/games/petanque.webp'}
               className={styles.carouselImage}
               alt="Une image de boules de pétanques"
             />
@@ -91,19 +79,23 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={Fortnite}
+              src={'/games/tft.webp'}
               className={styles.carouselImage}
-              alt="Une image du jeu vidéo Fortnite"
+              alt="Une image du jeu vidéo TeamFight Tactics"
             />
             <div className={styles.carouselTextContainer}>
-              <p className={styles.carouselText}>Fortnite</p>
+              <p className={styles.carouselText}>TFT</p>
             </div>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
-            <img src={Darts} className={styles.carouselImage} alt="Une partie de fléchette" />
+            <img
+              src={'/games/darts.webp'}
+              className={styles.carouselImage}
+              alt="Une partie de fléchette"
+            />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>Fléchettes</p>
             </div>
@@ -113,12 +105,12 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={GeoGuessr}
+              src={'/games/Minecraft.webp'}
               className={styles.carouselImage}
-              alt="Une image du jeu vidéo GeoGuessr"
+              alt="Une image du jeu vidéo Minecraft"
             />
             <div className={styles.carouselTextContainer}>
-              <p className={styles.carouselText}>GeoGuessr</p>
+              <p className={styles.carouselText}>Minecraft</p>
             </div>
           </div>
         </SwiperSlide>
@@ -126,7 +118,7 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={PingPong}
+              src={'/games/pingpong.webp'}
               className={styles.carouselImage}
               alt="Une raquette et une balle de ping pong "
             />
@@ -139,12 +131,12 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={FallGuys}
+              src={'/games/knightSquadTwo.webp'}
               className={styles.carouselImage}
-              alt="Une image du jeu vidéo Fall Guys"
+              alt="Une image du jeu vidéo Knight Squad 2"
             />
             <div className={styles.carouselTextContainer}>
-              <p className={styles.carouselText}>Fall Guys</p>
+              <p className={styles.carouselText}>Knight Squad 2</p>
             </div>
           </div>
         </SwiperSlide>
@@ -152,21 +144,12 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={Triathlon}
+              src={'/games/triathlon.webp'}
               className={styles.carouselImage}
               alt="Un homme sur une piste de course"
             />
             <div className={styles.carouselTextContainer}>
               <p className={styles.carouselText}>Triathlon</p>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className={styles.carouselSlideContainer}>
-            <img src={Osu} className={styles.carouselImage} alt="Une image du jeu vidéo Osu" />
-            <div className={styles.carouselTextContainer}>
-              <p className={styles.carouselText}>Osu</p>
             </div>
           </div>
         </SwiperSlide>
