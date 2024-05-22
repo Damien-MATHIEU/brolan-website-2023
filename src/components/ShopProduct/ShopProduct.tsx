@@ -7,8 +7,9 @@ import { Pagination, Scrollbar } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+import IShopProduct from './internal/shopProduct.interface'
 
-export default function ShopProduct({ name, price, images }: ShopProduct) {
+export default function ShopProduct({ name, price, images }: IShopProduct) {
   function sliderImages() {
     if (images.length <= 1) {
       return <img src={images[0]} className={styles.image} />
@@ -57,10 +58,4 @@ export default function ShopProduct({ name, price, images }: ShopProduct) {
       </div>
     </div>
   )
-}
-
-interface ShopProduct {
-  name: string
-  price: string
-  images: string[]
 }
