@@ -1,3 +1,9 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@use './../../../styles/variables/colors.scss';
+@import './../../../styles/base/mediaQueries.scss';
+
 .container {
   display: flex;
   flex-direction: row;
@@ -7,12 +13,28 @@
   scroll-margin: 88px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    flex-direction: column;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 .infosContainer {
   display: flex;
   flex-direction: column;
   gap: 64px;
   width: 40%;
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 55%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 100%;
+    gap: 16px;
+  }
 }
 .namePriceContainer {
   display: flex;
@@ -22,6 +44,9 @@
 .image,
 .carouselContainer {
   width: 40%;
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 100%;
+  }
 }
 .name {
   text-wrap: wrap;
