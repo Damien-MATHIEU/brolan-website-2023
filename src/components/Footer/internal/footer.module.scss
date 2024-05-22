@@ -89,8 +89,6 @@
 .logo {
   width: map.get(spaces.$spaces, '7');
   height: map.get(spaces.$spaces, '7');
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
 
   @include media-query-max(breakpoints.$screenSmall) {
     width: map.get(spaces.$spaces, '6');

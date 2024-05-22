@@ -25,6 +25,11 @@
   margin-left: 10%;
   flex-direction: row;
   justify-content: space-between;
+
+  @include media-query-max(breakpoints.$screenMedium) {
+  }
+  width: calc(80% + 12px);
+  margin-left: calc(10% - 12px);
 }
 
 .logoContainer,
@@ -35,10 +40,8 @@
   align-items: center;
 }
 .logo {
-  height: map.get(spaces.$spaces, '5');
-  width: map.get(spaces.$spaces, '5');
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  height: map.get(spaces.$spaces, '6');
+  width: map.get(spaces.$spaces, '6');
 }
 .burgerMenu {
   width: 24px;

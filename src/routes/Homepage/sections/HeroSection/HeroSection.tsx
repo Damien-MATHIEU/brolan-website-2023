@@ -20,8 +20,9 @@ function HeroSection() {
         propsClassName={styles.registerButton}
         center={true}
         fontSize="large"
-        propsOnClick="/games">
-        Tous les jeux
+        propsOnClick="https://forms.gle/RKqX5eDDmtaPge1a9"
+        openNewTab={true}>
+        Inscriptions
       </ButtonOutline>
       <ScrollIcon propsClassName={styles.scrollIcon} />
     </section>

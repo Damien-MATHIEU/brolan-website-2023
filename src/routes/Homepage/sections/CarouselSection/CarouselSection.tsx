@@ -11,7 +11,7 @@ function CarouselSection() {
       <TextNeon propsClassName={styles.subTitle} blinkingArraySlow={[3]}>
         JEUX
       </TextNeon>
-      <Carousel />
+      {/* <Carousel /> */}
       <ButtonOutline center={true} propsOnClick="/games">
         Tous les jeux
       </ButtonOutline>

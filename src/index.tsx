@@ -10,6 +10,7 @@ import Error404 from './routes/Error404/Error404'
 import LegalNotice from './routes/LegalNotice/LegalNotice'
 import Contact from './routes/Contact/Contact'
 import ScrollToTop from './customHooks/ScrollToTOp/ScrollToTop'
+import Shop from './routes/Shop/Shop'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
@@ -62,6 +63,15 @@ const router = createBrowserRouter([
       <>
         <ScrollToTop />
         <Contact />
+      </>
+    )
+  },
+  {
+    path: '/shop',
+    element: (
+      <>
+        <ScrollToTop />
+        <Shop />
       </>
     )
   }

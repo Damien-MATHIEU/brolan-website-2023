@@ -38,7 +38,7 @@ function Header() {
       <div className={styles.subContainer}>
         <div className={styles.logoContainer}>
           <Link to="/">
-            <img src={logo} className={styles.logo} alt="Logo de la Brolan" />
+            <img src={'/logo.png'} className={styles.logo} alt="Logo de la Brolan" />
           </Link>
         </div>
         {showMenuIcon && (
@@ -68,10 +68,19 @@ function Header() {
           <Link to="/games" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Jeux</p>
           </Link>
+          <Link to="/shop" className={styles.linkContainer} onClick={() => handleMobileClick()}>
+            <p className={styles.link}>Boutique</p>
+          </Link>
           <Link to="/contact" className={styles.linkContainer} onClick={() => handleMobileClick()}>
             <p className={styles.link}>Contact</p>
           </Link>
-          <div className={styles.linkContainer} onClick={() => handleMobileClick()}></div>
+          <Link
+            to="https://forms.gle/RKqX5eDDmtaPge1a9"
+            className={styles.linkContainer}
+            target="_blank"
+            onClick={() => handleMobileClick()}>
+            <ButtonOutline fontSize="small">S&apos;inscrire</ButtonOutline>
+          </Link>
         </div>
       </div>
     </nav>

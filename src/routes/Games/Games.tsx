@@ -3,17 +3,6 @@ import styles from './internal/games.module.scss'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import GameThumbnail from '../../components/Game/GameThumbnail/GameThumbnail'
-import TrackMania from './../../assets/Games/TrackMania.png'
-import Minecraft from './../../assets/Games/Minecraft.png'
-import Fortnite from './../../assets/Games/Fortnite.png'
-import GeoGuessr from './../../assets/Games/GeoGuessr.png'
-import FallGuys from './../../assets/Games/FallGuys.png'
-import Osu from './../../assets/Games/Osu.png'
-import Tennis from './../../assets/Games/tennis.jpg'
-import Petanque from './../../assets/Games/petanque.jpg'
-import Darts from './../../assets/Games/darts.jpg'
-import PingPong from './../../assets/Games/pingPong.jpg'
-import Triathlon from './../../assets/Games/triathlon.jpg'
 import TextNeon from '../../components/NeonComponents/TextNeon/TextNeon'
 
 function Games() {
@@ -25,100 +14,85 @@ function Games() {
         <div className={styles.gamesContainer}>
           {/* Video games */}
           <GameThumbnail
-            imageSrc={TrackMania}
-            gameName="TrackMania"
+            imageSrc={'/games/rocketLeague.webp'}
+            gameName="Rocket League"
             color="aquamarine"
-            propsOnClick="/game/trackmania"
-            propsAlt="Une image du jeu vidéo TrackMania"
-            tagMode="Mise à jour"
-            tagColor="aquamarine"
+            // propsOnClick="/game/minecraft"
+            propsAlt="Une image du jeu vidéo Rocket League"
           />
           <GameThumbnail
-            imageSrc={Minecraft}
+            imageSrc={'/games/squiz.webp'}
+            gameName="sQuiz"
+            color="pink"
+            // propsOnClick="/game/minecraft"
+            propsAlt="Le mot Quiz"
+          />
+          <GameThumbnail
+            imageSrc={'/games/tft.webp'}
+            gameName="TFT"
+            color="aquamarine"
+            // propsOnClick="/game/minecraft"
+            propsAlt="Une image du jeu vidéo TeamFight Tactics"
+          />
+          <GameThumbnail
+            imageSrc={'/games/Minecraft.webp'}
             gameName="Minecraft"
             color="pink"
-            propsOnClick="/game/minecraft"
+            // propsOnClick="/game/minecraft"
             propsAlt="Une image du jeu vidéo Minecraft"
-            tagMode="Mise à jour"
-            tagColor="pink"
           />
           <GameThumbnail
-            imageSrc={Fortnite}
-            gameName="Fortnite"
+            imageSrc={'/games/knightSquadTwo.webp'}
+            gameName="Knight Squad 2"
             color="aquamarine"
-            propsOnClick="/game/fortnite"
-            propsAlt="Une image du jeu vidéo Fortnite"
-            tagMode="Mise à jour"
-            tagColor="aquamarine"
-          />
-          <GameThumbnail
-            imageSrc={GeoGuessr}
-            gameName="GeoGuessr"
-            color="pink"
-            propsOnClick="/game/geoguessr"
-            propsAlt="Une image du jeu vidéo GeoGuessr"
-          />
-          <GameThumbnail
-            imageSrc={FallGuys}
-            gameName="FallGuys"
-            color="aquamarine"
-            propsOnClick="/game/fallguys"
-            propsAlt="Une image du jeu vidéo FallGuys"
-          />
-          <GameThumbnail
-            imageSrc={Osu}
-            gameName="Osu"
-            color="pink"
-            propsOnClick="/game/osu"
-            propsAlt="Une image du jeu vidéo Osu"
-            tagMode="Mise à jour"
-            tagColor="pink"
+            // propsOnClick="/game/minecraft"
+            propsAlt="Une image du jeu vidéo Knight Squad 2"
           />
           {/* IRL */}
           <GameThumbnail
-            imageSrc={Tennis}
+            imageSrc={'/games/tennis.webp'}
             gameName="Tennis"
-            color="aquamarine"
-            propsOnClick="/game/tennis"
+            color="pink"
+            // propsOnClick="/game/tennis"
             propsAlt="Une image d'une raquette de tennis et une balle de tennis"
-            tagMode="Nouveau"
-            tagColor="aquamarine"
+            tagMode="IRL"
+            tagColor="pink"
           />
           <GameThumbnail
-            imageSrc={Petanque}
+            imageSrc={'/games/petanque.webp'}
             gameName="Pétanque"
-            color="pink"
-            propsOnClick="/game/petanque"
+            color="aquamarine"
+            // propsOnClick="/game/petanque"
             propsAlt="Une image de boules de pétanques"
-            tagMode="Nouveau"
-            tagColor="pink"
+            tagMode="IRL"
+            tagColor="aquamarine"
           />
           <GameThumbnail
-            imageSrc={PingPong}
+            imageSrc={'/games/pingpong.webp'}
             gameName="Ping Pong"
-            color="aquamarine"
-            propsOnClick="/game/pingpong"
-            propsAlt="Une image d'une raquette de ping pong et une balle de ping pong"
-            tagMode="Nouveau"
-            tagColor="aquamarine"
-          />
-          <GameThumbnail
-            imageSrc={Darts}
-            gameName="Fléchettes"
             color="pink"
-            propsOnClick="/game/darts"
-            propsAlt="Une d'un jeu de fléchette"
-            tagMode="Nouveau"
+            // propsOnClick="/game/pingpong"
+            propsAlt="Une image d'une raquette de ping pong et une balle de ping pong"
+            tagMode="IRL"
             tagColor="pink"
           />
           <GameThumbnail
-            imageSrc={Triathlon}
-            gameName="Triathlon"
+            imageSrc={'/games/darts.webp'}
+            gameName="Fléchettes"
             color="aquamarine"
-            propsOnClick="/game/triathlon"
-            propsAlt="Une homme sur une piste de course"
-            tagMode="Nouveau"
+            // propsOnClick="/game/darts"
+            propsAlt="Une d'un jeu de fléchette"
+            tagMode="IRL"
             tagColor="aquamarine"
+          />
+          <GameThumbnail
+            imageSrc={'/games/triathlon.webp'}
+            gameName="Triathlon"
+            color="pink"
+            // propsOnClick="/game/triathlon"
+            propsAlt="Une homme sur une piste de course"
+            tagMode="IRL"
+            tagColor="pink"
           />
         </div>
       </section>
