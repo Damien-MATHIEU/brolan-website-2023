@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use './../../../styles/base/spaces.scss';
+@use './../../../styles/base/breakpoints.scss';
+@use './../../../styles/variables/colors.scss';
+@import './../../../styles/base/mediaQueries.scss';
+
+.container {
+  scroll-margin: 207px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin-top: map.get(spaces.$spaces, '8');
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spaces.$spaces, '7');
+  width: 70%;
+  margin-left: 15%;
+
+  @include media-query-min(breakpoints.$screenDoubleExtraLarge) {
+    gap: map.get(spaces.$spaces, '8');
+  }
+
+  @include media-query-max(breakpoints.$screenLarge) {
+    width: 90%;
+    margin-left: 5%;
+  }
+  @include media-query-max(breakpoints.$screenMedium) {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  @include media-query-max(breakpoints.$screenSmall) {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+.title {
+  font-size: 5rem;
+  letter-spacing: map.get(spaces.$spaces, '2');
+  text-indent: map.get(spaces.$spaces, '2');
+
+  @include media-query-max(breakpoints.$screenMedium) {
+    font-size: 4rem;
+  }
+
+  @include media-query-max(breakpoints.$screenSmall) {
+    font-size: 3.5rem;
+  }
+}
