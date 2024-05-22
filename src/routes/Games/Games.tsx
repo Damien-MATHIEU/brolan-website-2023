@@ -68,7 +68,7 @@ function Games() {
             tagColor="aquamarine"
           />
           <GameThumbnail
-            imageSrc={'/games/pingpong.webp'}
+            imageSrc={'/games/pingPong.webp'}
             gameName="Ping Pong"
             color="pink"
             // propsOnClick="/game/pingpong"

@@ -118,7 +118,7 @@ function Carousel() {
         <SwiperSlide>
           <div className={styles.carouselSlideContainer}>
             <img
-              src={'/games/pingpong.webp'}
+              src={'/games/pingPong.webp'}
               className={styles.carouselImage}
               alt="Une raquette et une balle de ping pong "
             />
