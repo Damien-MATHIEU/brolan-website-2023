@@ -1,5 +1,9 @@
 [
-  {"IP Serveur": ["62.210.41.50:27323"]},
-  {"Mode de jeu": ["Relais"]},
-  {"Condition de victoire": ["Finir le parkour en étant le mieux classé possible"]}
+  { "IP Serveur": ["node25.skorpia.fr:25574"] },
+  { "Condition de victoire": ["Tuer le dragon de l'End le plus vite possible"] },
+  {
+    "Infos complémentaires": [
+      "vos équipes ont été créées sur le serveur, merci de rejoindre la bonne lors de votre première connexion"
+    ]
+  }
 ]

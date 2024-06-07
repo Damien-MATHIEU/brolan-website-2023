@@ -1,7 +1,7 @@
 [
-  {"Format": ["Épreuves de Beer Pong, Quizz Culture et Tir Airsoft, en relais"]},
-  {"Beer Pong": ["Réussir un lancer de balle dans un verre"]},
-  {"Quizz Culture": ["Répondre à une question de culture générale"]},
-  {"Tir Airsoft": ["Toucher toutes les cibles"]},
-  {"Condition de victoire": ["Être le duo le plus rapide"]}
+  { "Format": ["Épreuves de Beer Pong, Quizz Culture et Tir Airsoft, en relais"] },
+  { "Beer Pong": ["Réussir un lancer de balle dans un verre"] },
+  { "Quizz Culture": ["Répondre à une question de culture générale"] },
+  { "Tir Airsoft": ["Toucher toutes les cibles"] },
+  { " Avantage": ["10 secondes de retrait au chrono"] }
 ]
