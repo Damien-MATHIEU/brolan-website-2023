@@ -4,11 +4,10 @@ import styles from './internal/gameComponent.module.scss'
 import TextNeon from '../../NeonComponents/TextNeon/TextNeon'
 import TableNeon from '../../NeonComponents/TableNeon/TableNeon'
 
-import TrackmaniaRules from './../../../data/rules/trackmania.json'
-import FallGuysRules from './../../../data/rules/fallguys.json'
-import FortniteRules from './../../../data/rules/fortnite.json'
-import GeoGuessrRules from './../../../data/rules/geoguessr.json'
-import OsuRules from './../../../data/rules/osu.json'
+import RocketLeagueRules from './../../../data/rules/rocketLeague.json'
+import KnightSquadTwoRules from './../../../data/rules/knightSquadTwo.json'
+import SquizRules from './../../../data/rules/squiz.json'
+import TeamfightTacticsRules from './../../../data/rules/teamfightTactics.json'
 import MinecraftRules from './../../../data/rules/minecraft.json'
 import DartsRules from './../../../data/rules/darts.json'
 import PetanqueRules from './../../../data/rules/petanque.json'
@@ -31,32 +30,32 @@ function GameComponent() {
   }
   let tableRule = null
   let tableHeader = null
+  let customHeading: null | string = null
 
   switch (gameName) {
     // Video games
-    case 'trackmania':
-      tableRule = TrackmaniaRules
+    case 'rocket-league':
+      tableRule = RocketLeagueRules
       tableHeader = ['Type', 'Partie personnalisée']
+      customHeading = 'Rocket League'
       break
     case 'minecraft':
       tableRule = MinecraftRules
-      tableHeader = ['Type', 'Parkour']
+      tableHeader = ['Type', 'Speedrun']
       break
-    case 'fortnite':
-      tableRule = FortniteRules
-      tableHeader = ['Type', 'Tilted Zone War']
-      break
-    case 'fallguys':
-      tableRule = FallGuysRules
+    case 'squiz':
+      tableRule = SquizRules
       tableHeader = ['Type', 'Partie personnalisée']
       break
-    case 'geoguessr':
-      tableRule = GeoGuessrRules
-      tableHeader = ['Type', 'World']
+    case 'knight-squad-two':
+      tableRule = KnightSquadTwoRules
+      tableHeader = ['Type', 'Partie personnalisée']
+      customHeading = 'Knight Squad 2'
       break
-    case 'osu':
-      tableRule = OsuRules
-      tableHeader = ['Type', 'Format de carte classique']
+    case 'teamfight-tactics':
+      tableRule = TeamfightTacticsRules
+      tableHeader = ['Type', 'World']
+      customHeading = 'TeamFight Tactics'
       break
     // IRL
     case 'tennis':
@@ -66,6 +65,7 @@ function GameComponent() {
     case 'darts':
       tableRule = DartsRules
       tableHeader = ['Type', 'Match 2 v 2']
+      customHeading = 'FLechettes'
       break
     case 'petanque':
       tableRule = PetanqueRules
@@ -87,7 +87,7 @@ function GameComponent() {
   return (
     <div className={styles.container}>
       <TextNeon propsClassName={styles.title} blinkingArrayFast={[2]} blinkingArraySlow={[9]}>
-        {gameName}
+        {customHeading === null ? gameName : customHeading}
       </TextNeon>
 
       <TableNeon
@@ -113,7 +113,7 @@ function GameComponent() {
           <p className={styles.additionnalInfo}>
             Sur la partie du bas, deux éléments sont importants : Le pseudo (normalement c&apos;est
             toi qui le choisi, fin c&apos;est mieux), et le truc à droite (pose pas de question), tu
-            sélectionne « Optifine 1.18.2 » et tu cliques sur le gros bouton Jaune sur la droite
+            sélectionne « Optifine 1.16.1 » et tu cliques sur le gros bouton Jaune sur la droite
             (Jaune ou orange ? vrai débat, laisse un comm).
           </p>
           <p className={styles.additionnalInfo}>
@@ -129,7 +129,7 @@ function GameComponent() {
             Une fois que t&apos;en est là, t&apos;as fait à peu près 5%, t&apos;y es presque !{' '}
           </p>
           <p className={styles.additionnalInfo}>
-            Dans Srver address tu rentres : « 62.210.41.50:27323 » et tu fais Done.
+            Dans Srver address tu rentres : « node25.skorpia.fr:25574 » et tu fais Done.
           </p>
           <img src={EnterIpAddress} className={styles.image} />
           <p className={styles.additionnalInfo}>
